@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Пинк</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="page-header__wrapper container">
+        <svg class="page-header__logo">
+          <use xlink:href="./img/svg/sprite.svg#logo-mobile"></use>
+        </svg>
+        <nav class="page-header__nav nav">
+          <ul class="nav__list">
+            <li class="nav__item">Главная</li>
+            <li class="nav__item">Фотография</li>
+            <li class="nav__item">Конкурс</li>
+            <li class="nav__item">HTML Academy</li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="page-main">
+      <section class="promo">
+        <h1 class="title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+      </section>
+      <!-- Анкета -->
+      <section class="questionnaire">
+        <div class="questionnaire__wrapper container">
+          <p class="questionnaire__description">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
+          <form class="questionnaire__form" action="https://echo.htmlacademy.ru" method="post">
+            <!-- Ввод имени -->
+            <fieldset class="name-information">
+              <legend class="visually-hidden">Представьтесь</legend>
+              <label class="name-information__label">
+                <span class="name-information__span text-form">Фамилия:</span>
+                <input class="name-information__input" type="text" name="surname" placeholder="Укажите фамилию *" required>
+              </label>
+              <label class="name-information__label">
+                <span class="name-information__span text-form">Имя:</span>
+                <input class="name-information__input" type="text" name="name" placeholder="Введите ваше имя *" required>
+              </label>
+              <label class="name-information__label">
+                <span class="name-information__span text-form">Отчество:</span>
+                <input class="name-information__input" type="text" name="patronymic" placeholder="Ну и отчество тоже">
+              </label>
+            </fieldset>
+            <!-- Выбор используемой платформы -->
+            <fieldset class="application-information">
+              <legend class="application-information__title text-form">С каким приложением путешествовали?</legend>
+              <label class="application-information__label">
+                <input class="application-information__input" type="radio" name="application" value="iOS" checked>
+                <span class="application-information__span text-form">Pink для iOS</span>
+              </label>
+              <label class="application-information__label">
+                <input class="application-information__input" type="radio" name="application" value="Android">
+                <span class="application-information__span text-form">Pink на Android</span>
+              </label>
+              <label class="application-information__label">
+                <input class="application-information__input" type="radio" name="application" value="Windows Phone">
+                <span class="application-information__span text-form">Windows Phone</span>
+              </label>
+            </fieldset>
+            <!-- Контактная информация -->
+            <fieldset class="contact-information">
+              <legend class="contact-information__title text-form">Контактная информация</legend>
+              <label class="contact-information__label">
+                <input class="contact-information__input" type="tel" name="phone" pattern="[0-9]{11}" placeholder="Номер, пожалуйста">
+                <span class="contact-information__span text-form">Номер телефона</span>
+              </label>
+              <label class="contact-information__label">
+                <input class="contact-information__input" type="email" name="mail" placeholder="Введите почту *" required>
+                <span class="contact-information__span text-form">Адрес почты</span>
+              </label>
+            </fieldset>
+            <!-- Достижения -->
+            <fieldset class="achievements">
+              <legend class="achievements__title text-form">Ваши безбашенные достижения в путешествии</legend>
+              <label class="achievements__label">
+                <input class="achievements__input" type="checkbox" name="selfie with a shark" checked>
+                <span class="achievements__span text-form">Сделал селфи с акулой</span>
+              </label>
+              <label class="achievements__label">
+                <input class="achievements__input" type="checkbox" name="burned out on the beach" checked>
+                <span class="achievements__span text-form">Обгорел на пляже</span>
+              </label>
+              <label class="achievements__label">
+                <input class="achievements__input" type="checkbox" name="saw Chuck Norris">
+                <span class="achievements__span text-form">Видел Чака Норриса</span>
+              </label>
+              <label class="achievements__label">
+                <input class="achievements__input" type="checkbox" name="bought souvenirs">
+                <span class="achievements__span text-form">Накупил сувениров</span>
+              </label>
+              <label class="achievements__label">
+                <input class="achievements__input" type="checkbox" name="held the tower" checked>
+                <span class="achievements__span text-form">Удержал башню</span>
+              </label>
+              <label class="achievements__label">
+                <input class="achievements__input" type="checkbox" name="Destroyed the hotel">
+                <span class="achievements__span text-form">Разгромил отель</span>
+              </label>
+            </fieldset>
+            <!-- Опишите свои мысли(эмоции) -->
+            <fieldset class="thoughts">
+              <legend class="thoughts__title text-form">Опишите свои эмоции</legend>
+              <textarea class="thoughts__textarea" name="thoughts" cols="30" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            </fieldset>
+            <!-- Отправка формы -->
+            <div class="questionnaire__submit">
+              <button class="button-submit" type="submit">Отправить форму</button>
+              <p class="questionnaire__footnote">
+                <span class="questionnaire__span questionnaire__span--important">*</span> — обязательные для заполнения поля
+              </p>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper container">
+        <a class="page-footer__link" href="#">
+          <svg class="page-footer__logo">
+            <use xlink:href="./img/svg/sprite.svg#logo-tablet"></use>
+          </svg>
+        </a>
+        <div class="social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <svg class="social__icon">
+                  <use xlink:href="./img/svg/sprite.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <svg class="social__icon">
+                  <use xlink:href="./img/svg/sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <svg class="social__icon">
+                  <use xlink:href="./img/svg/sprite.svg#icon-youtube"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <a class="page-footer__link" href="#">
+            Разработано
+            <svg class="page-footer__icon">
+              <use xlink:href="./img/svg/sprite.svg#icon-html-academy"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
