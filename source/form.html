@@ -50,7 +50,7 @@
           <p class="questionnaire__description">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
           <form class="questionnaire__form" action="https://echo.htmlacademy.ru" method="post">
             <!-- Ввод имени -->
-            <fieldset class="name-information">
+            <fieldset class="questionnaire__name-information name-information">
               <legend class="visually-hidden">Представьтесь</legend>
               <label class="name-information__label">
                 <span class="name-information__span text-form">Фамилия:</span>
@@ -66,7 +66,7 @@
               </label>
             </fieldset>
             <!-- Выбор используемой платформы -->
-            <fieldset class="application-information">
+            <fieldset class="questionnaire__application-information application-information">
               <legend class="application-information__title text-form">С каким приложением путешествовали?</legend>
               <label class="application-information__label">
                 <input class="application-information__input" type="radio" name="application" value="iOS" checked>
@@ -82,7 +82,7 @@
               </label>
             </fieldset>
             <!-- Контактная информация -->
-            <fieldset class="contact-information">
+            <fieldset class="questionnaire__contact-information contact-information">
               <legend class="contact-information__title text-form">Контактная информация</legend>
               <label class="contact-information__label">
                 <input class="contact-information__input" type="tel" name="phone" pattern="[0-9]{11}" placeholder="Номер, пожалуйста">
@@ -100,7 +100,7 @@
               </label>
             </fieldset>
             <!-- Достижения -->
-            <fieldset class="achievements">
+            <fieldset class="questionnaire__achievements achievements">
               <legend class="achievements__title text-form">Ваши безбашенные достижения в путешествии</legend>
               <label class="achievements__label">
                 <input class="achievements__input" type="checkbox" name="selfie with a shark" checked>
@@ -128,7 +128,7 @@
               </label>
             </fieldset>
             <!-- Опишите свои мысли(эмоции) -->
-            <fieldset class="thoughts">
+            <fieldset class="questionnaire__thoughts thoughts">
               <legend class="thoughts__title text-form">Опишите свои эмоции</legend>
               <textarea class="thoughts__textarea" name="thoughts" cols="30" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
             </fieldset>

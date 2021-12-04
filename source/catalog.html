@@ -44,18 +44,20 @@
       <section class="page-main__title">
         <h1 class="title">Фотографии пользователей</h1>
       </section>
+      <section class="page-main__subtitle">
+        <p class="subtitle">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+      </section>
       <!-- Панорама -->
-      <section class="panorama">
+      <section class="photo-card">
         <h2 class="visually-hidden">Панорама дня</h2>
-        <p class="panorama__title">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
-        <picture class="panorama__container">
+        <picture class="photo-card__container photo-card__container--panorama">
           <source media="(max-width: 320px)" srcset="./img/mobile/panorama-mobile.jpg">
           <source media="(max-width: 660px)" srcset="./img/tablet/panorama-tablet.jpg">
           <source media="(min-width: 661px)" srcset="./img/desktop/panorama-desktop.jpg">
           <img class="panorama__img" src="./img/desktop/panorama-desktop.jpg" alt="Панорама дня">
         </picture>
-        <div class="panorama__author author">
-          <span class="author__name">
+        <div class="photo-card__information">
+          <span class="author">
             Анна
             <time class="time">(5 минут назад)</time>
           </span>
@@ -70,7 +72,7 @@
               </svg>
             </button>
           </div>
-          <p class="author__description">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+          <p class="photo-card__description">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
         </div>
       </section>
       <!-- Галерея -->
@@ -84,12 +86,12 @@
               <source media="(min-width: 301px)" srcset="./img/desktop/photo-1-desktop.jpg">
               <img class="photo-card__img" src="./img/desktop/photo-1-desktop.jpg" alt="Фото-1">
             </picture>
-            <div class="photo-card__author author">
-              <span class="author__name">
+            <div class="photo-card__information">
+              <span class="author">
                 Левон
                 <time class="time">(5 часов назад)</time>
               </span>
-              <p class="author__description">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+              <p class="photo-card__description">Вчера он на луну летал, сегодня в руки к нам попал.</p>
               <div class="like">
                 <p class="like__wrapper">
                   <span class="like__text">нравится:</span>
@@ -109,12 +111,12 @@
               <source media="(min-width: 301px)" srcset="./img/desktop/photo-2-desktop.jpg">
               <img class="photo-card__img" src="./img/desktop/photo-2-desktop.jpg" alt="Фото-2">
             </picture>
-            <div class="photo-card__author author">
-              <span class="author__name">
+            <div class="photo-card__information">
+              <span class="author">
                 Антон
                 <time class="time">(12 часов назад)</time>
               </span>
-              <p class="author__description">Соседи будут рады!</p>
+              <p class="photo-card__description">Соседи будут рады!</p>
               <div class="like">
                 <p class="like__wrapper">
                   <span class="like__text">нравится:</span>
@@ -134,12 +136,12 @@
               <source media="(min-width: 301px)" srcset="./img/desktop/photo-3-desktop.jpg">
               <img class="photo-card__img" src="./img/desktop/photo-3-desktop.jpg" alt="Фото-3">
             </picture>
-            <div class="photo-card__author author">
-              <span class="author__name">
+            <div class="photo-card__information">
+              <span class="author">
                 Борис
                 <time class="time">(20 часов назад)</time>
               </span>
-              <p class="author__description">Здесь могла быть ваша цитата о высоком и вечном.</p>
+              <p class="photo-card__description">Здесь могла быть ваша цитата о высоком и вечном.</p>
               <div class="like">
                 <p class="like__wrapper">
                   <span class="like__text">нравится:</span>
@@ -159,12 +161,12 @@
               <source media="(min-width: 301px)" srcset="./img/desktop/photo-4-desktop.jpg">
               <img class="photo-card__img" src="./img/desktop/photo-4-desktop.jpg" alt="Фото-4">
             </picture>
-            <div class="photo-card__author author">
-              <span class="author__name">
+            <div class="photo-card__information">
+              <span class="author">
                 Сергей
                 <time class="time">(25 часов назад)</time>
               </span>
-              <p class="author__description">Самая кубанская в мире!</p>
+              <p class="photo-card__description">Самая кубанская в мире!</p>
               <div class="like">
                 <p class="like__wrapper">
                   <span class="like__text">нравится:</span>
@@ -184,12 +186,12 @@
               <source media="(min-width: 301px)" srcset="./img/desktop/photo-5-desktop.jpg">
               <img class="photo-card__img" src="./img/desktop/photo-1-desktop.jpg" alt="Фото-5">
             </picture>
-            <div class="photo-card__author author">
-              <span class="author__name">
+            <div class="photo-card__information">
+              <span class="author">
                 Максим
                 <time class="time">(40 часов назад)</time>
               </span>
-              <p class="author__description">Где снег-то?</p>
+              <p class="photo-card__description">Где снег-то?</p>
               <div class="like">
                 <p class="like__wrapper">
                   <span class="like__text">нравится:</span>
@@ -209,12 +211,12 @@
               <source media="(min-width: 301px)" srcset="./img/desktop/photo-6-desktop.jpg">
               <img class="photo-card__img" src="./img/desktop/photo-1-desktop.jpg" alt="Фото-6">
             </picture>
-            <div class="photo-card__author author">
-              <span class="author__name">
+            <div class="photo-card__information">
+              <span class="author">
                 Надежда
                 <time class="time">(45 часов назад)</time>
               </span>
-              <p class="author__description">Всем GM и взаимные лайки!</p>
+              <p class="photo-card__description">Всем GM и взаимные лайки!</p>
               <div class="like">
                 <p class="like__wrapper">
                   <span class="like__text">нравится:</span>
