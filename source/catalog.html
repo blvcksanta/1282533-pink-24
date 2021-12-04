@@ -7,6 +7,12 @@
   <body>
     <header class="page-header">
       <div class="page-header__wrapper container">
+        <picture class="page-header__backgroung background">
+          <source media="(max-width: 319px)" srcset="./img/back-mobile.jpg">
+          <source media="(max-width: 659px)" srcset="./img/back-tablet.jpg">
+          <source media="(min-width: 660px)" srcset="./img/back-desktop.jpg">
+          <img class="background__img" src="./img/back-desktop.jpg" alt="">
+        </picture>
         <svg class="page-header__logo">
           <use xlink:href="./img/svg/sprite.svg#logo-mobile"></use>
         </svg>
@@ -18,10 +24,18 @@
             <span class="visually-hidden">Открыть/закрыть меню</span>
           </button>
           <ul class="nav__list">
-            <li class="nav__item">Главная</li>
-            <li class="nav__item">Фотография</li>
-            <li class="nav__item">Конкурс</li>
-            <li class="nav__item">HTML Academy</li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Главная</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Фотография</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Конкурс</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">HTML Academy</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -221,33 +235,37 @@
           <p class="photo-editor__title">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
           <div class="photo-editor__editor">
             <img class="photo-editor__img" src="./img/working-picture.jpg" alt="Изменяемая картинка.">
-            <div class="photo-editor__crop">
-              <svg class="photo-editor__icon">
-                <use xlink:href="./img/svg/sprite.svg#icon-crop"></use>
-              </svg>
-              <div class="photo-editor__range-bar">
-                <button type="photo-editor__button-switch"></button>
-              </div>
-            </div>
-            <div class="photo-editor__fill">
-              <svg class="photo-editor__icon">
-                <use xlink:href="./img/svg/sprite.svg#icon-fill"></use>
-              </svg>
-              <div class="photo-editor__range-bar">
-                <button type="photo-editor__button-switch"></button>
-              </div>
-            </div>
-            <div class="photo-editor__contrast">
-              <svg class="photo-editor__icon">
-                <use xlink:href="./img/svg/sprite.svg#icon-contrast"></use>
-              </svg>
-              <div class="photo-editor__range-bar">
-                <button type="photo-editor__button-switch"></button>
-              </div>
-            </div>
+            <ul class="photo-editor__list">
+              <li class="photo-editor__item">
+                <svg class="photo-editor__icon">
+                  <use xlink:href="./img/svg/sprite.svg#icon-crop"></use>
+                </svg>
+                <div class="photo-editor__range-bar">
+                  <button type="photo-editor__button-switch"></button>
+                </div>
+              </li>
+              <li class="photo-editor__item">
+                <svg class="photo-editor__icon">
+                  <use xlink:href="./img/svg/sprite.svg#icon-fill"></use>
+                </svg>
+                <div class="photo-editor__range-bar">
+                  <button type="photo-editor__button-switch"></button>
+                </div>
+              </li>
+              <li class="photo-editor__item">
+                <svg class="photo-editor__icon">
+                  <use xlink:href="./img/svg/sprite.svg#icon-contrast"></use>
+                </svg>
+                <div class="photo-editor__range-bar">
+                  <button type="photo-editor__button-switch"></button>
+                </div>
+              </li>
+            </ul>
             <div class="photo-editor__upload">
-              <button class="photo-editor__send button">Запостить</button>
-              <button class="photo-editor__cancel button">Отмена</button>
+              <form action="https://echo.htmlacademy.ru" method="post">
+                <button class="photo-editor__send button" type="submit">Запостить</button>
+                <button class="photo-editor__cancel button" type="reset">Отмена</button>
+              </form>
             </div>
           </div>
         </div>

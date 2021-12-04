@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
     <header class="page-header">
@@ -24,10 +25,18 @@
             <span class="visually-hidden">Открыть/закрыть меню</span>
           </button>
           <ul class="nav__list">
-            <li class="nav__item">Главная</li>
-            <li class="nav__item">Фотография</li>
-            <li class="nav__item">Конкурс</li>
-            <li class="nav__item">HTML Academy</li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Главная</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Фотография</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Конкурс</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">HTML Academy</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -37,12 +46,20 @@
       <section class="promo">
         <h1 class="visually-hidden">Pink фотоприложение для раскрашивания серых будней</h1>
         <div class="promo__wrapper container">
-          <h2 class="title">Взгляните на жизнь иначе!</h2>
-          <button class="button" type="button">Скачать приложение</button>
+          <h2 class="promo__title title">Взгляните на жизнь иначе!</h2>
+          <button class="promo__button button" type="button">Скачать приложение</button>
           <div class="promo__availability">
-            <span class="promo__apple"></span>
-            <span class="promo__android"></span>
-            <span class="promo__windows"></span>
+            <ul class="promo__list">
+              <li class="promo__item">
+                <span class="promo__icon promo__icon--apple"></span>
+              </li>
+              <li class="promo__item">
+                <span class="promo__icon promo__icon--android"></span>
+              </li>
+              <li class="promo__item">
+                <span class="promo__icon promo__icon--windows"></span>
+              </li>
+            </ul>
             <span class="promo__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</span>
           </div>
         </div>
@@ -50,30 +67,30 @@
       <!-- Возможности приложения -->
       <section class="possibility">
         <div class="possibility__wrapper container">
-          <h2 class="title">Устали от серости мегаполиса? Нам есть, что вам предложить!</h2>
+          <h2 class="possibility__title title">Устали от серости мегаполиса? Нам есть, что вам предложить!</h2>
           <ul class="possibility__list">
-            <li class="possibility__item possibility__item--disabled">
-              <img class="possibility__phone" src="./img/phone.png" alt="Телефон" width="186" height="382">
-              <img class="possibility__screen" src="./img/phone-screen-not-filter.jpg" alt="Экран без розового фильтра" width="165" height="294">
-            </li>
             <li class="possibility__item">
-              <h3 class="subtitle">Поднимает настроение</h3>
+              <div class="possibility__img">
+                <img class="possibility__phone" src="./img/phone.png" alt="Телефон" width="186" height="382">
+                <img class="possibility__screen" src="./img/phone-screen-not-filter.jpg" alt="Экран без розового фильтра" width="165" height="294">
+              </div>
+              <h3 class="possibility__subtitle subtitle">Поднимает настроение</h3>
               <p class="possibility__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
             </li>
-            <li class="possibility__item possibility__item--disabled">
-              <img class="possibility__phone" src="./img/phone.png" alt="Телефон" width="186" height="382">
-              <img class="possibility__screen" src="./img/phone-screen-filter.jpg" alt="Экран с розовым фильтром" width="165" height="294">
-            </li>
             <li class="possibility__item">
-              <h3 class="subtitle">Меняет мир вокруг</h3>
+              <div class="possibility__img">
+                <img class="possibility__phone" src="./img/phone.png" alt="Телефон" width="186" height="382">
+                <img class="possibility__screen" src="./img/phone-screen-filter.jpg" alt="Экран с розовым фильтром" width="165" height="294">
+              </div>
+              <h3 class="possibility__subtitle subtitle">Меняет мир вокруг</h3>
               <p class="possibility__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
             </li>
             <li class="possibility__item">
-              <img class="possibility__phone" src="./img/phone.png" alt="Телефон" width="186" height="382">
-              <img class="possibility__screen" src="./img/phone-screen-filter-smile.jpg" alt="Экран с розовым фильтром и смайликом" width="165" height="294">
-            </li>
-            <li class="possibility__item">
-              <h3 class="subtitle">Заводит новых друзей</h3>
+              <div class="possibility__img">
+                <img class="possibility__phone" src="./img/phone.png" alt="Телефон" width="186" height="382">
+                <img class="possibility__screen" src="./img/phone-screen-filter-smile.jpg" alt="Экран с розовым фильтром и смайликом" width="165" height="294">
+              </div>
+              <h3 class="possibility__subtitle subtitle">Заводит новых друзей</h3>
               <p class="possibility__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
             </li>
           </ul>
@@ -82,13 +99,13 @@
       <!-- Блок с статьей -->
       <article class="article disabled">
         <div class="article__wrapper container">
-          <span class="article__logo">
-            <svg>
+          <span class="article__icon">
+            <svg class="article__timer">
               <use xlink:href="./img/svg/sprite.svg#icon-timer"></use>
             </svg>
           </span>
           <div class="article__description">
-            <h2 class="article__title">Эффект на 24 часа!</h2>
+            <h2 class="article__title title">Эффект на 24 часа!</h2>
             <p class="article__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
             <a class="article__link" href="#">Узнать больше об исследовании</a>
           </div>
@@ -106,12 +123,14 @@
                 <span class="reviews__age">25 лет, водитель трамвая</span>
               </cite>
             </blockquote>
-            <button class="reviews__prew" type="button">
-              <span class="visually-hidden">Предыдущий отзыв</span>
-            </button>
-            <button class="reviews__next" type="button">
-              <span class="visually-hidden">Следующий отзыв</span>
-            </button>
+            <div class="reviews__button">
+              <button class="reviews__prew" type="button">
+                <span class="visually-hidden">Предыдущий отзыв</span>
+              </button>
+              <button class="reviews__next" type="button">
+                <span class="visually-hidden">Следующий отзыв</span>
+              </button>
+            </div>
           </div>
           <p class="slider__toogles">
             <button class="slider__toogle slider__toogle--current" type="button">
@@ -179,19 +198,21 @@
       <!-- Блок с контактной информацией -->
       <section class="contacts">
         <div class="contacts__wrapper container">
-          <h2 class="title">Остались вопросы? Свяжитесь с нами!</h2>
-          <div class="contacts__phone">
-            <span class="subtitle">Звоните:</span>
-            <a href="tel:+78125556666">+7 (812) 555-66-66</a>
-          </div>
-          <div class="contacts__mail">
-            <span class="subtitle">Пишите:</span>
-            <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-          </div>
-          <div class="contacts__addres">
-            <span>Приезжайте в гости:</span>
-            <address>ул. Большая Конюшенная, 19/8</address>
-          </div>
+          <h2 class="contacts__title title">Остались вопросы? Свяжитесь с нами!</h2>
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <span class="contacts__subtitle subtitle">Звоните:</span>
+              <a class="contacts__tel" href="tel:+78125556666">+7 (812) 555-66-66</a>
+            </li>
+            <li class="contacts__item">
+              <span class="contacts__subtitle subtitle">Пишите:</span>
+              <a class="contacts__mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            </li>
+            <li class="contacts__item">
+              <span class="contacts__subtitle subtitle">Приезжайте в гости:</span>
+              <address class="contacts__address">ул. Большая Конюшенная, 19/8</address>
+            </li>
+          </ul>
         </div>
         <img class="contacts__map" src="#" alt="Карта">
       </section>
