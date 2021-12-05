@@ -1,0 +1,11 @@
+@mixin size($width, $height) {
+  max-width: $width;
+  width: 100%;
+  height: $height;
+}
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}

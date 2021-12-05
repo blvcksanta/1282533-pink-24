@@ -8,10 +8,8 @@
 }
 
 .contacts__list {
-  margin: 0;
+  @include reset-list;
   margin-bottom: 41px;
-  padding: 0;
-  list-style-type: none;
 }
 
 .contacts__item {

@@ -1,9 +1,10 @@
 // Начните писать стили здесь
 
-@import "./fonts.scss";
-@import "./variables.scss";
-@import "./visually-hidden.scss";
-@import "./general.scss";
+@import "./global/fonts.scss";
+@import "./global/variables.scss";
+@import "./global/mixin.scss";
+@import "./global/visually-hidden.scss";
+@import "./global/general.scss";
 @import "./page-header/page-header.scss";
 @import "./promo/promo.scss";
 @import "./possibility/possibility.scss";
