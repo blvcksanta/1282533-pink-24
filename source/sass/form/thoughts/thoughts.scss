@@ -1,0 +1,56 @@
+.thoughts {
+  @include reset-fieldset;
+  padding-top: 42px;
+}
+
+.thoughts__wrapper {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.thoughts__title {
+  margin-bottom: 20px;
+  line-height: 18px;
+  color: $magenta;
+  text-align: center;
+}
+
+.thoughts__textarea {
+  padding: 20px;
+
+  @include input-text;
+  color: $dark-blue;
+  border: 2px solid $grey;
+  border-radius: 1px;
+  resize: none;
+
+  &::placeholder {
+    @include input-text;
+    color: $dark-blue;
+  }
+
+  &:hover {
+    border-color: $dark-blue;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $green;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+    border-color: $grey;
+  }
+
+  &:focus-visible {
+    outline: none;
+    border-color: $green;
+  }
+
+  &:not(:placeholder-shown) {
+    outline: none;
+    border-color: $magenta;
+  }
+}

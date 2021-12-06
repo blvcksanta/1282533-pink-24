@@ -1,0 +1,71 @@
+.questionnaire {
+  position: relative;
+  top: -310px;
+  background-color: $white;
+}
+
+.questionnaire__description {
+  margin: 0;
+  margin-bottom: 55px;
+
+  @include ears;
+  padding-top: 55px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.questionnaire__submit {
+  padding: 50px 20px 0 20px;
+}
+
+.button-submit {
+  padding: 0;
+  margin-bottom: 30px;
+
+  @include input-text;
+  font-weight: 700;
+  color: $white;
+
+  @include size (280px, 60px);
+  box-sizing: border-box;
+  border: 2px solid $green;
+  border-radius: 1px;
+  background-color: $green;
+  cursor: pointer;
+
+  &:hover {
+    border-color: $dark-green;
+    background-color: $dark-green;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $magenta;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+    border-color: $green;
+  }
+
+  &:focus-visible {
+    outline: none;
+    border-color: $magenta;
+  }
+
+  &:active {
+    border-color: $dark-green;
+    background-color: $dark-green;
+    color: $white-3;
+  }
+}
+
+.questionnaire__footnote {
+  margin: 0;
+  line-height: 30px;
+  text-align: center;
+}
+
+.questionnaire__span {
+  color: $magenta;
+}

@@ -27,6 +27,11 @@ body {
   font-style: normal;
 }
 
+.text-form {
+  font-size: 18px;
+  line-height: 30px;
+}
+
 .button {
   @include size(280px, 55px);
   padding: 0;

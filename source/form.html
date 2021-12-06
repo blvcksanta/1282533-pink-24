@@ -7,14 +7,15 @@
     <title>HTML Academy: Пинк</title>
   </head>
   <body>
-    <header class="page-header">
-      <div class="page-header__wrapper container">
-        <picture class="page-header__backgroung background">
-          <source media="(max-width: 319px)" srcset="./img/back-mobile.jpg">
-          <source media="(max-width: 659px)" srcset="./img/back-tablet.jpg">
-          <source media="(min-width: 660px)" srcset="./img/back-desktop.jpg">
-          <img class="background__img" src="./img/back-desktop.jpg" alt="">
-        </picture>
+    <header class="page-header container">
+      <picture class="page-header__backgroung background">
+        <!-- <source media="(max-width: 320px)" srcset="./img/back-mobile.jpg">
+        <source media="(max-width: 660px)" srcset="./img/back-tablet.jpg">
+        <source media="(min-width: 661px)" srcset="./img/back-desktop.jpg"> -->
+        <img class="background__img" src="./img/back-mobile.jpg" alt="">
+      </picture>
+      <!-- page-header__content--active - класс подставляется, когда активно меню -->
+      <div class="page-header__content">
         <svg class="page-header__logo">
           <use xlink:href="./img/svg/sprite.svg#logo-mobile"></use>
         </svg>
@@ -23,9 +24,14 @@
             <svg class="nav__burger">
               <use xlink:href="./img/svg/sprite.svg#menu-burger"></use>
             </svg>
+            <!-- nav__burger--disable - класс отвечает за сокрытие не активной иконки кнопки меню -->
+            <svg class="nav__burger nav__burger--close nav__burger--disable">
+              <use xlink:href="./img/svg/sprite.svg#menu-close"></use>
+            </svg>
             <span class="visually-hidden">Открыть/закрыть меню</span>
           </button>
-          <ul class="nav__list">
+          <!-- nav__list--disable - класс отвечает за показ пунктов меню -->
+          <ul class="nav__list nav__list--disable">
             <li class="nav__item">
               <a class="nav__link" href="./index.html">Главная</a>
             </li>
@@ -44,108 +50,128 @@
     </header>
     <main class="page-main">
       <section class="page-main__title">
-        <h1 class="title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+        <div class="page-main__wrapper container">
+          <h1 class="title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+        </div>
       </section>
       <!-- Анкета -->
       <section class="questionnaire">
         <div class="questionnaire__wrapper container">
-          <p class="questionnaire__description">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
+          <p class="questionnaire__description">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
           <form class="questionnaire__form" action="https://echo.htmlacademy.ru" method="post">
             <!-- Ввод имени -->
-            <fieldset class="questionnaire__name-information name-information">
-              <legend class="visually-hidden">Представьтесь</legend>
-              <label class="name-information__label">
-                <span class="name-information__span text-form">Фамилия:</span>
-                <input class="name-information__input" type="text" name="surname" placeholder="Укажите фамилию *" required>
-              </label>
-              <label class="name-information__label">
-                <span class="name-information__span text-form">Имя:</span>
-                <input class="name-information__input" type="text" name="name" placeholder="Введите ваше имя *" required>
-              </label>
-              <label class="name-information__label">
-                <span class="name-information__span text-form">Отчество:</span>
-                <input class="name-information__input" type="text" name="patronymic" placeholder="Ну и отчество тоже">
-              </label>
-            </fieldset>
-            <!-- Выбор используемой платформы -->
-            <fieldset class="questionnaire__application-information application-information">
-              <legend class="application-information__title text-form">С каким приложением путешествовали?</legend>
-              <label class="application-information__label">
-                <input class="application-information__input" type="radio" name="application" value="iOS" checked>
-                <span class="application-information__span text-form">Pink для iOS</span>
-              </label>
-              <label class="application-information__label">
-                <input class="application-information__input" type="radio" name="application" value="Android">
-                <span class="application-information__span text-form">Pink на Android</span>
-              </label>
-              <label class="application-information__label">
-                <input class="application-information__input" type="radio" name="application" value="Windows Phone">
-                <span class="application-information__span text-form">Windows Phone</span>
-              </label>
-            </fieldset>
-            <!-- Контактная информация -->
-            <fieldset class="questionnaire__contact-information contact-information">
-              <legend class="contact-information__title text-form">Контактная информация</legend>
-              <label class="contact-information__label">
-                <input class="contact-information__input" type="tel" name="phone" pattern="[0-9]{11}" placeholder="Номер, пожалуйста">
-                <svg class="contact-information__icon-phone">
-                  <use xlink:href="./img/svg/sprite.svg#icon-phone"></use>
-                </svg>
-                <span class="contact-information__span text-form">Номер телефона</span>
-              </label>
-              <label class="contact-information__label">
-                <input class="contact-information__input" type="email" name="mail" placeholder="Введите почту *" required>
-                  <svg class="contact-information__icon-mail">
-                    <use xlink:href="./img/svg/sprite.svg#icon-mail"></use>
-                  </svg>
-                <span class="contact-information__span text-form">Адрес почты</span>
-              </label>
+            <fieldset class="questionnaire__name-information fieldset">
+              <div class="fieldset__wrapper">
+                <legend class="visually-hidden">Представьтесь</legend>
+                <label class="fieldset__label">
+                  <span class="fieldset__span text-form">Фамилия:</span>
+                  <input class="fieldset__input" type="text" name="surname" placeholder="Укажите фамилию *" required>
+                </label>
+                <label class="fieldset__label">
+                  <span class="fieldset__span text-form">Имя:</span>
+                  <input class="fieldset__input" type="text" name="name" placeholder="Введите ваше имя *" required>
+                </label>
+                <label class="fieldset__label">
+                  <span class="fieldset__span text-form">Отчество:</span>
+                  <input class="fieldset__input" type="text" name="patronymic" placeholder="Ну и отчество тоже">
+                </label>
+              </div>
             </fieldset>
             <!-- Достижения -->
             <fieldset class="questionnaire__achievements achievements">
-              <legend class="achievements__title text-form">Ваши безбашенные достижения в путешествии</legend>
-              <label class="achievements__label">
-                <input class="achievements__input" type="checkbox" name="selfie with a shark" checked>
-                <span class="achievements__span text-form">Сделал селфи с акулой</span>
-              </label>
-              <label class="achievements__label">
-                <input class="achievements__input" type="checkbox" name="burned out on the beach" checked>
-                <span class="achievements__span text-form">Обгорел на пляже</span>
-              </label>
-              <label class="achievements__label">
-                <input class="achievements__input" type="checkbox" name="saw Chuck Norris">
-                <span class="achievements__span text-form">Видел Чака Норриса</span>
-              </label>
-              <label class="achievements__label">
-                <input class="achievements__input" type="checkbox" name="bought souvenirs">
-                <span class="achievements__span text-form">Накупил сувениров</span>
-              </label>
-              <label class="achievements__label">
-                <input class="achievements__input" type="checkbox" name="held the tower" checked>
-                <span class="achievements__span text-form">Удержал башню</span>
-              </label>
-              <label class="achievements__label">
-                <input class="achievements__input" type="checkbox" name="Destroyed the hotel">
-                <span class="achievements__span text-form">Разгромил отель</span>
-              </label>
+              <div class="achievements__wrapper">
+                <legend class="achievements__title">Ваши безбашенные <br> достижения в путешествии</legend>
+                <label class="achievements__label">
+                  <input class="achievements__input visually-hidden" type="checkbox" name="selfie with a shark" checked>
+                  <span class="achievements__mark"></span>
+                  <span class="achievements__span text-form">Сделал селфи с акулой</span>
+                </label>
+                <label class="achievements__label">
+                  <input class="achievements__input visually-hidden" type="checkbox" name="burned out on the beach" checked>
+                  <span class="achievements__mark"></span>
+                  <span class="achievements__span text-form">Обгорел на пляже</span>
+                </label>
+                <label class="achievements__label">
+                  <input class="achievements__input visually-hidden" type="checkbox" name="saw Chuck Norris">
+                  <span class="achievements__mark"></span>
+                  <span class="achievements__span text-form">Видел Чака Норриса</span>
+                </label>
+                <label class="achievements__label">
+                  <input class="achievements__input visually-hidden" type="checkbox" name="bought souvenirs">
+                  <span class="achievements__mark"></span>
+                  <span class="achievements__span text-form">Накупил сувениров</span>
+                </label>
+                <label class="achievements__label">
+                  <input class="achievements__input visually-hidden" type="checkbox" name="held the tower" checked>
+                  <span class="achievements__mark"></span>
+                  <span class="achievements__span text-form">Удержал башню</span>
+                </label>
+                <label class="achievements__label">
+                  <input class="achievements__input visually-hidden" type="checkbox" name="Destroyed the hotel">
+                  <span class="achievements__mark"></span>
+                  <span class="achievements__span text-form">Разгромил отель</span>
+                </label>
+              </div>
+            </fieldset>
+            <!-- Контактная информация -->
+            <fieldset class="questionnaire__contact-information fieldset">
+              <div class="fieldset__wrapper">
+                <legend class="fieldset__title text-form">Контактная информация</legend>
+                <label class="fieldset__label">
+                  <span class="fieldset__span text-form">Номер телефона</span>
+                  <input class="fieldset__input" type="tel" name="phone" pattern="[0-9]{11}" placeholder="Номер, пожалуйста">
+                  <svg class="fieldset__icon fieldset__icon--phone">
+                    <use xlink:href="./img/svg/sprite.svg#icon-phone"></use>
+                  </svg>
+                </label>
+                <label class="fieldset__label">
+                  <span class="fieldset__span text-form">Адрес почты</span>
+                  <input class="fieldset__input" type="email" name="mail" placeholder="Введите почту *" required>
+                  <svg class="fieldset__icon fieldset__icon--mail">
+                    <use xlink:href="./img/svg/sprite.svg#icon-mail"></use>
+                  </svg>
+                </label>
+              </div>
+            </fieldset>
+            <!-- Выбор используемой платформы -->
+            <fieldset class="questionnaire__application-information application-information">
+              <div class="application-information__wrapper">
+                <legend class="application-information__title">С каким приложением путешествовали?</legend>
+                <label class="application-information__label">
+                  <input class="application-information__input visually-hidden" type="radio" name="application" value="iOS" checked>
+                  <span class="application-information__mark"></span>
+                  <span class="application-information__span text-form">Pink для iOS</span>
+                </label>
+                <label class="application-information__label">
+                  <input class="application-information__input visually-hidden" type="radio" name="application" value="Android">
+                  <span class="application-information__mark"></span>
+                  <span class="application-information__span text-form">Pink на Android</span>
+                </label>
+                <label class="application-information__label">
+                  <input class="application-information__input visually-hidden" type="radio" name="application" value="Windows Phone">
+                  <span class="application-information__mark"></span>
+                  <span class="application-information__span text-form">Windows Phone</span>
+                </label>
+              </div>
             </fieldset>
             <!-- Опишите свои мысли(эмоции) -->
             <fieldset class="questionnaire__thoughts thoughts">
-              <legend class="thoughts__title text-form">Опишите свои эмоции</legend>
-              <textarea class="thoughts__textarea" name="thoughts" cols="30" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
-            </fieldset>
+              <div class="thoughts__wrapper">
+                <legend class="thoughts__title">Опишите свои эмоции</legend>
+                <textarea class="thoughts__textarea" name="thoughts" rows="5" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+              </div></fieldset>
             <!-- Отправка формы -->
             <div class="questionnaire__submit">
               <button class="button-submit" type="submit">Отправить форму</button>
               <p class="questionnaire__footnote">
-                <span class="questionnaire__span questionnaire__span--important">*</span> — обязательные для заполнения поля
+                <span class="questionnaire__span">*</span> — обязательные поля
               </p>
             </div>
           </form>
         </div>
       </section>
     </main>
-    <footer class="page-footer">
+    <footer class="page-footer page-footer-form">
       <div class="page-footer__wrapper container">
         <a class="page-footer__link" href="#">
           <svg class="page-footer__logo">
@@ -156,27 +182,27 @@
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link" href="#">
-                <svg class="social__icon">
+                <svg class="social__icon social__icon--twitter">
                   <use xlink:href="./img/svg/sprite.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="#">
-                <svg class="social__icon">
+                <svg class="social__icon social__icon--facebook">
                   <use xlink:href="./img/svg/sprite.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="#">
-                <svg class="social__icon">
+                <svg class="social__icon social__icon--youtube">
                   <use xlink:href="./img/svg/sprite.svg#icon-youtube"></use>
                 </svg>
               </a>
             </li>
           </ul>
-          <a class="page-footer__link" href="#">
+          <a class="page-footer__author" href="#">
             Разработано
             <svg class="page-footer__icon">
               <use xlink:href="./img/svg/sprite.svg#icon-html-academy"></use>
