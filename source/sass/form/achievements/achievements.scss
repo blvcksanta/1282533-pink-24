@@ -1,0 +1,96 @@
+.achievements {
+  @include reset-fieldset;
+
+  position: relative;
+  background-color: $light-grey;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 9999px;
+    height: 100%;
+    box-shadow: inset 0 0 0 9999px $light-grey;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 9999px;
+    height: 100%;
+    box-shadow: inset 0 0 0 9999px $light-grey;
+  }
+}
+
+.achievements__wrapper {
+  @include ears;
+
+  padding-top: 42px;
+  margin-bottom: 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.achievements__title {
+  margin-bottom: 44px;
+  padding: 0;
+  line-height: 18px;
+  color: $magenta;
+  align-self: center;
+  text-align: center;
+}
+
+.achievements__label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-bottom: 47px;
+  }
+}
+
+.achievements__input {
+  &:checked + .achievements__mark {
+    background: url("../../../img/svg/icon/icon-yes.svg") no-repeat center $white;
+  }
+
+  &:hover + .achievements__mark {
+    border-color: $dark-blue;
+  }
+
+  &:focus + .achievements__mark {
+    border-color: $green;
+  }
+
+  &:focus:not(:focus-visible) + .achievements__mark {
+    border-color: $grey;
+  }
+
+  &:focus-visible + .achievements__mark {
+    border-color: $green;
+  }
+
+  &:active + .achievements__mark {
+    border-color: $magenta;
+  }
+}
+
+.achievements__mark {
+  position: absolute;
+  top: -4.5px;
+  left: 0;
+  width: 35px;
+  height: 35px;
+  border: 2px solid $grey;
+  border-radius: 1px;
+  background-color: $white;
+}
+
+.achievements__span {
+  padding-left: 60px;
+}

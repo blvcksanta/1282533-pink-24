@@ -1,0 +1,29 @@
+@mixin size($width, $height) {
+  max-width: $width;
+  width: 100%;
+  height: $height;
+}
+
+@mixin reset-list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@mixin reset-fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin ears {
+  padding: 0 20px;
+}
+
+@mixin input-text {
+  font-family: "OpenSans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+}

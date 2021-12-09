@@ -1,1 +1,34 @@
-// Начните писать стили здесь
+// Глобальные стили (Для всех страниц)
+@import "./global/fonts.scss";
+@import "./global/variables.scss";
+@import "./global/mixin.scss";
+@import "./global/visually-hidden.scss";
+@import "./global/general.scss";
+
+// Стили шапки и подвала страницы
+@import "./page-header/page-header.scss";
+@import "./footer/footer.scss";
+
+// Стили для заголовка страницы с ФОРМАМИ и ГАЛЕРЕЕЙ
+@import "./page-main-title/page-main-title.scss";
+
+// Стили главной страницы
+@import "./index/promo/promo.scss";
+@import "./index/possibility/possibility.scss";
+@import "./index/article/article.scss";
+@import "./index/reviews/reviews.scss";
+@import "./index/contacts/contacts.scss";
+
+// Стили страницы с формами
+@import "./form/questionnaire/questionnaire.scss";
+@import "./form/fieldset/fieldset.scss";
+@import "./form/achievements/achievements.scss";
+@import "./form/application/application.scss";
+@import "./form/thoughts/thoughts.scss";
+
+// Стили фотогалереи
+@import "./catalog/subtitle/subtitle.scss";
+@import "./catalog/photo-card/photo-card.scss";
+@import "./catalog/like/like.scss";
+@import "./catalog/gallery/gallery.scss";
+@import "./catalog/photo-editor/photo-editor.scss";

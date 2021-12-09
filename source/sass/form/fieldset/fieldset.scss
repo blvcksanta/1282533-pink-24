@@ -1,0 +1,74 @@
+.fieldset {
+  @include reset-fieldset;
+
+  margin-bottom: 43px;
+}
+
+.questionnaire__contact-information {
+  margin-top: 42px;
+}
+
+.fieldset__wrapper {
+  @include ears;
+}
+
+.fieldset__title {
+  display: none;
+}
+
+.fieldset__label {
+  display: flex;
+  flex-direction: column;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.fieldset__span {
+  font-size: 14px;
+  color: $magenta;
+}
+
+.fieldset__input {
+  padding: 23px 20px;
+  border: 2px solid $grey;
+  border-radius: 1px;
+  box-sizing: border-box;
+
+  @include size (280px, 63px);
+  @include input-text;
+
+  &::placeholder {
+    @include input-text;
+    color: $dark-blue;
+  }
+
+  &:hover {
+    border-color: $dark-blue;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $green;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+    border-color: $grey;
+  }
+
+  &:focus-visible {
+    outline: none;
+    border-color: $green;
+  }
+
+  &:not(:placeholder-shown) {
+    outline: none;
+    border-color: $magenta;
+  }
+}
+
+.fieldset__icon {
+  display: none;
+}
