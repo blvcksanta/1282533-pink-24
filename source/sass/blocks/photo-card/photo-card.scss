@@ -1,11 +1,9 @@
-.panorama {
-  position: relative;
-  top: -90px;
-}
-
 .photo-card__container {
-  position: relative;
   display: block;
+
+  &--panorama {
+    position: relative;
+  }
 
   &--panorama::before {
     content: "панорама дня";
@@ -26,7 +24,7 @@
   }
 }
 
-.panorama__img {
+.photo-card__img {
   display: block;
 }
 

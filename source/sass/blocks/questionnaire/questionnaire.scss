@@ -1,6 +1,5 @@
 .questionnaire {
   position: relative;
-  top: -310px;
   background-color: $white;
 }
 
@@ -14,11 +13,19 @@
   line-height: 30px;
 }
 
+.questionnaire__achievements {
+  overflow-x: hidden;
+}
+
+.questionnaire__application-information {
+  overflow-x: hidden;
+}
+
 .questionnaire__submit {
   padding: 50px 20px 0 20px;
 }
 
-.button-submit {
+.questionnaire__button-submit {
   padding: 0;
   margin-bottom: 30px;
 
