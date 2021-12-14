@@ -22,9 +22,10 @@
 
 .nav__list {
   position: absolute;
-  top: 66px;
+  top: 67px;
   left: 0;
   width: 100%;
+  z-index: 2;
 
   @include reset-list;
 

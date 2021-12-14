@@ -8,11 +8,11 @@
   </head>
   <body>
     <header class="page-header container">
-      <picture class="page-header__backgroung background">
+      <picture class="page-header__background header-background">
         <!-- <source media="(max-width: 320px)" srcset="./img/back-mobile.jpg">
         <source media="(max-width: 660px)" srcset="./img/back-tablet.jpg">
         <source media="(min-width: 661px)" srcset="./img/back-desktop.jpg"> -->
-        <img class="background__img" src="./img/back-mobile.jpg" alt="">
+        <img class="header-background__img" src="./img/back-mobile.jpg" alt="">
       </picture>
       <!-- page-header__content--active - класс подставляется, когда активно меню -->
       <div class="page-header__content">
@@ -192,12 +192,12 @@
           <h2 class="visually-hidden">Режимы приложения</h2>
           <table class="table slider__item">
             <tr class="table__head">
-              <th class="table__title"></th>
+              <th class="table__title table__title--mobile"></th>
               <th class="table__title">
                 <span class="table__mode">база</span>
                 <span class="table__price">1,99 usd</span>
               </th>
-              <th class="table__title">
+              <th class="table__title table__title--hit">
                 <span class="table__mode">стандарт</span>
                 <span class="table__price">3,99 usd</span>
               </th>
@@ -208,21 +208,57 @@
             </tr>
             <tr class="table__row">
               <td class="table__data table__data--peculiarities">Розовый фильтр</td>
-              <td class="table__data">1</td>
-              <td class="table__data">1</td>
-              <td class="table__data">1</td>
+              <td class="table__data table__data--filtr">
+                <svg class="table__svg table__svg--yes">
+                  <use xlink:href="./img/svg/sprite.svg#icon-yes"></use>
+                </svg>
+              </td>
+              <td class="table__data table__data--filtr">
+                <svg class="table__svg table__svg--yes">
+                  <use xlink:href="./img/svg/sprite.svg#icon-yes"></use>
+                </svg>
+              </td>
+              <td class="table__data table__data--filtr">
+                <svg class="table__svg table__svg--yes">
+                  <use xlink:href="./img/svg/sprite.svg#icon-yes"></use>
+                </svg>
+              </td>
             </tr>
             <tr class="table__row">
               <td class="table__data table__data--peculiarities">Смайлики</td>
-              <td class="table__data">0</td>
-              <td class="table__data">1</td>
-              <td class="table__data">1</td>
+              <td class="table__data table__data--smile">
+                <svg class="table__svg table__svg--no">
+                  <use xlink:href="./img/svg/sprite.svg#icon-no"></use>
+                </svg>
+              </td>
+              <td class="table__data table__data--smile">
+                <svg class="table__svg table__svg--yes">
+                  <use xlink:href="./img/svg/sprite.svg#icon-yes"></use>
+                </svg>
+              </td>
+              <td class="table__data table__data--smile">
+                <svg class="table__svg table__svg--yes">
+                  <use xlink:href="./img/svg/sprite.svg#icon-yes"></use>
+                </svg>
+              </td>
             </tr>
             <tr class="table__row">
               <td class="table__data table__data--peculiarities">Комментарии</td>
-              <td class="table__data">0</td>
-              <td class="table__data">0</td>
-              <td class="table__data">1</td>
+              <td class="table__data table__data--comments">
+                <svg class="table__svg table__svg--no">
+                  <use xlink:href="./img/svg/sprite.svg#icon-no"></use>
+                </svg>
+              </td>
+              <td class="table__data table__data--comments">
+                <svg class="table__svg table__svg--no">
+                  <use xlink:href="./img/svg/sprite.svg#icon-no"></use>
+                </svg>
+              </td>
+              <td class="table__data table__data--comments">
+                <svg class="table__svg table__svg--yes">
+                  <use xlink:href="./img/svg/sprite.svg#icon-yes"></use>
+                </svg>
+              </td>
             </tr>
           </table>
           <p class="slider__toogles">
@@ -303,4 +339,5 @@
       </div>
     </footer>
   </body>
+  <script src="./js/menu.js"></script>
 </html>
