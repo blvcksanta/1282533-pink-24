@@ -39,17 +39,17 @@
 .contacts__map {
   position: relative;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 95px;
-    left: 142px;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    border: 10px solid $white;
-    background-color: $magenta;
-  }
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   top: 95px;
+  //   left: 142px;
+  //   width: 16px;
+  //   height: 16px;
+  //   border-radius: 50%;
+  //   border: 10px solid $white;
+  //   background-color: $magenta;
+  // }
 
   &::after {
     content: "";

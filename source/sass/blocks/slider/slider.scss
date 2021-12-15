@@ -1,0 +1,29 @@
+.slider__item {
+  margin-bottom: 45px;
+}
+
+.slider__toogles {
+  margin: 0;
+  margin-bottom: 5px;
+  line-height: 0;
+  text-align: center;
+}
+
+.slider__toogle {
+  border: none;
+  padding: 0;
+  width: 6px;
+  height: 6px;
+  background-color: $dark-blue-3;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-right: 19px;
+  }
+
+  &--current {
+    outline: 3px solid $dark-blue;
+    background-color: $white;
+  }
+}

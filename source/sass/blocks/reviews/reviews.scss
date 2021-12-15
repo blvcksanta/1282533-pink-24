@@ -5,6 +5,7 @@
   left: 0;
   right: 0;
   margin: 0 auto;
+  margin-bottom: -5px;
 }
 
 .reviews__wrapper {
@@ -15,7 +16,6 @@
 
 .reviews__item {
   margin: 0;
-  margin-bottom: 44px;
   display: flex;
   flex-direction: column;
 }
@@ -37,29 +37,4 @@
 
 .reviews__button {
   display: none;
-}
-
-.slider__toogles {
-  margin: 0;
-  align-self: center;
-  line-height: 0;
-}
-
-.slider__toogle {
-  border: none;
-  padding: 0;
-  width: 6px;
-  height: 6px;
-  background-color: $dark-blue-3;
-  border-radius: 50%;
-  cursor: pointer;
-
-  &:not(:last-child) {
-    margin-right: 19px;
-  }
-
-  &--current {
-    outline: 3px solid $dark-blue;
-    background-color: $white;
-  }
 }
