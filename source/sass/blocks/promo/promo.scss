@@ -1,55 +1,112 @@
 .promo {
-  position: relative;
-  top: -373px;
-  left: 0;
-  right: 0;
   margin: 0 auto;
+  margin-top: -366px;
+
+  @media (min-width: $width-tablet) {
+    margin-top: -545px;
+  }
+}
+
+.promo__wrapper {
+  position: relative;
+  max-width: $width-tablet+200px;
 }
 
 .promo__title {
-  padding: 0 20px;
+  @include ears;
   color: $white;
   text-align: center;
   margin-bottom: 22px;
+
+  br {
+    display: none;
+  }
+
+  @media (min-width: $width-tablet) {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 300px;
+    line-height: 48px;
+    z-index: 3;
+
+    br {
+      display: inline;
+    }
+  }
 }
 
 .promo__picture {
   position: relative;
-  z-index: 1;
-}
+  max-width: $width-mobile;
+  margin: 0 auto;
 
-.promo__screen {
-  position: absolute;
-  z-index: -1;
-  top: 33px;
-  left: 104px;
+  @media (min-width: $width-tablet) {
+    max-width: $width-tablet;
+  }
 }
 
 .promo__img {
   display: block;
-}
 
-.promo__background {
-  background-color: $dark-blue;
+  &--hand {
+    position: relative;
+    z-index: 2;
+  }
+
+  &--screen {
+    position: absolute;
+    top: 32px;
+    right: 105px;
+    z-index: 1;
+  }
+
+  @media (min-width: $width-tablet) {
+    &--screen {
+      top: 54px;
+      right: 94px;
+    }
+  }
 }
 
 .promo__availability {
-  padding: 0 20px;
+  padding: 28px 20px 38px;
+  background-color: $dark-blue;
+
+  @media (min-width: $width-tablet) {
+    position: absolute;
+    bottom: 132px;
+    left: 0;
+    max-width: 300px;
+    padding: 0 20px;
+    z-index: 3;
+    background-color: transparent;
+  }
 }
 
 .promo__button {
-  margin-top: 28px;
+  margin: 0 auto;
   margin-bottom: 32px;
+
+  @media (min-width: $width-tablet) {
+    max-width: none;
+  }
 }
 
 .promo__list {
-  margin: 0;
+  max-width: $width-mobile;
+  margin: 0 auto;
   margin-bottom: 28px;
   padding: 0 38px;
   list-style-type: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: $width-tablet) {
+    max-width: none;
+    padding: 0 46px;
+  }
 }
 
 .promo__icon {
@@ -75,8 +132,12 @@
 }
 
 .promo__text {
-  display: inline-block;
-  margin-bottom: 38px;
+  display: block;
+  font-weight: 300;
   color: $white;
   text-align: center;
+
+  @media (min-width: $width-tablet) {
+    font-size: 18px;
+  }
 }

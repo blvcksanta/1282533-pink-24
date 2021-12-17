@@ -4,6 +4,14 @@
   left: 50%;
   width: 840px;
   transform: translateX(-50%);
+
+  @media (min-width: $width-tablet) {
+    max-width: $width-tablet+200px;
+    width: 100%;
+    margin: 0 auto;
+    position: static;
+    transform: translateX(0);
+  }
 }
 
 .table__title,
@@ -11,6 +19,10 @@
   padding: 0;
   width: 280px;
   box-sizing: border-box;
+
+  @media (min-width: $width-tablet) {
+    width: 152px;
+  }
 }
 
 .table__title {
@@ -36,6 +48,7 @@
     content: "хит";
     text-transform: uppercase;
     font-size: 14px;
+    line-height: 30px;
     font-weight: 400;
 
     @include center;
@@ -46,6 +59,29 @@
     width: 105px;
     background-color: $magenta;
     transform: rotate(-45deg);
+  }
+
+  @media (min-width: $width-tablet) {
+    padding-bottom: 8px;
+
+    &--mobile {
+      display: table-cell;
+      background-color: transparent;
+      border-left: none;
+    }
+
+    &--border-left-top {
+      border-radius: 1px 0 0 0;
+    }
+
+    &--border-right-top {
+      border-radius: 0 1px 0 0;
+    }
+
+    &--hit::before {
+      top: 10px;
+      left: -33px;
+    }
   }
 }
 
@@ -98,6 +134,38 @@
     content: "Комментарии";
     text-transform: uppercase;
   }
+
+  @media (min-width: $width-tablet) {
+    padding: 8px 15px;
+
+    &--peculiarities {
+      display: table-cell;
+    }
+
+    &--filtr::before {
+      content: "";
+    }
+
+    &--smile::before {
+      content: "";
+    }
+
+    &--comments::before {
+      content: "";
+    }
+
+    &--border-left-top {
+      border-radius: 1px 0 0 0;
+    }
+
+    &--border-left-bottom {
+      border-radius: 0 0 0 1px;
+    }
+
+    &--border-right-bottom {
+      border-radius: 0 0 1px 0;
+    }
+  }
 }
 
 .table__svg {
@@ -118,5 +186,10 @@
     width: 27px;
     height: 27px;
     fill: $tomato;
+  }
+
+  @media (min-width: $width-tablet) {
+    float: none;
+    margin: 0 auto;
   }
 }

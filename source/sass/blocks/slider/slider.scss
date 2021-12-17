@@ -1,12 +1,21 @@
 .slider__item {
   margin-bottom: 45px;
+
+  @media (min-width: $width-tablet) {
+    margin-bottom: 40px;
+  }
 }
 
 .slider__toogles {
   margin: 0;
-  margin-bottom: 5px;
   line-height: 0;
   text-align: center;
+
+  @media (min-width: $width-tablet) {
+    &--table {
+      display: none;
+    }
+  }
 }
 
 .slider__toogle {

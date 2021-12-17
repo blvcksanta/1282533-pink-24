@@ -25,12 +25,16 @@
   top: 67px;
   left: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 10;
 
   @include reset-list;
 
   &--disable {
     display: none;
+  }
+
+  @media (min-width: $width-tablet) {
+    top: 111px;
   }
 }
 

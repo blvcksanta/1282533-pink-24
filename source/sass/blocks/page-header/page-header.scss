@@ -1,29 +1,65 @@
 .page-header {
-  position: relative;
+  height: 462px;
+  background-image: url("../../../img/back-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: $dark-blue;
+
+  @media (min-width: $width-tablet) {
+    height: 729px;
+    background-image: url("../../../img/back-tablet.jpg");
+  }
 }
 
 .page-header__content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  height: 66px;
+  padding-top: 23px;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
   background-color: rgba(0, 0, 0, 0.3);
 
   &--active {
     box-shadow: 0 1px 0 0 #000000;
     background-color: $dark-blue;
   }
+
+  @media (min-width: $width-tablet) {
+    height: 110px;
+    padding-top: 27px;
+  }
 }
 
 .page-header__logo {
-  margin: 22px 0 21px 20px;
-  width: 74px;
-  height: 23px;
-  fill: $white;
+  margin-left: 20px;
+
+  &--mobile {
+    width: 74px;
+    height: 23px;
+    fill: $white;
+  }
+
+  &--tablet {
+    width: 145px;
+    height: 40px;
+    fill: $white;
+    color: $white;
+    display: none;
+  }
+
+  @media (min-width: $width-tablet) {
+    &--mobile {
+      display: none;
+    }
+
+    &--tablet {
+      display: block;
+    }
+  }
 }
 
 .page-header__nav {
-  margin: 22px 20px 18px 0;
+  margin-right: 20px;
 }

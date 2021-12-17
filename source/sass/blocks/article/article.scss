@@ -1,3 +1,75 @@
 .article {
   display: none;
+  position: relative;
+  margin-top: -65px;
+  background-color: $white;
+
+  @media (min-width: $width-tablet) {
+    display: block;
+  }
+}
+
+.article__wrapper {
+  max-width: $width-tablet+200px;
+
+  @include ears;
+  padding-top: 55px;
+  display: grid;
+  grid-template-columns: 238px 1fr;
+  column-gap: 72px;
+}
+
+.article__icon {
+  display: block;
+  width: 238px;
+  height: 276px;
+  background: url("../../../img/svg/icon/icon-timer.svg") no-repeat center $white;
+}
+
+.article__description {
+  padding-top: 50px;
+
+  @media (min-width: 704px) {
+    br {
+      display: none;
+    }
+  }
+}
+
+.article__title {
+  margin-bottom: 11px;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+.article__text {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.article__link {
+  color: $magenta;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    outline: none;
+    color: $green;
+  }
+
+  &:focus:not(:focus-visible) {
+    color: $magenta;
+  }
+
+  &:focus-visible {
+    outline: none;
+    color: $green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
