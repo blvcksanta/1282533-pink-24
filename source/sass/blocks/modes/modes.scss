@@ -1,5 +1,5 @@
 .modes {
-  background: linear-gradient(176deg, rgba(255, 255, 255, 1) 10%, rgba(242, 242, 242, 1) 10%);
+  background: linear-gradient(176deg, rgba(255, 255, 255, 1) 11%, rgba(242, 242, 242, 1) 11%);
 
   @media (min-width: $width-tablet) {
     background: linear-gradient(176deg, rgba(255, 255, 255, 1) 15%, rgba(242, 242, 242, 1) 15.2%);
@@ -8,11 +8,12 @@
 
 .modes__wrapper {
   overflow-x: hidden;
-  padding-top: 100px;
-  padding-bottom: 45px;
+  padding-top: 143px;
+  padding-bottom: 49px;
 
   @media (min-width: $width-tablet) {
     @include ears;
-    padding-top: 120px;
+    padding-top: 115px;
+    padding-bottom: 69px;
   }
 }

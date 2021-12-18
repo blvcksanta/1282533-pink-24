@@ -1,6 +1,6 @@
 .promo {
   margin: 0 auto;
-  margin-top: -366px;
+  margin-top: -372px;
 
   @media (min-width: $width-tablet) {
     margin-top: -545px;
@@ -16,7 +16,7 @@
   @include ears;
   color: $white;
   text-align: center;
-  margin-bottom: 22px;
+  margin-bottom: 28px;
 
   br {
     display: none;
@@ -70,12 +70,14 @@
 }
 
 .promo__availability {
-  padding: 28px 20px 38px;
+  @include ears;
+  padding-top: 28px;
+  padding-bottom: 31px;
   background-color: $dark-blue;
 
   @media (min-width: $width-tablet) {
     position: absolute;
-    bottom: 132px;
+    bottom: 114px;
     left: 0;
     max-width: 300px;
     padding: 0 20px;
@@ -86,19 +88,21 @@
 
 .promo__button {
   margin: 0 auto;
-  margin-bottom: 32px;
+  margin-bottom: 34px;
 
   @media (min-width: $width-tablet) {
     max-width: none;
+    margin-bottom: 47px;
   }
 }
 
 .promo__list {
   max-width: $width-mobile;
+
+  @include reset-list;
   margin: 0 auto;
-  margin-bottom: 28px;
+  margin-bottom: 19px;
   padding: 0 38px;
-  list-style-type: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -106,6 +110,7 @@
   @media (min-width: $width-tablet) {
     max-width: none;
     padding: 0 46px;
+    margin-bottom: 32px;
   }
 }
 

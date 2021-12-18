@@ -1,16 +1,18 @@
 .reviews {
+  position: relative;
   background-color: $white;
   margin: 0 auto;
+  margin-top: -43px;
 }
 
 .reviews__wrapper {
   @include ears;
-  padding-top: 50px;
+  padding-top: 44px;
   display: flex;
   flex-direction: column;
 
   @media (min-width: $width-tablet) {
-    padding-top: 100px;
+    padding-top: 90px;
     max-width: $width-tablet+200px;
   }
 }
@@ -24,6 +26,7 @@
 .reviews__text {
   order: 1;
   margin: 0;
+  line-height: 30px;
   text-align: center;
 
   @media (min-width: $width-tablet) {
@@ -37,7 +40,7 @@
 .reviews__author {
   display: block;
   text-align: center;
-  margin-bottom: 31px;
+  margin-bottom: 16px;
 
   @media (min-width: $width-tablet) {
     margin-bottom: 0;
