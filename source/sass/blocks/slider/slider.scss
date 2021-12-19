@@ -24,6 +24,10 @@
       display: none;
     }
   }
+
+  @media (min-width: $width-desktop) {
+    display: none;
+  }
 }
 
 .slider__toogle {

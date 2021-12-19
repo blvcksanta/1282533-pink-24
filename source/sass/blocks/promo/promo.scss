@@ -5,11 +5,21 @@
   @media (min-width: $width-tablet) {
     margin-top: -545px;
   }
+
+  @media (min-width: $width-desktop) {
+    margin-top: -645px;
+  }
 }
 
 .promo__wrapper {
-  position: relative;
-  max-width: $width-tablet+200px;
+  @media (min-width: $width-tablet) {
+    position: relative;
+    max-width: $width-tablet+200px;
+  }
+
+  @media (min-width: $width-desktop) {
+    max-width: $width-desktop;
+  }
 }
 
 .promo__title {
@@ -34,6 +44,11 @@
       display: inline;
     }
   }
+
+  @media (min-width: $width-desktop) {
+    top: 0;
+    line-height: 68px;
+  }
 }
 
 .promo__picture {
@@ -43,6 +58,12 @@
 
   @media (min-width: $width-tablet) {
     max-width: $width-tablet;
+  }
+
+  @media (min-width: $width-desktop) {
+    margin: 0;
+    margin-left: auto;
+    max-width: 1050px;
   }
 }
 
@@ -67,6 +88,13 @@
       right: 94px;
     }
   }
+
+  @media (min-width: $width-desktop) {
+    &--screen {
+      top: 65px;
+      right: 250px;
+    }
+  }
 }
 
 .promo__availability {
@@ -77,12 +105,15 @@
 
   @media (min-width: $width-tablet) {
     position: absolute;
-    bottom: 114px;
+    bottom: 83px;
     left: 0;
     max-width: 300px;
-    padding: 0 20px;
     z-index: 3;
     background-color: transparent;
+  }
+
+  @media (min-width: $width-desktop) {
+    bottom: 93px;
   }
 }
 
@@ -93,6 +124,10 @@
   @media (min-width: $width-tablet) {
     max-width: none;
     margin-bottom: 47px;
+  }
+
+  @media (min-width: $width-desktop) {
+    margin-bottom: 70px;
   }
 }
 
@@ -111,6 +146,10 @@
     max-width: none;
     padding: 0 46px;
     margin-bottom: 32px;
+  }
+
+  @media (min-width: $width-desktop) {
+    margin-bottom: 50px;
   }
 }
 
@@ -144,5 +183,9 @@
 
   @media (min-width: $width-tablet) {
     font-size: 18px;
+  }
+
+  @media (min-width: $width-desktop) {
+    line-height: 24px;
   }
 }

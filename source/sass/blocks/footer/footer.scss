@@ -7,11 +7,17 @@
   @media (min-width: $width-tablet) {
     max-width: $width-tablet+200px;
     padding: 36px 0;
-    padding-left: 20px;
-    padding-right: 20px;
+
+    @include ears;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
+  }
+
+  @media (min-width: $width-desktop) {
+    max-width: $width-desktop;
+    padding-top: 70px;
+    padding-bottom: 75px;
   }
 }
 
