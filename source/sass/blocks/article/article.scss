@@ -34,12 +34,12 @@
   display: block;
   width: 238px;
   height: 276px;
-  background: url("../../../img/svg/icon/icon-timer-tablet.svg") no-repeat center;
+  background: url("../img/svg/icon/icon-timer-tablet.svg") no-repeat center;
 
   @media (min-width: $width-desktop) {
     width: 298px;
     height: 345px;
-    background: url("../../../img/svg/icon/icon-timer-desktop.svg") no-repeat center;
+    background: url("../img/svg/icon/icon-timer-desktop.svg") no-repeat center;
   }
 }
 

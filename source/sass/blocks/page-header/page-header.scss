@@ -1,6 +1,6 @@
 .page-header {
   height: 462px;
-  background-image: url("../../../img/back-mobile.jpg");
+  background-image: url("../img/back-mobile.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -8,12 +8,12 @@
 
   @media (min-width: $width-tablet) {
     height: 729px;
-    background-image: url("../../../img/back-tablet.jpg");
+    background-image: url("../img/back-tablet.jpg");
   }
 
   @media (min-width: $width-desktop) {
     height: 853px;
-    background-image: url("../../../img/back-desktop.jpg");
+    background-image: url("../img/back-desktop.jpg");
   }
 }
 
