@@ -6,29 +6,34 @@
 @import "./global/general.scss";
 
 // Стили шапки и подвала страницы
-@import "./page-header/page-header.scss";
-@import "./footer/footer.scss";
+@import "./blocks/page-header/page-header.scss";
+@import "./blocks/nav/nav.scss";
+@import "./blocks/social/social.scss";
+@import "./blocks/footer/footer.scss";
 
 // Стили для заголовка страницы с ФОРМАМИ и ГАЛЕРЕЕЙ
-@import "./page-main-title/page-main-title.scss";
+@import "./blocks/page-main-title/page-main-title.scss";
 
 // Стили главной страницы
-@import "./index/promo/promo.scss";
-@import "./index/possibility/possibility.scss";
-@import "./index/article/article.scss";
-@import "./index/reviews/reviews.scss";
-@import "./index/contacts/contacts.scss";
+@import "./blocks/promo/promo.scss";
+@import "./blocks/possibility/possibility.scss";
+@import "./blocks/article/article.scss";
+@import "./blocks/reviews/reviews.scss";
+@import "./blocks/modes/modes.scss";
+@import "./blocks/table/table.scss";
+@import "./blocks/contacts/contacts.scss";
+@import "./blocks/slider/slider.scss";
 
 // Стили страницы с формами
-@import "./form/questionnaire/questionnaire.scss";
-@import "./form/fieldset/fieldset.scss";
-@import "./form/achievements/achievements.scss";
-@import "./form/application/application.scss";
-@import "./form/thoughts/thoughts.scss";
+@import "./blocks/questionnaire/questionnaire.scss";
+@import "./blocks/fieldset/fieldset.scss";
+@import "./blocks/achievements/achievements.scss";
+@import "./blocks/application/application.scss";
+@import "./blocks/thoughts/thoughts.scss";
 
 // Стили фотогалереи
-@import "./catalog/subtitle/subtitle.scss";
-@import "./catalog/photo-card/photo-card.scss";
-@import "./catalog/like/like.scss";
-@import "./catalog/gallery/gallery.scss";
-@import "./catalog/photo-editor/photo-editor.scss";
+@import "./blocks/subtitle/subtitle.scss";
+@import "./blocks/like/like.scss";
+@import "./blocks/gallery/gallery.scss";
+@import "./blocks/photo-card/photo-card.scss";
+@import "./blocks/photo-editor/photo-editor.scss";

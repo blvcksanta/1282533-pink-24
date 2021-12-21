@@ -1,0 +1,27 @@
+.modes {
+  background: linear-gradient(176deg, rgba(255, 255, 255, 1) 11%, rgba(242, 242, 242, 1) 11%);
+
+  @media (min-width: $width-tablet) {
+    background: linear-gradient(176deg, rgba(255, 255, 255, 1) 15%, rgba(242, 242, 242, 1) 15.2%);
+  }
+
+  @media (min-width: $width-desktop) {
+    background: linear-gradient(175.2deg, rgba(255, 255, 255, 1) 17%, rgba(242, 242, 242, 1) 17.2%);
+  }
+}
+
+.modes__wrapper {
+  overflow-x: hidden;
+  padding-top: 140px;
+  padding-bottom: 49px;
+
+  @media (min-width: $width-tablet) {
+    @include ears;
+    padding-top: 115px;
+    padding-bottom: 69px;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding: 160px 0 93px;
+  }
+}

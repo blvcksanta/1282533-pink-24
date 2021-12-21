@@ -1,0 +1,15 @@
+.gallery__list {
+  @include reset-list;
+}
+
+.gallery__item {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  @include ears;
+
+  &--panorama {
+    padding: 0;
+  }
+}

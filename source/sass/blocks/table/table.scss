@@ -1,0 +1,225 @@
+.table {
+  border-spacing: 0;
+  position: relative;
+  left: 50%;
+  width: 840px;
+  transform: translateX(-50%);
+
+  @media (min-width: $width-tablet) {
+    max-width: $width-tablet+200px;
+    width: 100%;
+    margin: 0 auto;
+    position: static;
+    transform: translateX(0);
+  }
+
+  @media (min-width: $width-desktop) {
+    max-width: 940px;
+  }
+}
+
+.table__title,
+.table__data {
+  padding: 0;
+  width: 280px;
+  box-sizing: border-box;
+
+  @media (min-width: $width-tablet) {
+    width: 152px;
+  }
+
+  @media (min-width: $width-desktop) {
+    width: 235px;
+  }
+}
+
+.table__title {
+  padding-top: 10px;
+  padding-bottom: 27px;
+  background-color: $dark-blue;
+  border-left: 2px solid $grey;
+  color: $white;
+  font-size: 16px;
+  line-height: 30px;
+  position: relative;
+  overflow: hidden;
+
+  &:nth-child(2) {
+    border-left: none;
+  }
+
+  &--mobile {
+    display: none;
+  }
+
+  &--hit::before {
+    content: "хит";
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 400;
+
+    @include center;
+    position: absolute;
+    top: 17px;
+    left: -25px;
+    height: 23px;
+    width: 105px;
+    background-color: $magenta;
+    transform: rotate(-45deg);
+  }
+
+  @media (min-width: $width-tablet) {
+    padding-bottom: 8px;
+
+    &--mobile {
+      display: table-cell;
+      background-color: transparent;
+      border-left: none;
+    }
+
+    &--border-left-top {
+      border-radius: 1px 0 0 0;
+    }
+
+    &--border-right-top {
+      border-radius: 0 1px 0 0;
+    }
+
+    &--hit::before {
+      top: 10px;
+      left: -33px;
+    }
+  }
+
+  @media (min-width: $width-desktop) {
+    font-size: inherit;
+    padding-top: 14px;
+    padding-bottom: 19px;
+
+    &--hit::before {
+      top: 13px;
+      left: -26px;
+    }
+  }
+}
+
+.table__mode {
+  display: block;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  @media (min-width: $width-desktop) {
+    margin-bottom: 1px;
+  }
+}
+
+.table__price {
+  display: block;
+  margin-top: -3px;
+  font-weight: 300;
+  font-size: 18px;
+  text-transform: uppercase;
+
+  @media (min-width: $width-desktop) {
+    font-size: 24px;
+  }
+}
+
+.table__row:last-child {
+  .table__data {
+    border-bottom: 2px solid $grey;
+  }
+}
+
+.table__data {
+  padding: 15px 0 15px 20px;
+  line-height: 30px;
+  background-color: $white;
+  border-left: 2px solid $grey;
+  border-top: 2px solid $grey;
+
+  &:last-child {
+    border-right: 2px solid $grey;
+  }
+
+  &--peculiarities {
+    display: none;
+  }
+
+  &--filtr::before {
+    content: "Розовый фильтр";
+    text-transform: uppercase;
+  }
+
+  &--smile::before {
+    content: "Смайлики";
+    text-transform: uppercase;
+  }
+
+  &--comments::before {
+    content: "Комментарии";
+    text-transform: uppercase;
+  }
+
+  @media (min-width: $width-tablet) {
+    padding: 8px 15px;
+
+    &--peculiarities {
+      display: table-cell;
+    }
+
+    &--filtr::before {
+      content: "";
+    }
+
+    &--smile::before {
+      content: "";
+    }
+
+    &--comments::before {
+      content: "";
+    }
+
+    &--border-left-top {
+      border-radius: 1px 0 0 0;
+    }
+
+    &--border-left-bottom {
+      border-radius: 0 0 0 1px;
+    }
+
+    &--border-right-bottom {
+      border-radius: 0 0 1px 0;
+    }
+  }
+
+  @media (min-width: $width-desktop) {
+    padding: 15px 22px;
+  }
+}
+
+.table__svg {
+  display: block;
+  float: right;
+
+  &--yes {
+    margin-top: 5px;
+    margin-right: 19px;
+    width: 31px;
+    height: 21px;
+    fill: $light-green;
+  }
+
+  &--no {
+    margin-right: 20px;
+    width: 27px;
+    height: 27px;
+    fill: $tomato;
+  }
+
+  @media (min-width: $width-tablet) {
+    float: none;
+    margin: 0 auto;
+  }
+}

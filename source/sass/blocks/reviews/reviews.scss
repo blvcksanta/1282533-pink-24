@@ -1,0 +1,132 @@
+.reviews {
+  position: relative;
+  background-color: $white;
+  margin: 0 auto;
+  margin-top: -43px;
+
+  @media (min-width: $width-tablet) {
+    position: static;
+    margin-top: 0;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding-top: 72px;
+  }
+}
+
+.reviews__wrapper {
+  @include ears;
+  padding-top: 44px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $width-tablet) {
+    padding-top: 47px;
+    max-width: $width-tablet+200px;
+  }
+
+  @media (min-width: $width-desktop) {
+    position: relative;
+    padding-top: 112px;
+    max-width: $width-desktop;
+    background-image: url("../img/svg/icon/icon-quotes.svg");
+    background-repeat: no-repeat;
+    background-size: 79px 63px;
+    background-position: center top;
+  }
+}
+
+.reviews__item {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $width-desktop) {
+    margin: 0 auto;
+    max-width: 690px;
+  }
+}
+
+.reviews__text {
+  order: 1;
+  margin: 0;
+  line-height: 30px;
+  text-align: center;
+
+  @media (min-width: $width-tablet) {
+    margin-bottom: 35px;
+    font-size: 18px;
+    line-height: 30px;
+    order: 0;
+  }
+}
+
+.reviews__author {
+  display: block;
+  text-align: center;
+  margin-bottom: 16px;
+
+  @media (min-width: $width-tablet) {
+    margin-bottom: 0;
+  }
+}
+
+.reviews__name {
+  display: block;
+
+  @media (min-width: $width-tablet) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $width-desktop) {
+    font-size: 24px;
+    margin-bottom: 2px;
+  }
+}
+
+.reviews__age {
+  display: none;
+
+  @media (min-width: $width-tablet) {
+    display: block;
+    line-height: 30px;
+    font-style: normal;
+  }
+}
+
+.reviews__buttons {
+  display: none;
+  line-height: 0;
+
+  @media (min-width: $width-desktop) {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 130px;
+    right: 130px;
+    transform: translateY(-65%);
+  }
+}
+
+.reviews__button {
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  background: none;
+  line-height: 0;
+  cursor: pointer;
+
+  &--next {
+    position: absolute;
+    transform: rotate(180deg);
+    top: 0;
+    right: 0;
+  }
+}
+
+.reviews__arrow {
+  width: 22px;
+  height: 41px;
+  fill: $dark-blue-3;
+}

@@ -1,0 +1,50 @@
+.slider__item {
+  margin-bottom: 32px;
+
+  &--table {
+    margin-bottom: 38px;
+  }
+
+  @media (min-width: $width-tablet) {
+    margin-bottom: 36px;
+
+    &--table {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.slider__toogles {
+  margin: 0;
+  line-height: 0;
+  text-align: center;
+
+  @media (min-width: $width-tablet) {
+    &--table {
+      display: none;
+    }
+  }
+
+  @media (min-width: $width-desktop) {
+    display: none;
+  }
+}
+
+.slider__toogle {
+  border: none;
+  padding: 0;
+  width: 6px;
+  height: 6px;
+  background-color: $dark-blue-3;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  &--current {
+    outline: 3px solid $dark-blue;
+    background-color: $white;
+  }
+}
