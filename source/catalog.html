@@ -8,44 +8,47 @@
   </head>
   <body>
     <header class="page-header container">
-      <picture class="page-header__background header-background">
-        <!-- <source media="(max-width: 320px)" srcset="./img/back-mobile.jpg">
-        <source media="(max-width: 660px)" srcset="./img/back-tablet.jpg">
-        <source media="(min-width: 661px)" srcset="./img/back-desktop.jpg"> -->
-        <img class="header-background__img" src="./img/back-mobile.jpg" alt="">
-      </picture>
       <!-- page-header__content--active - класс подставляется, когда активно меню -->
       <div class="page-header__content">
-        <svg class="page-header__logo">
-          <use xlink:href="./img/svg/sprite.svg#logo-mobile"></use>
-        </svg>
-        <nav class="page-header__nav nav">
-          <button class="nav__button">
-            <svg class="nav__burger">
-              <use xlink:href="./img/svg/sprite.svg#menu-burger"></use>
-            </svg>
-            <!-- nav__burger--disable - класс отвечает за сокрытие не активной иконки кнопки меню -->
-            <svg class="nav__burger nav__burger--close nav__burger--disable">
-              <use xlink:href="./img/svg/sprite.svg#menu-close"></use>
-            </svg>
-            <span class="visually-hidden">Открыть/закрыть меню</span>
-          </button>
-          <!-- nav__list--disable - класс отвечает за показ пунктов меню -->
-          <ul class="nav__list nav__list--disable">
-            <li class="nav__item">
-              <a class="nav__link" href="./index.html">Главная</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="./catalog.html">Фотография</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="./form.html">Конкурс</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#">HTML Academy</a>
-            </li>
-          </ul>
-        </nav>
+        <div class="page-header__wrapper">
+          <svg class="page-header__logo page-header__logo--mobile">
+            <use xlink:href="./img/svg/sprite.svg#logo-mobile"></use>
+          </svg>
+          <svg class="page-header__logo page-header__logo--tablet">
+            <use xlink:href="./img/svg/sprite.svg#logo-tablet"></use>
+          </svg>
+          <svg class="page-header__logo page-header__logo--desktop">
+            <use xlink:href="./img/svg/sprite.svg#logo-desktop"></use>
+          </svg>
+          <nav class="page-header__nav nav">
+            <button class="nav__button">
+              <svg class="nav__burger">
+                <use xlink:href="./img/svg/sprite.svg#menu-burger"></use>
+              </svg>
+              <!-- nav__burger--disable - класс отвечает за сокрытие не активной иконки кнопки меню -->
+              <svg class="nav__burger nav__burger--close nav__burger--disable">
+                <use xlink:href="./img/svg/sprite.svg#menu-close"></use>
+              </svg>
+              <span class="visually-hidden">Открыть/закрыть меню</span>
+            </button>
+            <!-- nav__list--disable - класс отвечает за показ пунктов меню -->
+            <!-- nav__link--current - класс отвечает за выделение активного пункта меню -->
+            <ul class="nav__list nav__list--disable">
+              <li class="nav__item">
+                <a class="nav__link nav__link--current" href="./index.html">Главная</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="./catalog.html">Фотографии</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="./form.html">Конкурс</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">HTML Academy</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
     <main class="page-main">
@@ -297,37 +300,35 @@
             <use xlink:href="./img/svg/sprite.svg#logo-tablet"></use>
           </svg>
         </a>
-        <div class="social">
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link" href="#">
-                <svg class="social__icon social__icon--twitter">
-                  <use xlink:href="./img/svg/sprite.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link" href="#">
-                <svg class="social__icon social__icon--facebook">
-                  <use xlink:href="./img/svg/sprite.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link" href="#">
-                <svg class="social__icon social__icon--youtube">
-                  <use xlink:href="./img/svg/sprite.svg#icon-youtube"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-          <a class="page-footer__author" href="#">
-            Разработано
-            <svg class="page-footer__icon">
-              <use xlink:href="./img/svg/sprite.svg#icon-html-academy"></use>
-            </svg>
-          </a>
-        </div>
+        <ul class="page-footer__list social">
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <svg class="social__icon social__icon--twitter">
+                <use xlink:href="./img/svg/sprite.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <svg class="social__icon social__icon--facebook">
+                <use xlink:href="./img/svg/sprite.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <svg class="social__icon social__icon--youtube">
+                <use xlink:href="./img/svg/sprite.svg#icon-youtube"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <a class="page-footer__author" href="#">
+          Разработано
+          <svg class="page-footer__icon">
+            <use xlink:href="./img/svg/sprite.svg#icon-html-academy"></use>
+          </svg>
+        </a>
       </div>
     </footer>
   </body>

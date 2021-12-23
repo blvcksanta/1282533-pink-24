@@ -22,9 +22,34 @@
 }
 
 .page-footer__link {
-  display: inline-block;
+  display: block;
   line-height: 0;
   margin-bottom: 38px;
+  outline-offset: 5px;
+  border-radius: 5px;
+
+  &:hover .page-footer__logo {
+    fill: $dark-blue;
+    color: $magenta;
+  }
+
+  &:focus {
+    outline: 2px solid $green;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $green;
+  }
+
+  &:active .page-footer__logo {
+    fill: $dark-blue;
+    color: $magenta;
+    opacity: 0.3;
+  }
 
   @media (min-width: $width-tablet) {
     margin-bottom: 0;
@@ -52,6 +77,33 @@
   text-decoration: none;
   display: flex;
   align-items: center;
+  outline-offset: 5px;
+  border-radius: 5px;
+
+  &:hover .page-footer__icon {
+    fill: $dark-blue;
+  }
+
+  &:focus {
+    outline: 2px solid $green;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $green;
+  }
+
+  &:active {
+    color: $dark-blue-3;
+    fill: $dark-blue-3;
+  }
+
+  &:active .page-footer__icon {
+    fill: $dark-blue-3;
+  }
 
   @media (min-width: $width-tablet) {
     align-self: center;

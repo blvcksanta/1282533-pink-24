@@ -1,42 +1,95 @@
 .fieldset {
   @include reset-fieldset;
-
-  margin-bottom: 43px;
 }
 
-.questionnaire__contact-information {
-  margin-top: 42px;
-}
-
-.fieldset__wrapper {
+.fieldset__list {
+  @include reset-list;
   @include ears;
+
+  @media (min-width: $width-tablet) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.fieldset__item {
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  @media (min-width: $width-tablet) {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 52px;
+    }
+
+    &--margin {
+      &:not(:last-child) {
+        margin-bottom: 27px;
+      }
+    }
+  }
 }
 
 .fieldset__title {
   display: none;
+
+  @media (min-width: $width-tablet) {
+    &--contact {
+      display: block;
+      font-size: 14px;
+      color: $magenta;
+      text-align: center;
+      text-transform: uppercase;
+      padding: 0 30px;
+    }
+  }
 }
 
 .fieldset__label {
   display: flex;
   flex-direction: column;
 
-  &:not(:last-child) {
-    margin-bottom: 30px;
+  @media (min-width: $width-tablet) {
+    flex-direction: row;
+    align-items: center;
+
+    &--column {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 }
 
 .fieldset__span {
+  margin-left: 25px;
+  margin-bottom: 6px;
   font-size: 14px;
+  text-transform: uppercase;
   color: $magenta;
+
+  @media (min-width: $width-tablet) {
+    margin: 0 20px 0 0;
+
+    &--margin {
+      margin: 0;
+      margin-left: 17px;
+    }
+
+    &--order {
+      order: 2;
+    }
+  }
 }
 
 .fieldset__input {
-  padding: 23px 20px;
+  padding: 15px 20px;
   border: 2px solid $grey;
   border-radius: 1px;
   box-sizing: border-box;
+  width: 100%;
 
-  @include size (280px, 63px);
   @include input-text;
 
   &::placeholder {
@@ -53,22 +106,70 @@
     border-color: $green;
   }
 
-  &:focus:not(:focus-visible) {
-    outline: none;
-    border-color: $grey;
-  }
-
-  &:focus-visible {
-    outline: none;
-    border-color: $green;
-  }
-
   &:not(:placeholder-shown) {
     outline: none;
     border-color: $magenta;
+  }
+
+  @media (min-width: $width-tablet) {
+    &--margin {
+      margin-bottom: 10px;
+    }
+
+    &--padding {
+      padding-right: 79px;
+    }
+
+    &:hover + .fieldset__icon {
+      background-color: $dark-blue;
+    }
+
+    &:focus + .fieldset__icon {
+      background-color: $green;
+    }
+
+    &:focus + .fieldset__icon .fieldset__svg {
+      fill: $white;
+    }
+
+    &:not(:placeholder-shown) + .fieldset__icon {
+      background-color: $magenta;
+    }
+
+    &:not(:placeholder-shown) + .fieldset__icon .fieldset__svg {
+      fill: $white;
+    }
   }
 }
 
 .fieldset__icon {
   display: none;
+
+  @media (min-width: $width-tablet) {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    display: block;
+    line-height: 0;
+    width: 60px;
+    height: 60px;
+    background-color: $grey;
+
+    @include center;
+    border-radius: 0 1px 1px 0;
+  }
+}
+
+.fieldset__svg {
+  fill: $magenta;
+
+  &--phone {
+    width: 20px;
+    height: 19px;
+  }
+
+  &--mail {
+    width: 18px;
+    height: 13px;
+  }
 }

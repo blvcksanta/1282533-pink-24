@@ -1,39 +1,114 @@
 .questionnaire {
-  position: relative;
   background-color: $white;
+}
+
+.questionnaire__wrapper {
+  padding-top: 43px;
+
+  @media (min-width: $width-tablet) {
+    @include ears;
+  }
 }
 
 .questionnaire__description {
   margin: 0;
-  margin-bottom: 55px;
+  margin-bottom: 35px;
 
   @include ears;
-  padding-top: 55px;
   text-align: center;
   line-height: 30px;
+
+  @media (min-width: $width-tablet) {
+    font-size: 18px;
+    margin-bottom: 72px;
+    padding: 48px 65px 0;
+  }
+}
+
+.questionnaire__description-span {
+  display: none;
+
+  @media (min-width: $width-tablet) {
+    display: inline;
+  }
+}
+
+.questionnaire__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.questionnaire__name-information {
+  margin-bottom: 22px;
+
+  @media (min-width: $width-tablet) {
+    order: 1;
+    margin-bottom: 50px;
+  }
 }
 
 .questionnaire__achievements {
-  overflow-x: hidden;
+  @media (min-width: $width-tablet) {
+    order: 4;
+    margin-bottom: 58px;
+  }
+}
+
+.questionnaire__contact-information {
+  padding-top: 32px;
+  padding-bottom: 25px;
+
+  @media (min-width: $width-tablet) {
+    order: 3;
+
+    @include visible-fieldset;
+    margin-bottom: 53px;
+    padding-top: 28px;
+    padding-bottom: 27px;
+  }
 }
 
 .questionnaire__application-information {
-  overflow-x: hidden;
+  margin-bottom: 12px;
+
+  @media (min-width: $width-tablet) {
+    order: 2;
+    margin-bottom: 54px;
+  }
+}
+
+.questionnaire__thoughts {
+  @media (min-width: $width-tablet) {
+    order: 5;
+    margin-bottom: 10px;
+  }
 }
 
 .questionnaire__submit {
-  padding: 50px 20px 0 20px;
+  @include ears;
+  padding-top: 45px;
+  padding-bottom: 25px;
+
+  @media (min-width: $width-tablet) {
+    padding: 55px 0 48px;
+    order: 6;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
 }
 
 .questionnaire__button-submit {
-  padding: 0;
-  margin-bottom: 30px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 35px;
+  padding: 15px 45px;
 
   @include input-text;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
   color: $white;
-
-  @include size (280px, 60px);
   box-sizing: border-box;
   border: 2px solid $green;
   border-radius: 1px;
@@ -65,12 +140,18 @@
     background-color: $dark-green;
     color: $white-3;
   }
+
+  @media (min-width: $width-tablet) {
+    margin: 0;
+    padding: 15px 57px;
+  }
 }
 
 .questionnaire__footnote {
   margin: 0;
   line-height: 30px;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .questionnaire__span {

@@ -1,57 +1,60 @@
 .achievements {
   @include reset-fieldset;
-
+  padding-top: 98px;
+  padding-bottom: 47px;
   position: relative;
   background-color: $light-grey;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 100%;
-    width: 9999px;
-    height: 100%;
-    box-shadow: inset 0 0 0 9999px $light-grey;
+  @media (min-width: $width-tablet) {
+    @include visible-fieldset;
+    background-color: transparent;
+    padding-top: 42px;
+    padding-bottom: 53px;
   }
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 100%;
-    width: 9999px;
-    height: 100%;
-    box-shadow: inset 0 0 0 9999px $light-grey;
-  }
-}
-
-.achievements__wrapper {
-  @include ears;
-
-  padding-top: 42px;
-  margin-bottom: 55px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
 }
 
 .achievements__title {
-  margin-bottom: 44px;
   padding: 0;
+  text-transform: uppercase;
   line-height: 18px;
   color: $magenta;
-  align-self: center;
   text-align: center;
+  transform: translateY(155%);
+
+  @media (min-width: $width-tablet) {
+    padding: 0 30px;
+    line-height: 30px;
+    transform: translateY(0);
+
+    br {
+      display: none;
+    }
+  }
+}
+
+.achievements__list {
+  @include reset-list;
+  @include ears;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @media (min-width: $width-tablet) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.achievements__item {
+  &:not(:last-child) {
+    margin-bottom: 52px;
+  }
 }
 
 .achievements__label {
   position: relative;
   display: block;
   cursor: pointer;
-
-  &:not(:last-child) {
-    margin-bottom: 47px;
-  }
 }
 
 .achievements__input {
@@ -93,4 +96,8 @@
 
 .achievements__span {
   padding-left: 60px;
+
+  @media (min-width: $width-tablet) {
+    padding-left: 57px;
+  }
 }
