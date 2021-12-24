@@ -16,6 +16,14 @@
   background-color: $white;
   border-radius: 1px 1px 0 0;
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+
+  @media (min-width: $width-tablet) {
+    width: 460px;
+  }
+
+  @media (min-width: $width-desktop) {
+    width: 780px;
+  }
 }
 
 .modal-success__text {
@@ -28,6 +36,12 @@
   font-size: 18px;
   font-weight: 700;
   text-align: center;
+
+  @media (min-width: $width-tablet) {
+    padding: 0 130px;
+    font-size: 30px;
+    line-height: 40px;
+  }
 }
 
 .modal-success__description {
@@ -35,6 +49,21 @@
   margin-bottom: 35px;
   padding: 0 20px;
   text-align: center;
+
+  @media (min-width: $width-tablet) {
+    margin-bottom: 30px;
+    padding: 0 70px;
+    font-size: 18px;
+
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: $width-desktop) {
+    margin-bottom: 40px;
+    padding: 0 200px;
+  }
 }
 
 .modal-success__button-wrapper {
@@ -45,6 +74,10 @@
 
 .modal-success__button {
   margin: 0 auto;
+
+  @media (min-width: $width-desktop) {
+    max-width: 460px;
+  }
 }
 
 .modal-success__disable {

@@ -16,6 +16,17 @@
   background-color: $white;
   border-radius: 1px;
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+
+  @media (min-width: $width-tablet) {
+    width: 460px;
+    padding: 40px 80px 55px;
+  }
+
+  @media (min-width: $width-desktop) {
+    width: 780px;
+    padding: 0;
+    padding-top: 40px;
+  }
 }
 
 .modal-error__title {
@@ -24,12 +35,53 @@
   font-size: 18px;
   font-weight: 700;
   text-align: center;
+
+  br {
+    display: none;
+  }
+
+  @media (min-width: $width-tablet) {
+    font-size: 30px;
+    line-height: 40px;
+
+    br {
+      display: inline;
+    }
+  }
+
+  @media (min-width: $width-desktop) {
+    br {
+      display: none;
+    }
+  }
 }
 
 .modal-error__description {
   margin-top: 0;
   margin-bottom: 40px;
   text-align: center;
+
+  @media (min-width: $width-tablet) {
+    margin-bottom: 35px;
+    font-size: 18px;
+  }
+
+  @media (min-width: $width-desktop) {
+    margin-bottom: 63px;
+    padding: 0 215px;
+  }
+}
+
+.modal-error__button-wrapper {
+  @media (min-width: $width-desktop) {
+    padding: 52px 0;
+    background-color: $light-grey;
+    border-radius: 0 0 1px 1px;
+  }
+}
+
+.modal-error__button {
+  margin: 0 auto;
 }
 
 .modal-error__disable {
