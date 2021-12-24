@@ -8,6 +8,11 @@
   @media (min-width: $width-tablet) {
     @include ears;
   }
+
+  @media (min-width: $width-desktop) {
+    max-width: $width-desktop;
+    margin: 0 auto;
+  }
 }
 
 .questionnaire__description {
@@ -21,7 +26,12 @@
   @media (min-width: $width-tablet) {
     font-size: 18px;
     margin-bottom: 72px;
-    padding: 48px 65px 0;
+    padding: 48px 30px 0;
+  }
+
+  @media (min-width: $width-desktop) {
+    margin-bottom: 66px;
+    padding: 48px 70px 0;
   }
 }
 
@@ -31,120 +41,110 @@
   @media (min-width: $width-tablet) {
     display: inline;
   }
+
+  @media (min-width: $width-desktop) {
+    br {
+      display: none;
+    }
+  }
 }
 
 .questionnaire__form {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  row-gap: 22px;
+  column-gap: 66px;
+
+  @media (min-width: $width-tablet) {
+    row-gap: 50px;
+  }
+
+  @media (min-width: $width-desktop) {
+    row-gap: 45px;
+  }
 }
 
 .questionnaire__name-information {
-  margin-bottom: 22px;
-
   @media (min-width: $width-tablet) {
     order: 1;
-    margin-bottom: 50px;
+  }
+
+  @media (min-width: $width-desktop) {
+    margin-top: 20px;
   }
 }
 
 .questionnaire__achievements {
   @media (min-width: $width-tablet) {
     order: 4;
-    margin-bottom: 58px;
+    grid-column: 1/-1;
+    margin-top: 2px;
+  }
+
+  @media (min-width: $width-desktop) {
+    margin-top: 6px;
   }
 }
 
 .questionnaire__contact-information {
-  padding-top: 32px;
-  padding-bottom: 25px;
+  padding-top: 8px;
 
   @media (min-width: $width-tablet) {
     order: 3;
+    grid-column: 1/-1;
+    margin-top: 4px;
+    padding-top: 28px;
+    padding-bottom: 28px;
 
     @include visible-fieldset;
-    margin-bottom: 53px;
-    padding-top: 28px;
-    padding-bottom: 27px;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding-bottom: 12px;
   }
 }
 
 .questionnaire__application-information {
-  margin-bottom: 12px;
-
   @media (min-width: $width-tablet) {
     order: 2;
-    margin-bottom: 54px;
   }
 }
 
 .questionnaire__thoughts {
   @media (min-width: $width-tablet) {
     order: 5;
-    margin-bottom: 10px;
+    grid-column: 1/-1;
+    margin-top: 8px;
+  }
+
+  @media (min-width: $width-desktop) {
+    margin-top: 12px;
   }
 }
 
 .questionnaire__submit {
   @include ears;
-  padding-top: 45px;
-  padding-bottom: 25px;
+  padding-top: 25px;
+  padding-bottom: 22px;
 
   @media (min-width: $width-tablet) {
-    padding: 55px 0 48px;
+    grid-column: 1/-1;
+    padding: 15px 0 48px;
     order: 6;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
   }
+
+  @media (min-width: $width-desktop) {
+    grid-column: 1/-1;
+    padding: 20px 0 0;
+  }
 }
 
 .questionnaire__button-submit {
-  display: block;
   margin: 0 auto;
   margin-bottom: 35px;
-  padding: 15px 45px;
-
-  @include input-text;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
-  color: $white;
-  box-sizing: border-box;
-  border: 2px solid $green;
-  border-radius: 1px;
-  background-color: $green;
-  cursor: pointer;
-
-  &:hover {
-    border-color: $dark-green;
-    background-color: $dark-green;
-  }
-
-  &:focus {
-    outline: none;
-    border-color: $magenta;
-  }
-
-  &:focus:not(:focus-visible) {
-    outline: none;
-    border-color: $green;
-  }
-
-  &:focus-visible {
-    outline: none;
-    border-color: $magenta;
-  }
-
-  &:active {
-    border-color: $dark-green;
-    background-color: $dark-green;
-    color: $white-3;
-  }
-
-  @media (min-width: $width-tablet) {
-    margin: 0;
-    padding: 15px 57px;
-  }
 }
 
 .questionnaire__footnote {
@@ -152,8 +152,20 @@
   line-height: 30px;
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: $width-desktop) {
+    font-size: 14px;
+  }
 }
 
 .questionnaire__span {
   color: $magenta;
+}
+
+.questionnaire__span-desktop {
+  display: none;
+
+  @media (min-width: $width-desktop) {
+    display: inline;
+  }
 }

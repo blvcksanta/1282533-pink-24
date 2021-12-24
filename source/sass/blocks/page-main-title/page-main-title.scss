@@ -9,6 +9,15 @@
     top: -552px;
     margin-bottom: -493px;
   }
+
+  @media (min-width: $width-desktop) {
+    width: $width-desktop;
+    top: -684px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    margin-bottom: -595px;
+  }
 }
 
 .page-main__wrapper {

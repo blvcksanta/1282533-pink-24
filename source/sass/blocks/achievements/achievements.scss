@@ -1,6 +1,6 @@
 .achievements {
   @include reset-fieldset;
-  padding-top: 98px;
+  padding-top: 100px;
   padding-bottom: 47px;
   position: relative;
   background-color: $light-grey;
@@ -10,6 +10,10 @@
     background-color: transparent;
     padding-top: 42px;
     padding-bottom: 53px;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding-bottom: 60px;
   }
 }
 
@@ -30,6 +34,10 @@
       display: none;
     }
   }
+
+  @media (min-width: $width-desktop) {
+    font-size: 14px;
+  }
 }
 
 .achievements__list {
@@ -43,11 +51,36 @@
     padding-left: 0;
     padding-right: 0;
   }
+
+  @media (min-width: $width-desktop) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 52px;
+  }
 }
 
 .achievements__item {
   &:not(:last-child) {
     margin-bottom: 52px;
+  }
+
+  @media (min-width: $width-desktop) {
+    &--position-1 {
+      grid-column: 1/2;
+      grid-row: 2/3;
+    }
+
+    &--position-2 {
+      grid-column: 3/4;
+      grid-row: 1/2;
+    }
+  }
+
+  @media (min-width: $width-desktop) {
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
   }
 }
 

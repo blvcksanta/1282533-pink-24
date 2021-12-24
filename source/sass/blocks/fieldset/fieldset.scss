@@ -10,6 +10,14 @@
     padding-left: 0;
     padding-right: 0;
   }
+
+  @media (min-width: $width-desktop) {
+    &--grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 70px;
+    }
+  }
 }
 
 .fieldset__item {
@@ -27,6 +35,14 @@
     &--margin {
       &:not(:last-child) {
         margin-bottom: 27px;
+      }
+    }
+  }
+
+  @media (min-width: $width-desktop) {
+    &--margin {
+      &:not(:last-child) {
+        margin-bottom: 0;
       }
     }
   }
