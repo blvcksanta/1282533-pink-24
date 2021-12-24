@@ -92,7 +92,7 @@
 
 .achievements__input {
   &:checked + .achievements__mark {
-    background: url("../../../img/svg/icon/icon-yes.svg") no-repeat center $white;
+    background: url("../img/svg/icon/icon-yes.svg") no-repeat center $white;
   }
 
   &:hover + .achievements__mark {
