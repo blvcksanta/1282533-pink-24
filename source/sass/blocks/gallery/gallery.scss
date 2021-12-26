@@ -2,14 +2,36 @@
   @include reset-list;
 }
 
-.gallery__item {
-  &:not(:last-child) {
-    margin-bottom: 20px;
-  }
+.gallery__main-photo {
+  margin-bottom: 20px;
 
+  @media (min-width: $width-tablet) {
+    margin-bottom: 50px;
+  }
+}
+
+.gallery__less-important-photos {
+  @media (min-width: $width-desktop) {
+    margin: 0 auto;
+    max-width: 940px;
+  }
+}
+
+.gallery__sublist {
+  @include reset-list;
   @include ears;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  column-gap: 20px;
+  row-gap: 20px;
 
-  &--panorama {
+  @media (min-width: $width-desktop) {
     padding: 0;
+    row-gap: 55px;
   }
+}
+
+.gallery__item {
+  display: flex;
+  flex-direction: column;
 }

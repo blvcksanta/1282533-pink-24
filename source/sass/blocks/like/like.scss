@@ -10,6 +10,16 @@
   text-transform: uppercase;
   color: $magenta;
   order: 2;
+
+  @media (min-width: $width-tablet) {
+    order: 1;
+    margin-left: 0;
+    margin-right: auto;
+
+    &--margin {
+      margin-right: 16px;
+    }
+  }
 }
 
 .like__button {
@@ -18,6 +28,10 @@
   background: none;
   box-sizing: border-box;
   cursor: pointer;
+
+  @media (min-width: $width-tablet) {
+    order: 2;
+  }
 }
 
 .like__heart {
