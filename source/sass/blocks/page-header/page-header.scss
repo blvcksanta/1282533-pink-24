@@ -42,11 +42,6 @@
   justify-content: space-between;
   align-items: baseline;
 
-  @media (min-width: $width-tablet) {
-    max-width: $width-tablet;
-    width: 100%;
-  }
-
   @media (min-width: $width-desktop) {
     max-width: 940px;
     width: 100%;

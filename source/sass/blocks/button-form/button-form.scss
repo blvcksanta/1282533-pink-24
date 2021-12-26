@@ -1,0 +1,50 @@
+.button-form {
+  @include input-text;
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: $white;
+  box-sizing: border-box;
+  border: 2px solid $green;
+  border-radius: 1px;
+  background-color: $green;
+  cursor: pointer;
+
+  &:hover {
+    border-color: $dark-green;
+    background-color: $dark-green;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $magenta;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+    border-color: $green;
+  }
+
+  &:focus-visible {
+    outline: none;
+    border-color: $magenta;
+  }
+
+  &:active {
+    border-color: $dark-green;
+    background-color: $dark-green;
+    color: $white-3;
+  }
+
+  @media (min-width: $width-mobile) {
+    max-width: 280px;
+  }
+
+  @media (min-width: $width-tablet) {
+    max-width: 300px;
+    margin: 0;
+  }
+}

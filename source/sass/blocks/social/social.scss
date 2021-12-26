@@ -17,6 +17,34 @@
   border: 3px solid $dark-blue-1;
   border-radius: 50%;
   line-height: 0;
+
+  &:hover {
+    border-color: $dark-blue;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $green;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+    border-color: $dark-blue-1;
+  }
+
+  &:focus-visible {
+    outline: none;
+    border-color: $green;
+  }
+
+  &:active {
+    border-color: $magenta;
+    background-color: $magenta;
+  }
+
+  &:active .social__icon {
+    fill: $white;
+  }
 }
 
 .social__icon {

@@ -1,78 +1,171 @@
 .questionnaire {
-  position: relative;
   background-color: $white;
+}
+
+.questionnaire__wrapper {
+  padding-top: 43px;
+
+  @media (min-width: $width-tablet) {
+    @include ears;
+  }
+
+  @media (min-width: $width-desktop) {
+    max-width: $width-desktop;
+    margin: 0 auto;
+  }
 }
 
 .questionnaire__description {
   margin: 0;
-  margin-bottom: 55px;
+  margin-bottom: 35px;
 
   @include ears;
-  padding-top: 55px;
   text-align: center;
   line-height: 30px;
+
+  @media (min-width: $width-tablet) {
+    font-size: 18px;
+    margin-bottom: 72px;
+    padding: 48px 30px 0;
+  }
+
+  @media (min-width: $width-desktop) {
+    margin-bottom: 66px;
+    padding: 48px 70px 0;
+  }
+}
+
+.questionnaire__description-span {
+  display: none;
+
+  @media (min-width: $width-tablet) {
+    display: inline;
+  }
+
+  @media (min-width: $width-desktop) {
+    br {
+      display: none;
+    }
+  }
+}
+
+.questionnaire__form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  row-gap: 22px;
+  column-gap: 66px;
+
+  @media (min-width: $width-tablet) {
+    row-gap: 50px;
+  }
+
+  @media (min-width: $width-desktop) {
+    row-gap: 45px;
+  }
+}
+
+.questionnaire__name-information {
+  @media (min-width: $width-tablet) {
+    order: 1;
+  }
+
+  @media (min-width: $width-desktop) {
+    margin-top: 20px;
+  }
 }
 
 .questionnaire__achievements {
-  overflow-x: hidden;
+  @media (min-width: $width-tablet) {
+    order: 4;
+    grid-column: 1/-1;
+    margin-top: 2px;
+  }
+
+  @media (min-width: $width-desktop) {
+    margin-top: 6px;
+  }
+}
+
+.questionnaire__contact-information {
+  padding-top: 8px;
+
+  @media (min-width: $width-tablet) {
+    order: 3;
+    grid-column: 1/-1;
+    margin-top: 4px;
+    padding-top: 28px;
+    padding-bottom: 28px;
+
+    @include visible-fieldset;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding-bottom: 12px;
+  }
 }
 
 .questionnaire__application-information {
-  overflow-x: hidden;
+  @media (min-width: $width-tablet) {
+    order: 2;
+  }
+}
+
+.questionnaire__thoughts {
+  @media (min-width: $width-tablet) {
+    order: 5;
+    grid-column: 1/-1;
+    margin-top: 8px;
+  }
+
+  @media (min-width: $width-desktop) {
+    margin-top: 12px;
+  }
 }
 
 .questionnaire__submit {
-  padding: 50px 20px 0 20px;
+  @include ears;
+  padding-top: 25px;
+  padding-bottom: 22px;
+
+  @media (min-width: $width-tablet) {
+    grid-column: 1/-1;
+    padding: 15px 0 48px;
+    order: 6;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  @media (min-width: $width-desktop) {
+    grid-column: 1/-1;
+    padding: 20px 0 0;
+  }
 }
 
 .questionnaire__button-submit {
-  padding: 0;
-  margin-bottom: 30px;
-
-  @include input-text;
-  font-weight: 700;
-  color: $white;
-
-  @include size (280px, 60px);
-  box-sizing: border-box;
-  border: 2px solid $green;
-  border-radius: 1px;
-  background-color: $green;
-  cursor: pointer;
-
-  &:hover {
-    border-color: $dark-green;
-    background-color: $dark-green;
-  }
-
-  &:focus {
-    outline: none;
-    border-color: $magenta;
-  }
-
-  &:focus:not(:focus-visible) {
-    outline: none;
-    border-color: $green;
-  }
-
-  &:focus-visible {
-    outline: none;
-    border-color: $magenta;
-  }
-
-  &:active {
-    border-color: $dark-green;
-    background-color: $dark-green;
-    color: $white-3;
-  }
+  margin: 0 auto;
+  margin-bottom: 35px;
 }
 
 .questionnaire__footnote {
   margin: 0;
   line-height: 30px;
   text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: $width-desktop) {
+    font-size: 14px;
+  }
 }
 
 .questionnaire__span {
   color: $magenta;
+}
+
+.questionnaire__span-desktop {
+  display: none;
+
+  @media (min-width: $width-desktop) {
+    display: inline;
+  }
 }

@@ -195,6 +195,16 @@
 .possibility__phone {
   display: block;
   margin: 0 auto;
+
+  &--none {
+    display: none;
+  }
+
+  @media (min-width: $width-desktop) {
+    &--none {
+      display: block;
+    }
+  }
 }
 
 .possibility__screen {
@@ -204,11 +214,19 @@
   right: 0;
   margin: 0 auto;
 
+  &--none {
+    display: none;
+  }
+
   @media (min-width: $width-tablet) {
     top: 60px;
   }
 
   @media (min-width: $width-desktop) {
     top: 40px;
+
+    &--none {
+      display: block;
+    }
   }
 }

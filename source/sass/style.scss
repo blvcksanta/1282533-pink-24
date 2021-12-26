@@ -25,11 +25,14 @@
 @import "./blocks/slider/slider.scss";
 
 // Стили страницы с формами
-@import "./blocks/questionnaire/questionnaire.scss";
 @import "./blocks/fieldset/fieldset.scss";
+@import "./blocks/questionnaire/questionnaire.scss";
 @import "./blocks/achievements/achievements.scss";
 @import "./blocks/application/application.scss";
 @import "./blocks/thoughts/thoughts.scss";
+@import "./blocks/button-form/button-form.scss";
+@import "./blocks/modal-error/modal-error.scss";
+@import "./blocks/modal-success/modal-success.scss";
 
 // Стили фотогалереи
 @import "./blocks/subtitle/subtitle.scss";

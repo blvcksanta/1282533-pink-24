@@ -13,8 +13,16 @@
 
 @mixin reset-fieldset {
   border: none;
-  margin: 0;
+  margin-left: 0;
+  margin-right: 0;
   padding: 0;
+}
+
+@mixin visible-fieldset {
+  border: 2px solid $grey;
+  border-radius: 1px;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 @mixin ears {
