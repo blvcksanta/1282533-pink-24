@@ -33,9 +33,12 @@
   background-color: $light-grey;
 
   @media (min-width: $width-tablet) {
-    padding-left: 150px;
     padding-top: 57px;
     padding-bottom: 56px;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding-left: 150px;
   }
 }
 
