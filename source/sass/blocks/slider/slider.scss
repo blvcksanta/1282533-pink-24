@@ -1,12 +1,12 @@
 .slider__item {
-  margin-bottom: 32px;
+  margin-bottom: 25px;
 
   &--table {
-    margin-bottom: 38px;
+    margin-bottom: 32px;
   }
 
   @media (min-width: $width-tablet) {
-    margin-bottom: 36px;
+    margin-bottom: 29px;
 
     &--table {
       margin-bottom: 0;
@@ -16,6 +16,7 @@
 
 .slider__toogles {
   margin: 0;
+  font-size: 0;
   line-height: 0;
   text-align: center;
 
@@ -31,20 +32,48 @@
 }
 
 .slider__toogle {
+  padding: 9.5px;
   border: none;
-  padding: 0;
-  width: 6px;
-  height: 6px;
-  background-color: $dark-blue-3;
-  border-radius: 50%;
+  background-color: initial;
+  border-radius: 5px;
   cursor: pointer;
 
-  &:not(:last-child) {
-    margin-right: 15px;
+  &:hover {
+    .slider__mark {
+      background-color: $dark-blue-6;
+    }
+  }
+
+  &:focus {
+    outline: 2px solid $green;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $green;
+  }
+
+  &:active {
+    .slider__mark {
+      background-color: $dark-blue-1;
+    }
   }
 
   &--current {
-    outline: 3px solid $dark-blue;
-    background-color: $white;
+    .slider__mark {
+      outline: 3px solid $dark-blue;
+      background-color: $white;
+    }
   }
+}
+
+.slider__mark {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: $dark-blue-3;
 }

@@ -1,9 +1,3 @@
-@mixin size($width, $height) {
-  max-width: $width;
-  width: 100%;
-  height: $height;
-}
-
 @mixin reset-list {
   margin-top: 0;
   margin-bottom: 0;

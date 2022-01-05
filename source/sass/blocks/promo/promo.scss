@@ -99,7 +99,7 @@
 
 .promo__availability {
   @include ears;
-  padding-top: 28px;
+  padding-top: 27px;
   padding-bottom: 31px;
   background-color: $dark-blue;
 
@@ -121,9 +121,34 @@
   margin: 0 auto;
   margin-bottom: 34px;
 
+  &:hover {
+    background-color: $white;
+    color: $magenta;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $green;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+    border-color: $white;
+  }
+
+  &:focus-visible {
+    outline: none;
+    border-color: $green;
+  }
+
+  &:active {
+    background-color: $white;
+    color: $magenta-3;
+  }
+
   @media (min-width: $width-tablet) {
     max-width: none;
-    margin-bottom: 47px;
+    margin-bottom: 45px;
   }
 
   @media (min-width: $width-desktop) {

@@ -3,23 +3,29 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./css/style.css">
     <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./favicon.ico">
+    <link rel="icon" href="./img/favicon/32.svg" type="image/svg+xml">
+    <link rel="icon" href="./img/favicon/32.png" type="image/png">
+    <link rel="apple-touch-icon" href="./img/favicon/152.png">
   </head>
   <body>
-    <header class="page-header container">
+    <header class="page-header container" id="go-to-top">
       <!-- page-header__content--active - класс подставляется, когда активно меню -->
       <div class="page-header__content">
         <div class="page-header__wrapper">
-          <svg class="page-header__logo page-header__logo--mobile">
-            <use xlink:href="./img/svg/sprite.svg#logo-mobile"></use>
-          </svg>
-          <svg class="page-header__logo page-header__logo--tablet">
-            <use xlink:href="./img/svg/sprite.svg#logo-tablet"></use>
-          </svg>
-          <svg class="page-header__logo page-header__logo--desktop">
-            <use xlink:href="./img/svg/sprite.svg#logo-desktop"></use>
-          </svg>
+          <a class="page-header__link" href="index.html">
+            <svg class="page-header__logo page-header__logo--mobile">
+              <use xlink:href="./img/svg/sprite.svg#logo-mobile"></use>
+            </svg>
+            <svg class="page-header__logo page-header__logo--tablet">
+              <use xlink:href="./img/svg/sprite.svg#logo-tablet"></use>
+            </svg>
+            <svg class="page-header__logo page-header__logo--desktop">
+              <use xlink:href="./img/svg/sprite.svg#logo-desktop"></use>
+            </svg>
+          </a>
           <nav class="page-header__nav nav">
             <button class="nav__button">
               <svg class="nav__burger">
@@ -35,16 +41,24 @@
             <!-- nav__link--current - класс отвечает за выделение активного пункта меню -->
             <ul class="nav__list nav__list--disable">
               <li class="nav__item">
-                <a class="nav__link" href="./index.html">Главная</a>
+                <a class="nav__link" href="./index.html">
+                  Главная
+                </a>
               </li>
               <li class="nav__item">
-                <a class="nav__link nav__link--current" href="./catalog.html">Фотографии</a>
+                <a class="nav__link nav__link--current" href="./catalog.html">
+                  Фотографии
+                </a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href="./form.html">Конкурс</a>
+                <a class="nav__link" href="./form.html">
+                  Конкурс
+                </a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href="#">HTML Academy</a>
+                <a class="nav__link" href="#">
+                  HTML Academy
+                </a>
               </li>
             </ul>
           </nav>
@@ -72,25 +86,35 @@
         </div></section>
       <!-- Галерея -->
       <section class="gallery">
-        <h2 class="visually-hidden">Фото галерея</h2>
+        <h2 class="visually-hidden">
+          Фото галерея
+        </h2>
         <ul class="gallery__list container">
           <li class="gallery__main-photo photo-card">
-            <h2 class="visually-hidden">Панорама дня</h2>
+            <h2 class="visually-hidden">
+              Панорама дня
+            </h2>
             <picture class="photo-card__container photo-card__container--panorama">
-              <source media="(min-width: 1200px)" srcset="./img/desktop/panorama-desktop.jpg">
-              <source media="(min-width: 660px)" srcset="./img/tablet/panorama-tablet.jpg">
-              <source media="(min-width: 320px)" srcset="./img/mobile/panorama-mobile.jpg">
+              <source media="(min-width: 1200px)" srcset="./img/desktop/catalog/panorama-desktop.jpg 1x, ./img/desktop/catalog/panorama-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="./img/tablet/catalog/panorama-tablet.jpg 1x, ./img/tablet/catalog/panorama-tablet@2x.jpg 2x">
+              <source media="(min-width: 320px)" srcset="./img/mobile/catalog/panorama-mobile.jpg 1x, ./img/mobile/catalog/panorama-mobile@2x.jpg 2x">
               <img class="photo-card__img" src="./img/mobile/panorama-mobile.jpg" alt="Панорама дня">
             </picture>
             <div class="photo-card__information photo-card__information--ears photo-card__information--grid">
               <span class="photo-card__author">
                 Анна
-                <time class="photo-card__time">(5 минут назад)</time>
+                <time class="photo-card__time">
+                  (5 минут назад)
+                </time>
               </span>
               <div class="photo-card__like photo-card__like--order like">
                 <p class="like__text like__text--margin">
-                  <span class="like__span">нравится:</span>
-                  <span class="like__counter">215</span>
+                  <span class="like__span">
+                    нравится:
+                  </span>
+                  <span class="like__counter">
+                    215
+                  </span>
                 </p>
                 <button class="like__button">
                   <svg class="like__heart">
@@ -108,21 +132,29 @@
             <ul class="gallery__sublist">
               <li class="gallery__item photo-card">
                 <picture class="photo-card__container">
-                  <source media="(min-width: 1200px)" srcset="./img/desktop/photo-1-desktop.jpg">
-                  <source media="(min-width: 660px)" srcset="./img/tablet/photo-1-tablet.jpg">
-                  <source media="(min-width: 320px)" srcset="./img/mobile/photo-1-mobile.jpg">
+                  <source media="(min-width: 1200px)" srcset="./img/desktop/catalog/photo-1-desktop.jpg 1x, ./img/desktop/catalog/photo-1-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="./img/tablet/catalog/photo-1-tablet.jpg 1x, ./img/tablet/catalog/photo-1-tablet@2x.jpg 2x">
+                  <source media="(min-width: 320px)" srcset="./img/mobile/catalog/photo-1-mobile.jpg 1x, ./img/mobile/catalog/photo-1-mobile@2x.jpg 2x">
                   <img class="photo-card__img" src="./img/mobile/photo-1-mobile.jpg" alt="Фото-1">
                 </picture>
                 <div class="photo-card__information">
                   <span class="photo-card__author">
                     Левон
-                    <time class="photo-card__time">(5 часов назад)</time>
+                    <time class="photo-card__time">
+                      (5 часов назад)
+                    </time>
                   </span>
-                  <p class="photo-card__description">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+                  <p class="photo-card__description">
+                    Вчера он на луну летал, сегодня в руки к нам попал.
+                  </p>
                   <div class="photo-card__like like">
                     <p class="like__text">
-                      <span class="like__span">нравится:</span>
-                      <span class="like__counter">356</span>
+                      <span class="like__span">
+                        нравится:
+                      </span>
+                      <span class="like__counter">
+                        356
+                      </span>
                     </p>
                     <button class="like__button">
                       <svg class="like__heart">
@@ -133,21 +165,29 @@
               </li>
               <li class="gallery__item photo-card">
                 <picture class="photo-card__container">
-                  <source media="(min-width: 1200px)" srcset="./img/desktop/photo-2-desktop.jpg">
-                  <source media="(min-width: 660px)" srcset="./img/tablet/photo-2-tablet.jpg">
-                  <source media="(min-width: 320px)" srcset="./img/mobile/photo-2-mobile.jpg">
+                  <source media="(min-width: 1200px)" srcset="./img/desktop/catalog/photo-2-desktop.jpg 1x, ./img/desktop/catalog/photo-2-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="./img/tablet/catalog/photo-2-tablet.jpg 1x, ./img/tablet/catalog/photo-2-tablet@2x.jpg 2x">
+                  <source media="(min-width: 320px)" srcset="./img/mobile/catalog/photo-2-mobile.jpg 1x, ./img/mobile/catalog/photo-2-mobile@2x.jpg 2x">
                   <img class="photo-card__img" src="./img/mobile/photo-2-mobile.jpg" alt="Фото-2">
                 </picture>
                 <div class="photo-card__information">
                   <span class="photo-card__author">
                     Антон
-                    <time class="photo-card__time">(12 часов назад)</time>
+                    <time class="photo-card__time">
+                      (12 часов назад)
+                    </time>
                   </span>
-                  <p class="photo-card__description">Соседи будут рады!</p>
+                  <p class="photo-card__description">
+                    Соседи будут рады!
+                  </p>
                   <div class="photo-card__like like">
                     <p class="like__text">
-                      <span class="like__span">нравится:</span>
-                      <span class="like__counter">666</span>
+                      <span class="like__span">
+                        нравится:
+                      </span>
+                      <span class="like__counter">
+                        666
+                      </span>
                     </p>
                     <button class="like__button">
                       <svg class="like__heart">
@@ -158,21 +198,29 @@
               </li>
               <li class="gallery__item photo-card">
                 <picture class="photo-card__container">
-                  <source media="(min-width: 1200px)" srcset="./img/desktop/photo-3-desktop.jpg">
-                  <source media="(min-width: 660px)" srcset="./img/tablet/photo-3-tablet.jpg">
-                  <source media="(min-width: 320px)" srcset="./img/mobile/photo-3-mobile.jpg">
+                  <source media="(min-width: 1200px)" srcset="./img/desktop/catalog/photo-3-desktop.jpg 1x, ./img/desktop/catalog/photo-3-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="./img/tablet/catalog/photo-3-tablet.jpg 1x, ./img/tablet/catalog/photo-3-tablet@2x.jpg 2x">
+                  <source media="(min-width: 320px)" srcset="./img/mobile/catalog/photo-3-mobile.jpg 1x, ./img/mobile/catalog/photo-3-mobile@2x.jpg 2x">
                   <img class="photo-card__img" src="./img/mobile/photo-3-mobile.jpg" alt="Фото-3">
                 </picture>
                 <div class="photo-card__information">
                   <span class="photo-card__author">
                     Борис
-                    <time class="photo-card__time">(20 часов назад)</time>
+                    <time class="photo-card__time">
+                      (20 часов назад)
+                    </time>
                   </span>
-                  <p class="photo-card__description">Здесь могла быть ваша цитата о высоком и вечном.</p>
+                  <p class="photo-card__description">
+                    Здесь могла быть ваша цитата о высоком и вечном.
+                  </p>
                   <div class="photo-card__like like">
                     <p class="like__text">
-                      <span class="like__span">нравится:</span>
-                      <span class="like__counter">215</span>
+                      <span class="like__span">
+                        нравится:
+                      </span>
+                      <span class="like__counter">
+                        215
+                      </span>
                     </p>
                     <button class="like__button">
                       <svg class="like__heart">
@@ -183,21 +231,29 @@
               </li>
               <li class="gallery__item photo-card">
                 <picture class="photo-card__container">
-                  <source media="(min-width: 1200px)" srcset="./img/desktop/photo-4-desktop.jpg">
-                  <source media="(min-width: 660px)" srcset="./img/tablet/photo-4-tablet.jpg">
-                  <source media="(min-width: 320px)" srcset="./img/mobile/photo-4-mobile.jpg">
+                  <source media="(min-width: 1200px)" srcset="./img/desktop/catalog/photo-4-desktop.jpg 1x, ./img/desktop/catalog/photo-4-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="./img/tablet/catalog/photo-4-tablet.jpg 1x, ./img/tablet/catalog/photo-4-tablet@2x.jpg 2x">
+                  <source media="(min-width: 320px)" srcset="./img/mobile/catalog/photo-4-mobile.jpg 1x, ./img/mobile/catalog/photo-4-mobile@2x.jpg 2x">
                   <img class="photo-card__img" src="./img/mobile/photo-4-mobile.jpg" alt="Фото-4">
                 </picture>
                 <div class="photo-card__information">
                   <span class="photo-card__author">
                     Сергей
-                    <time class="photo-card__time">(25 часов назад)</time>
+                    <time class="photo-card__time">
+                      (25 часов назад)
+                    </time>
                   </span>
-                  <p class="photo-card__description">Самая кубанская в мире!</p>
+                  <p class="photo-card__description">
+                    Самая кубанская в мире!
+                  </p>
                   <div class="photo-card__like like">
                     <p class="like__text">
-                      <span class="like__span">нравится:</span>
-                      <span class="like__counter">4</span>
+                      <span class="like__span">
+                        нравится:
+                      </span>
+                      <span class="like__counter">
+                        4
+                      </span>
                     </p>
                     <button class="like__button">
                       <svg class="like__heart">
@@ -208,21 +264,29 @@
               </li>
               <li class="gallery__item photo-card">
                 <picture class="photo-card__container">
-                  <source media="(min-width: 1200px)" srcset="./img/desktop/photo-5-desktop.jpg">
-                  <source media="(min-width: 660px)" srcset="./img/tablet/photo-5-tablet.jpg">
-                  <source media="(min-width: 320px)" srcset="./img/mobile/photo-5-mobile.jpg">
+                  <source media="(min-width: 1200px)" srcset="./img/desktop/catalog/photo-5-desktop.jpg 1x, ./img/desktop/catalog/photo-5-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="./img/tablet/catalog/photo-5-tablet.jpg 1x, ./img/tablet/catalog/photo-5-tablet@2x.jpg 2x">
+                  <source media="(min-width: 320px)" srcset="./img/mobile/catalog/photo-5-mobile.jpg 1x, ./img/mobile/catalog/photo-5-mobile@2x.jpg 2x">
                   <img class="photo-card__img" src="./img/mobile/photo-5-mobile.jpg" alt="Фото-5">
                 </picture>
                 <div class="photo-card__information">
                   <span class="photo-card__author">
                     Максим
-                    <time class="photo-card__time">(40 часов назад)</time>
+                    <time class="photo-card__time">
+                      (40 часов назад)
+                    </time>
                   </span>
-                  <p class="photo-card__description">Где снег-то?</p>
+                  <p class="photo-card__description">
+                    Где снег-то?
+                  </p>
                   <div class="photo-card__like like">
                     <p class="like__text">
-                      <span class="like__span">нравится:</span>
-                      <span class="like__counter">150</span>
+                      <span class="like__span">
+                        нравится:
+                      </span>
+                      <span class="like__counter">
+                        150
+                      </span>
                     </p>
                     <button class="like__button">
                       <svg class="like__heart">
@@ -233,21 +297,29 @@
               </li>
               <li class="gallery__item photo-card">
                 <picture class="photo-card__container">
-                  <source media="(min-width: 1200px)" srcset="./img/desktop/photo-6-desktop.jpg">
-                  <source media="(min-width: 660px)" srcset="./img/tablet/photo-6-tablet.jpg">
-                  <source media="(min-width: 320px)" srcset="./img/mobile/photo-6-mobile.jpg">
+                  <source media="(min-width: 1200px)" srcset="./img/desktop/catalog/photo-6-desktop.jpg 1x, ./img/desktop/catalog/photo-6-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="./img/tablet/catalog/photo-6-tablet.jpg 1x, ./img/tablet/catalog/photo-6-tablet@2x.jpg 2x">
+                  <source media="(min-width: 320px)" srcset="./img/mobile/catalog/photo-6-mobile.jpg 1x, ./img/mobile/catalog/photo-6-mobile@2x.jpg 2x">
                   <img class="photo-card__img" src="./img/mobile/photo-6-mobile.jpg" alt="Фото-6">
                 </picture>
                 <div class="photo-card__information">
                   <span class="photo-card__author">
                     Надежда
-                    <time class="photo-card__time">(45 часов назад)</time>
+                    <time class="photo-card__time">
+                      (45 часов назад)
+                    </time>
                   </span>
-                  <p class="photo-card__description">Всем GM и взаимные лайки!</p>
+                  <p class="photo-card__description">
+                    Всем GM и взаимные лайки!
+                  </p>
                   <div class="photo-card__like like">
                     <p class="like__text">
-                      <span class="like__span">нравится:</span>
-                      <span class="like__counter">2560</span>
+                      <span class="like__span">
+                        нравится:
+                      </span>
+                      <span class="like__counter">
+                        2560
+                      </span>
                     </p>
                     <button class="like__button">
                       <svg class="like__heart">
@@ -261,11 +333,17 @@
         </ul>
       </section>
       <section class="photo-editor">
-        <h2 class="visually-hidden">Фото-редактор</h2>
-        <p class="photo-editor__title">Затмите их всех! <br> Выкладывайте все, что накопилось в телефоне!</p>
+        <h2 class="visually-hidden">
+          Фото-редактор
+        </h2>
+        <p class="photo-editor__title">
+          Затмите их всех!
+          <br>
+          Выкладывайте все, что накопилось в телефоне!
+        </p>
         <div class="photo-editor__wrapper">
           <div class="photo-editor__editor">
-            <img class="photo-editor__img" src="./img/working-picture.jpg" alt="Изменяемая картинка.">
+            <img class="photo-editor__img" src="./img/working-picture.jpg" srcset="./img/working-picture.jpg 1x, img/working-picture@2x.jpg 2x" alt="Изменяемая картинка.">
             <ul class="photo-editor__list photo-editor__list--icon">
               <li class="photo-editor__item photo-editor__item--active">
                 <svg class="photo-editor__icon photo-editor__icon--crop">
@@ -294,8 +372,12 @@
             </ul>
             <div class="photo-editor__upload">
               <form class="photo-editor__form" action="https://echo.htmlacademy.ru" method="post">
-                <button class="photo-editor__button button" type="submit">Запостить</button>
-                <button class="photo-editor__button button" type="reset">Отмена</button>
+                <button class="photo-editor__button button" type="submit">
+                  Запостить
+                </button>
+                <button class="photo-editor__button button" type="reset">
+                  Отмена
+                </button>
               </form>
             </div>
           </div>
@@ -304,9 +386,12 @@
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper container">
-        <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="nofollow noopener">
+        <a class="page-footer__link" href="#go-to-top">
           <svg class="page-footer__logo">
             <use xlink:href="./img/svg/sprite.svg#logo-tablet"></use>
+          </svg>
+          <svg class="page-footer__logo page-footer__logo--desktop">
+            <use xlink:href="./img/svg/sprite.svg#logo-desktop-footer"></use>
           </svg>
         </a>
         <ul class="page-footer__list social">
@@ -332,7 +417,7 @@
             </a>
           </li>
         </ul>
-        <a class="page-footer__author" href="https://htmlacademy.ru/" target="_blank" rel="nofollow noopener">
+        <a class="page-footer__author" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="nofollow noopener">
           Разработано
           <svg class="page-footer__icon">
             <use xlink:href="./img/svg/sprite.svg#icon-html-academy"></use>

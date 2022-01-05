@@ -145,6 +145,11 @@
 .questionnaire__button-submit {
   margin: 0 auto;
   margin-bottom: 35px;
+
+  &--disabled:disabled {
+    background-color: $grey;
+    border-color: $grey;
+  }
 }
 
 .questionnaire__footnote {

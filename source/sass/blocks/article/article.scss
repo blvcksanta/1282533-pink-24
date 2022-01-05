@@ -46,12 +46,6 @@
 .article__description {
   padding-top: 42px;
 
-  @media (min-width: 704px) {
-    br {
-      display: none;
-    }
-  }
-
   @media (min-width: $width-desktop) {
     padding-bottom: 45px;
     align-self: end;
@@ -65,6 +59,12 @@
   font-weight: 700;
   letter-spacing: 0.02em;
 
+  @media (min-width: 704px) {
+    br {
+      display: none;
+    }
+  }
+
   @media (min-width: $width-desktop) {
     margin-bottom: 22px;
     letter-spacing: 0.05em;
@@ -75,13 +75,27 @@
   margin: 0;
   margin-bottom: 10px;
 
-  @media (min-width: $width-desktop) {
-    margin-bottom: 30px;
-    max-width: 530px;
+  br {
+    display: none;
+  }
+
+  br:nth-child(2n+1) {
+    display: inline;
+  }
+
+  @media (min-width: 704px) {
+    br:nth-child(2n+1) {
+      display: none;
+    }
 
     br:nth-child(2) {
       display: inline;
     }
+  }
+
+  @media (min-width: $width-desktop) {
+    margin-bottom: 30px;
+    max-width: 530px;
   }
 }
 
@@ -89,16 +103,7 @@
   color: $magenta;
 
   &:hover {
-    opacity: 0.6;
-  }
-
-  &:focus {
-    outline: none;
-    color: $green;
-  }
-
-  &:focus:not(:focus-visible) {
-    color: $magenta;
+    color: $dark-blue;
   }
 
   &:focus-visible {
@@ -107,6 +112,7 @@
   }
 
   &:active {
-    opacity: 0.3;
+    text-decoration: none;
+    color: $dark-blue-3;
   }
 }
