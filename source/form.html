@@ -10,7 +10,7 @@
     <link rel="icon" href="./img/favicon/32.png" type="image/png">
     <link rel="apple-touch-icon" href="./img/favicon/152.png">
   </head>
-  <body id="go-to-top">
+  <body>
     <header class="page-header container" id="go-to-top">
       <!-- page-header__content--active - класс подставляется, когда активно меню -->
       <div class="page-header__content">
@@ -35,7 +35,7 @@
               <svg class="nav__burger nav__burger--close nav__burger--disable">
                 <use xlink:href="./img/svg/sprite.svg#menu-close"></use>
               </svg>
-              <span class="visually-hidden">Открыть/закрыть меню</span>
+              <span class="visually-hidden">Открыть/закрыть меню.</span>
             </button>
             <!-- nav__list--disable - класс отвечает за показ пунктов меню -->
             <!-- nav__link--current - класс отвечает за выделение активного пункта меню -->
@@ -87,7 +87,7 @@
             <!-- Ввод имени -->
             <fieldset class="questionnaire__name-information fieldset">
               <legend class="visually-hidden">
-                Представьтесь
+                Представьтесь.
               </legend>
               <ul class="fieldset__list">
                 <li class="fieldset__item">
@@ -192,11 +192,11 @@
                       Номер телефона
                     </span>
                     <input class="fieldset__input fieldset__input--margin fieldset__input--padding" type="tel" name="phone" pattern="[0-9]{11}" placeholder="Номер, пожалуйста">
-                    <div class="fieldset__icon">
+                    <span class="fieldset__icon">
                       <svg class="fieldset__svg fieldset__svg--phone">
                         <use xlink:href="./img/svg/sprite.svg#icon-phone"></use>
                       </svg>
-                    </div>
+                    </span>
                   </label>
                 </li>
                 <li class="fieldset__item fieldset__item--margin">
@@ -205,11 +205,11 @@
                       Адрес почты
                     </span>
                     <input class="fieldset__input fieldset__input--margin fieldset__input--padding" type="email" name="mail" placeholder="Введите почту *" required>
-                    <div class="fieldset__icon">
+                    <span class="fieldset__icon">
                       <svg class="fieldset__svg fieldset__svg--mail">
                         <use xlink:href="./img/svg/sprite.svg#icon-mail"></use>
                       </svg>
-                    </div>
+                    </span>
                   </label>
                 </li>
               </ul>
@@ -355,7 +355,7 @@
         </div>
       </div>
     </div>
+    <script src="./js/menu.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
-  <script src="./js/menu.js"></script>
-  <script src="./js/modal.js"></script>
 </html>
