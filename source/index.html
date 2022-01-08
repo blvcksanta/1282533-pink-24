@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.min.css">
     <link rel="icon" href="./favicon.ico">
     <link rel="icon" href="./img/favicon/32.svg" type="image/svg+xml">
     <link rel="icon" href="./img/favicon/32.png" type="image/png">
@@ -77,16 +77,22 @@
           </h2>
           <div class="promo__picture">
             <picture>
-              <source media="(min-width: 1200px)" srcset="./img/desktop/index/hand-phone-desktop.png 1x, ./img/desktop/index/hand-phone-desktop@2x.png 2x">
-              <source media="(min-width: 660px)" srcset="./img/tablet/index/hand-phone-tablet.png 1x, ./img/tablet/index/hand-phone-tablet@2x.png 2x">
-              <source media="(min-width: 320px)" srcset="./img/mobile/index/hand-phone-mobile.png 1x, ./img/mobile/index/hand-phone-mobile@2x.png 2x">
-              <img class="promo__img promo__img--hand" src="./img/tablet/index/hand-phone-tablet.png" srcset="./img/tablet/index/hand-phone-tablet@2x.png 2x" alt="рука с телефоном.">
+              <source media="(min-width: 1200px)" srcset="./img/desktop/index/hand-phone-desktop.webp 1x, ./img/desktop/index/hand-phone-desktop@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 1200px)" srcset="./img/desktop/index/hand-phone-desktop.png 1x, ./img/desktop/index/hand-phone-desktop@2x.png 2x" type="image/png">
+              <source media="(min-width: 660px)" srcset="./img/tablet/index/hand-phone-tablet.webp 1x, ./img/tablet/index/hand-phone-tablet@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 660px)" srcset="./img/tablet/index/hand-phone-tablet.png 1x, ./img/tablet/index/hand-phone-tablet@2x.png 2x" type="image/png">
+              <source media="(min-width: 320px)" srcset="./img/mobile/index/hand-phone-mobile.webp 1x, ./img/mobile/index/hand-phone-mobile@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 320px)" srcset="./img/mobile/index/hand-phone-mobile.png 1x, ./img/mobile/index/hand-phone-mobile@2x.png 2x" type="image/png">
+              <img class="promo__img promo__img--hand" src="./img/mobile/index/hand-phone-mobile.png" srcset="./img/mobile/index/hand-phone-mobile@2x.png 2x" alt="рука с телефоном.">
             </picture>
             <picture>
-              <source media="(min-width: 1200px)" srcset="./img/desktop/index/phone-screen-desktop.jpg 1x, ./img/desktop/index/phone-screen-desktop@2x.jpg 2x">
-              <source media="(min-width: 660px)" srcset="./img/tablet/index/phone-screen-tablet.jpg 1x, ./img/tablet/index/phone-screen-tablet@2x.jpg 2x">
-              <source media="(min-width: 320px)" srcset="./img/mobile/index/phone-screen-mobile.jpg 1x, ./img/mobile/index/phone-screen-mobile@2x.jpg 2x">
-              <img class="promo__img promo__img--screen" src="./img/tablet/index/phone-screen-tablet.jpg" srcset="./img/tablet/index/phone-screen-tablet@2x.jpg 2x" alt="экран телефона.">
+              <source media="(min-width: 1200px)" srcset="./img/desktop/index/phone-screen-desktop.webp 1x, ./img/desktop/index/phone-screen-desktop@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 1200px)" srcset="./img/desktop/index/phone-screen-desktop.jpg 1x, ./img/desktop/index/phone-screen-desktop@2x.jpg 2x" type="image/jpeg">
+              <source media="(min-width: 660px)" srcset="./img/tablet/index/phone-screen-tablet.webp 1x, ./img/tablet/index/phone-screen-tablet@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 660px)" srcset="./img/tablet/index/phone-screen-tablet.jpg 1x, ./img/tablet/index/phone-screen-tablet@2x.jpg 2x" type="image/jpeg">
+              <source media="(min-width: 320px)" srcset="./img/mobile/index/phone-screen-mobile.webp 1x, ./img/mobile/index/phone-screen-mobile@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 320px)" srcset="./img/mobile/index/phone-screen-mobile.jpg 1x, ./img/mobile/index/phone-screen-mobile@2x.jpg 2x" type="image/jpeg">
+              <img class="promo__img promo__img--screen" src="./img/mobile/index/phone-screen-mobile.jpg" srcset="./img/mobile/index/phone-screen-mobile@2x.jpg 2x" alt="экран телефона.">
             </picture>
           </div>
           <div class="promo__availability">
@@ -127,11 +133,13 @@
             <li class="possibility__item">
               <div class="possibility__img">
                 <picture>
-                  <source media="(min-width: 1200px)" srcset="./img/desktop/index/desktop-phone.png 1x, ./img/desktop/index/desktop-phone@2x.png 2x">
+                  <source media="(min-width: 1200px)" srcset="./img/desktop/index/desktop-phone.webp 1x, ./img/desktop/index/desktop-phone@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 1200px)" srcset="./img/desktop/index/desktop-phone.png 1x, ./img/desktop/index/desktop-phone@2x.png 2x" type="image/png">
                   <img class="possibility__phone possibility__phone--none" src="./img/crutch.png" alt="Телефон.">
                 </picture>
                 <picture>
-                  <source media="(min-width: 1200px)" srcset="./img/desktop/index/desktop-phone-screen-not-filter.jpg 1x, ./img/desktop/index/desktop-phone-screen-not-filter@2x.jpg 2x">
+                  <source media="(min-width: 1200px)" srcset="./img/desktop/index/desktop-phone-screen-not-filter.webp 1x, ./img/desktop/index/desktop-phone-screen-not-filter@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 1200px)" srcset="./img/desktop/index/desktop-phone-screen-not-filter.jpg 1x, ./img/desktop/index/desktop-phone-screen-not-filter@2x.jpg 2x" type="image/jpeg">
                   <img class="possibility__screen possibility__screen--none" src="./img/crutch.png" alt="Экран телефона без фильтра.">
                 </picture>
               </div>
@@ -145,11 +153,13 @@
             <li class="possibility__item">
               <div class="possibility__img">
                 <picture>
-                  <source media="(min-width: 1200px)" srcset="./img/desktop/index/desktop-phone.png 1x, ./img/desktop/index/desktop-phone@2x.png 2x">
+                  <source media="(min-width: 1200px)" srcset="./img/desktop/index/desktop-phone.webp 1x, ./img/desktop/index/desktop-phone@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 1200px)" srcset="./img/desktop/index/desktop-phone.png 1x, ./img/desktop/index/desktop-phone@2x.png 2x" type="image/png">
                   <img class="possibility__phone possibility__phone--none" src="./img/crutch.png" alt="Телефон.">
                 </picture>
                 <picture>
-                  <source media="(min-width: 1200px)" srcset="./img/desktop/index/desktop-phone-screen-filter.jpg 1x, ./img/desktop/index/desktop-phone-screen-filter@2x.jpg 2x">
+                  <source media="(min-width: 1200px)" srcset="./img/desktop/index/desktop-phone-screen-filter.webp 1x, ./img/desktop/index/desktop-phone-screen-filter@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 1200px)" srcset="./img/desktop/index/desktop-phone-screen-filter.jpg 1x, ./img/desktop/index/desktop-phone-screen-filter@2x.jpg 2x" type="image/jpeg">
                   <img class="possibility__screen possibility__screen--none" src="./img/crutch.png" alt="Экран телефона с фильтром.">
                 </picture>
               </div>
@@ -165,16 +175,22 @@
             <li class="possibility__item possibility__item--mobile-flex">
               <div class="possibility__img">
                 <picture>
-                  <source media="(min-width: 1200px)" srcset="./img/desktop/index/desktop-phone.png 1x, ./img/desktop/index/desktop-phone@2x.png 2x">
-                  <source media="(min-width: 660px)" srcset="./img/tablet/index/tablet-phone.png 1x, ./img/tablet/index/tablet-phone@2x.png 2x">
-                  <source media="(min-width: 320px)" srcset="./img/mobile/index/mobile-phone.png 1x, ./img/mobile/index/mobile-phone@2x.png 2x">
-                  <img class="possibility__phone" src="./img/tablet/index/tablet-phone.png" srcset="./img/tablet/index/tablet-phone@2x.png 2x" alt="Телефон.">
+                  <source media="(min-width: 1200px)" srcset="./img/desktop/index/desktop-phone.webp 1x, ./img/desktop/index/desktop-phone@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 1200px)" srcset="./img/desktop/index/desktop-phone.png 1x, ./img/desktop/index/desktop-phone@2x.png 2x" type="image/png">
+                  <source media="(min-width: 660px)" srcset="./img/tablet/index/tablet-phone.webp 1x, ./img/tablet/index/tablet-phone@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 660px)" srcset="./img/tablet/index/tablet-phone.png 1x, ./img/tablet/index/tablet-phone@2x.png 2x" type="image/png">
+                  <source media="(min-width: 320px)" srcset="./img/mobile/index/mobile-phone.webp 1x, ./img/mobile/index/mobile-phone@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 320px)" srcset="./img/mobile/index/mobile-phone.png 1x, ./img/mobile/index/mobile-phone@2x.png 2x" type="image/png">
+                  <img class="possibility__phone" src="./img/mobile/index/mobile-phone.png" srcset="./img/mobile/index/mobile-phone@2x.png 2x" alt="Телефон.">
                 </picture>
                 <picture>
-                  <source media="(min-width: 1200px)" srcset="./img/desktop/index/desktop-phone-screen-filter-smile.jpg 1x, ./img/desktop/index/desktop-phone-screen-filter-smile@2x.jpg 2x">
-                  <source media="(min-width: 660px)" srcset="./img/tablet/index/tablet-phone-screen-smail.jpg 1x, ./img/tablet/index/tablet-phone-screen-smail@2x.jpg 2x">
-                  <source media="(min-width: 320px)" srcset="./img/mobile/index/mobile-phone-screen-smail.jpg 1x, ./img/mobile/index/mobile-phone-screen-smail@2x.jpg 2x">
-                  <img class="possibility__screen" src="./img/tablet/index/tablet-phone-screen-smail.jpg" srcset="./img/tablet/index/tablet-phone-screen-smail@2x.jpg 2x" alt="Экран телефона с фильтром и смайлом.">
+                  <source media="(min-width: 1200px)" srcset="./img/desktop/index/desktop-phone-screen-filter-smile.webp 1x, ./img/desktop/index/desktop-phone-screen-filter-smile@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 1200px)" srcset="./img/desktop/index/desktop-phone-screen-filter-smile.jpg 1x, ./img/desktop/index/desktop-phone-screen-filter-smile@2x.jpg 2x" type="image/jpeg">
+                  <source media="(min-width: 660px)" srcset="./img/tablet/index/tablet-phone-screen-smail.webp 1x, ./img/tablet/index/tablet-phone-screen-smail@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 660px)" srcset="./img/tablet/index/tablet-phone-screen-smail.jpg 1x, ./img/tablet/index/tablet-phone-screen-smail@2x.jpg 2x" type="image/jpeg">
+                  <source media="(min-width: 320px)" srcset="./img/mobile/index/mobile-phone-screen-smail.webp 1x, ./img/mobile/index/mobile-phone-screen-smail@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 320px)" srcset="./img/mobile/index/mobile-phone-screen-smail.jpg 1x, ./img/mobile/index/mobile-phone-screen-smail@2x.jpg 2x" type="image/jpeg">
+                  <img class="possibility__screen" src="./img/mobile/index/mobile-phone-screen-smail.jpg" srcset="./img/mobile/index/mobile-phone-screen-smail@2x.jpg 2x" alt="Экран телефона с фильтром и смайлом.">
                 </picture>
               </div>
               <h3 class="possibility__subtitle subtitle">
