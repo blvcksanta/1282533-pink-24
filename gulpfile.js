@@ -10,7 +10,7 @@ import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import del from 'del';
-import svgmin from 'gulp-svgmin';
+import svgSprite from 'gulp-svg-sprite';
 
 // Styles
 
@@ -65,13 +65,44 @@ const copyImg = () => {
   .pipe(gulp.dest('build'))
 }
 
+// Svg
+
+export const sprite = () => {
+  return gulp.src(['source/img/svg/icon-sprite/*.svg', 'source/img/svg/icon-sprite/burger/*.svg'])
+  .pipe(svgSprite({
+    mode: {
+      symbol: {
+        sprite: '../img/svg/sprite.svg',
+      },
+    },
+    shape: {
+      transform: [{
+        svgo: {
+          plugins: [
+            {removeXMLNS: true},
+            {removeXMLProcInst: true},
+            {
+              removeAttrs: {
+                attrs: ['fill']
+              }
+            },
+          ]
+        }
+      }]
+    },
+  }))
+  .pipe(gulp.dest('build'))
+}
+
 // Copy
 
 const copy = (done) => {
   gulp.src([
     'source/fonts/*.{woff2,woff}',
     'source/*.ico',
-    'source/img/svg/**/*.svg'
+    'source/img/favicon/*.svg',
+    'source/img/svg/icon/*.svg',
+    'source/img/svg/icon-sprite/logo/sprite-logo.svg',
   ], {
     base: 'source'
   })
@@ -126,6 +157,7 @@ export const build = gulp.series(
     styles,
     js,
     webp,
+    sprite,
   )
 );
 
@@ -140,6 +172,7 @@ export default gulp.series(
     styles,
     js,
     webp,
+    sprite,
   ),
   gulp.series(
     server,

@@ -1,4 +1,8 @@
 .nav {
+  &.nav-noJS:focus-within .nav__list--disable {
+    display: block;
+  }
+
   @media (min-width: $width-desktop) {
     max-width: 620px;
     width: 100%;

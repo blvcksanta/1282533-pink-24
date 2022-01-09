@@ -120,6 +120,8 @@
 .promo__button {
   margin: 0 auto;
   margin-bottom: 34px;
+  text-align: center;
+  text-decoration: none;
 
   &:hover {
     background-color: $white;
@@ -180,6 +182,28 @@
 
 .promo__icon {
   display: block;
+  outline-offset: 10px;
+  border-radius: 2px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    outline: 2px solid $green;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   &--apple {
     width: 47px;
