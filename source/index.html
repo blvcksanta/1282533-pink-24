@@ -4,23 +4,27 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="icon" href="./favicon.ico">
+    <link rel="icon" href="./img/favicon/32.svg" type="image/svg+xml">
+    <link rel="icon" href="./img/favicon/32.png" type="image/png">
+    <link rel="apple-touch-icon" href="./img/favicon/152.png">
   </head>
   <body>
-    <header class="page-header container">
+    <header class="page-header container" id="go-to-top">
       <!-- page-header__content--active - класс подставляется, когда активно меню -->
       <div class="page-header__content">
         <div class="page-header__wrapper">
           <svg class="page-header__logo page-header__logo--mobile">
-            <use xlink:href="./img/svg/sprite.svg#logo-mobile"></use>
+            <use xlink:href="./img/svg/icon-sprite/logo/sprite-logo.svg#logo-mobile"></use>
           </svg>
           <svg class="page-header__logo page-header__logo--tablet">
-            <use xlink:href="./img/svg/sprite.svg#logo-tablet"></use>
+            <use xlink:href="./img/svg/icon-sprite/logo/sprite-logo.svg#logo-tablet"></use>
           </svg>
           <svg class="page-header__logo page-header__logo--desktop">
-            <use xlink:href="./img/svg/sprite.svg#logo-desktop"></use>
+            <use xlink:href="./img/svg/icon-sprite/logo/sprite-logo.svg#logo-desktop"></use>
           </svg>
-          <nav class="page-header__nav nav">
+          <nav class="page-header__nav nav nav-noJS">
             <button class="nav__button">
               <svg class="nav__burger">
                 <use xlink:href="./img/svg/sprite.svg#menu-burger"></use>
@@ -29,22 +33,30 @@
               <svg class="nav__burger nav__burger--close nav__burger--disable">
                 <use xlink:href="./img/svg/sprite.svg#menu-close"></use>
               </svg>
-              <span class="visually-hidden">Открыть/закрыть меню</span>
+              <span class="visually-hidden">Открыть/закрыть меню.</span>
             </button>
             <!-- nav__list--disable - класс отвечает за показ пунктов меню -->
             <!-- nav__link--current - класс отвечает за выделение активного пункта меню -->
             <ul class="nav__list nav__list--disable">
               <li class="nav__item">
-                <a class="nav__link nav__link--current" href="./index.html">Главная</a>
+                <a class="nav__link nav__link--current" href="./index.html">
+                  Главная
+                </a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href="./catalog.html">Фотографии</a>
+                <a class="nav__link" href="./catalog.html">
+                  Фотографии
+                </a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href="./form.html">Конкурс</a>
+                <a class="nav__link" href="./form.html">
+                  Конкурс
+                </a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href="#">HTML Academy</a>
+                <a class="nav__link" href="https://htmlacademy.ru" target="_blank" rel="nofollow noopener">
+                  HTML Academy
+                </a>
               </li>
             </ul>
           </nav>
@@ -54,7 +66,9 @@
     <main class="page-main">
       <!-- Главная секция -->
       <section class="promo">
-        <h1 class="visually-hidden">Pink фотоприложение для раскрашивания серых будней</h1>
+        <h1 class="visually-hidden">
+          Pink фотоприложение для раскрашивания серых будней.
+        </h1>
         <div class="promo__wrapper container">
           <h2 class="promo__title title">
             Взгляните
@@ -63,32 +77,42 @@
           </h2>
           <div class="promo__picture">
             <picture>
-              <source media="(min-width: 1200px)" srcset="./img/desktop/hand-phone-desktop.png">
-              <source media="(min-width: 660px)" srcset="./img/tablet/hand-phone-tablet.png">
-              <source media="(min-width: 320px)" srcset="./img/mobile/hand-phone-mobile.png">
-              <img class="promo__img promo__img--hand" src="./img/desktop/hand-phone-desktop.png" alt="рука с телефоном.">
+              <source media="(min-width: 1200px)" srcset="./img/desktop/index/hand-phone-desktop.webp 1x, ./img/desktop/index/hand-phone-desktop@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 1200px)" srcset="./img/desktop/index/hand-phone-desktop.png 1x, ./img/desktop/index/hand-phone-desktop@2x.png 2x" type="image/png">
+              <source media="(min-width: 660px)" srcset="./img/tablet/index/hand-phone-tablet.webp 1x, ./img/tablet/index/hand-phone-tablet@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 660px)" srcset="./img/tablet/index/hand-phone-tablet.png 1x, ./img/tablet/index/hand-phone-tablet@2x.png 2x" type="image/png">
+              <source media="(min-width: 320px)" srcset="./img/mobile/index/hand-phone-mobile.webp 1x, ./img/mobile/index/hand-phone-mobile@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 320px)" srcset="./img/mobile/index/hand-phone-mobile.png 1x, ./img/mobile/index/hand-phone-mobile@2x.png 2x" type="image/png">
+              <img class="promo__img promo__img--hand" src="./img/mobile/index/hand-phone-mobile.png" srcset="./img/mobile/index/hand-phone-mobile@2x.png 2x" alt="рука с телефоном.">
             </picture>
             <picture>
-              <source media="(min-width: 1200px)" srcset="./img/desktop/phone-screen-desktop.jpg">
-              <source media="(min-width: 660px)" srcset="./img/tablet/phone-screen-tablet.jpg">
-              <source media="(min-width: 320px)" srcset="./img/mobile/phone-screen-mobile.jpg">
-              <img class="promo__img promo__img--screen" src="./img/desktop/phone-screen-desktop.jpg" alt="экран телефона.">
+              <source media="(min-width: 1200px)" srcset="./img/desktop/index/phone-screen-desktop.webp 1x, ./img/desktop/index/phone-screen-desktop@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 1200px)" srcset="./img/desktop/index/phone-screen-desktop.jpg 1x, ./img/desktop/index/phone-screen-desktop@2x.jpg 2x" type="image/jpeg">
+              <source media="(min-width: 660px)" srcset="./img/tablet/index/phone-screen-tablet.webp 1x, ./img/tablet/index/phone-screen-tablet@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 660px)" srcset="./img/tablet/index/phone-screen-tablet.jpg 1x, ./img/tablet/index/phone-screen-tablet@2x.jpg 2x" type="image/jpeg">
+              <source media="(min-width: 320px)" srcset="./img/mobile/index/phone-screen-mobile.webp 1x, ./img/mobile/index/phone-screen-mobile@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 320px)" srcset="./img/mobile/index/phone-screen-mobile.jpg 1x, ./img/mobile/index/phone-screen-mobile@2x.jpg 2x" type="image/jpeg">
+              <img class="promo__img promo__img--screen" src="./img/mobile/index/phone-screen-mobile.jpg" srcset="./img/mobile/index/phone-screen-mobile@2x.jpg 2x" alt="экран телефона.">
             </picture>
           </div>
           <div class="promo__availability">
-            <button class="promo__button button" type="button">Скачать приложение</button>
+            <a class="promo__button button" href="https://www.apple.com/ru/app-store/" target="_blank" rel="nofollow noopener">
+              Скачать приложение
+            </a>
             <ul class="promo__list">
               <li class="promo__item">
-                <span class="promo__icon promo__icon--apple"></span>
+                <a class="promo__icon promo__icon--apple" href="https://www.apple.com/ru/app-store/" target="_blank" rel="nofollow noopener"></a>
               </li>
               <li class="promo__item">
-                <span class="promo__icon promo__icon--android"></span>
+                <a class="promo__icon promo__icon--android" href="https://play.google.com/store" target="_blank" rel="nofollow noopener"></a>
               </li>
               <li class="promo__item">
-                <span class="promo__icon promo__icon--windows"></span>
+                <a class="promo__icon promo__icon--windows" href="https://www.microsoft.com/ru-ru/store/apps/windows" target="_blank" rel="nofollow noopener"></a>
               </li>
             </ul>
-            <span class="promo__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</span>
+            <span class="promo__text">
+              Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+            </span>
           </div>
         </div>
       </section>
@@ -96,7 +120,9 @@
       <section class="possibility">
         <div class="possibility__wrapper container">
           <h2 class="possibility__title title">
-            <span class="possibility__title-text">Устали от серости мегаполиса?</span>
+            <span class="possibility__title-text">
+              Устали от серости мегаполиса?
+            </span>
             <span class="possibility__title-text">
               Нам есть, что вам
               <br>
@@ -107,29 +133,39 @@
             <li class="possibility__item">
               <div class="possibility__img">
                 <picture>
-                  <source media="(min-width: 1200px)" srcset="./img/desktop/desktop-phone.png">
+                  <source media="(min-width: 1200px)" srcset="./img/desktop/index/desktop-phone.webp 1x, ./img/desktop/index/desktop-phone@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 1200px)" srcset="./img/desktop/index/desktop-phone.png 1x, ./img/desktop/index/desktop-phone@2x.png 2x" type="image/png">
                   <img class="possibility__phone possibility__phone--none" src="./img/crutch.png" alt="Телефон.">
                 </picture>
                 <picture>
-                  <source media="(min-width: 1200px)" srcset="./img/desktop/desktop-phone-screen-not-filter.jpg">
+                  <source media="(min-width: 1200px)" srcset="./img/desktop/index/desktop-phone-screen-not-filter.webp 1x, ./img/desktop/index/desktop-phone-screen-not-filter@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 1200px)" srcset="./img/desktop/index/desktop-phone-screen-not-filter.jpg 1x, ./img/desktop/index/desktop-phone-screen-not-filter@2x.jpg 2x" type="image/jpeg">
                   <img class="possibility__screen possibility__screen--none" src="./img/crutch.png" alt="Экран телефона без фильтра.">
                 </picture>
               </div>
-              <h3 class="possibility__subtitle subtitle">Поднимает настроение</h3>
-              <p class="possibility__text possibility__text--br-desktop">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+              <h3 class="possibility__subtitle subtitle">
+                Поднимает настроение
+              </h3>
+              <p class="possibility__text possibility__text--br-desktop">
+                Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
+              </p>
             </li>
             <li class="possibility__item">
               <div class="possibility__img">
                 <picture>
-                  <source media="(min-width: 1200px)" srcset="./img/desktop/desktop-phone.png">
+                  <source media="(min-width: 1200px)" srcset="./img/desktop/index/desktop-phone.webp 1x, ./img/desktop/index/desktop-phone@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 1200px)" srcset="./img/desktop/index/desktop-phone.png 1x, ./img/desktop/index/desktop-phone@2x.png 2x" type="image/png">
                   <img class="possibility__phone possibility__phone--none" src="./img/crutch.png" alt="Телефон.">
                 </picture>
                 <picture>
-                  <source media="(min-width: 1200px)" srcset="./img/desktop/desktop-phone-screen-filter.jpg">
+                  <source media="(min-width: 1200px)" srcset="./img/desktop/index/desktop-phone-screen-filter.webp 1x, ./img/desktop/index/desktop-phone-screen-filter@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 1200px)" srcset="./img/desktop/index/desktop-phone-screen-filter.jpg 1x, ./img/desktop/index/desktop-phone-screen-filter@2x.jpg 2x" type="image/jpeg">
                   <img class="possibility__screen possibility__screen--none" src="./img/crutch.png" alt="Экран телефона с фильтром.">
                 </picture>
               </div>
-              <h3 class="possibility__subtitle subtitle">Меняет мир вокруг</h3>
+              <h3 class="possibility__subtitle subtitle">
+                Меняет мир вокруг
+              </h3>
               <p class="possibility__text">
                 Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы
                 <br>
@@ -139,16 +175,22 @@
             <li class="possibility__item possibility__item--mobile-flex">
               <div class="possibility__img">
                 <picture>
-                  <source media="(min-width: 1200px)" srcset="./img/desktop/desktop-phone.png">
-                  <source media="(min-width: 660px)" srcset="./img/tablet/tablet-phone.png">
-                  <source media="(min-width: 320px)" srcset="./img/mobile/mobile-phone.png">
-                  <img class="possibility__phone" src="./img/tablet/tablet-phone-screen-smail.jpg" alt="Телефон.">
+                  <source media="(min-width: 1200px)" srcset="./img/desktop/index/desktop-phone.webp 1x, ./img/desktop/index/desktop-phone@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 1200px)" srcset="./img/desktop/index/desktop-phone.png 1x, ./img/desktop/index/desktop-phone@2x.png 2x" type="image/png">
+                  <source media="(min-width: 660px)" srcset="./img/tablet/index/tablet-phone.webp 1x, ./img/tablet/index/tablet-phone@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 660px)" srcset="./img/tablet/index/tablet-phone.png 1x, ./img/tablet/index/tablet-phone@2x.png 2x" type="image/png">
+                  <source media="(min-width: 320px)" srcset="./img/mobile/index/mobile-phone.webp 1x, ./img/mobile/index/mobile-phone@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 320px)" srcset="./img/mobile/index/mobile-phone.png 1x, ./img/mobile/index/mobile-phone@2x.png 2x" type="image/png">
+                  <img class="possibility__phone" src="./img/mobile/index/mobile-phone.png" srcset="./img/mobile/index/mobile-phone@2x.png 2x" alt="Телефон.">
                 </picture>
                 <picture>
-                  <source media="(min-width: 1200px)" srcset="./img/desktop/desktop-phone-screen-filter-smile.jpg">
-                  <source media="(min-width: 660px)" srcset="./img/tablet/tablet-phone-screen-smail.jpg">
-                  <source media="(min-width: 320px)" srcset="./img/mobile/mobile-phone-screen-smail.jpg">
-                  <img class="possibility__screen" src="./img/tablet/tablet-phone-screen-smail.jpg" alt="Экран телефона с фильтром и смайлом.">
+                  <source media="(min-width: 1200px)" srcset="./img/desktop/index/desktop-phone-screen-filter-smile.webp 1x, ./img/desktop/index/desktop-phone-screen-filter-smile@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 1200px)" srcset="./img/desktop/index/desktop-phone-screen-filter-smile.jpg 1x, ./img/desktop/index/desktop-phone-screen-filter-smile@2x.jpg 2x" type="image/jpeg">
+                  <source media="(min-width: 660px)" srcset="./img/tablet/index/tablet-phone-screen-smail.webp 1x, ./img/tablet/index/tablet-phone-screen-smail@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 660px)" srcset="./img/tablet/index/tablet-phone-screen-smail.jpg 1x, ./img/tablet/index/tablet-phone-screen-smail@2x.jpg 2x" type="image/jpeg">
+                  <source media="(min-width: 320px)" srcset="./img/mobile/index/mobile-phone-screen-smail.webp 1x, ./img/mobile/index/mobile-phone-screen-smail@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 320px)" srcset="./img/mobile/index/mobile-phone-screen-smail.jpg 1x, ./img/mobile/index/mobile-phone-screen-smail@2x.jpg 2x" type="image/jpeg">
+                  <img class="possibility__screen" src="./img/mobile/index/mobile-phone-screen-smail.jpg" srcset="./img/mobile/index/mobile-phone-screen-smail@2x.jpg 2x" alt="Экран телефона с фильтром и смайлом.">
                 </picture>
               </div>
               <h3 class="possibility__subtitle subtitle">
@@ -156,7 +198,9 @@
                 <br>
                 новых друзей
               </h3>
-              <p class="possibility__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+              <p class="possibility__text">
+                Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
+              </p>
             </li>
           </ul>
         </div>
@@ -180,20 +224,30 @@
               <br>
               от использования&nbsp;приложения длится целые сутки!
             </p>
-            <a class="article__link" href="#">Узнать больше об исследовании</a>
+            <a class="article__link" href="#">
+              Узнать больше об исследовании
+            </a>
           </div>
         </div>
       </article>
       <!-- Блок с отзывами -->
       <section class="reviews">
         <div class="reviews__wrapper slider container">
-          <h2 class="visually-hidden">Отзывы о приложении</h2>
+          <h2 class="visually-hidden">
+            Отзывы о приложении.
+          </h2>
           <div class="reviews__list slider__list">
             <blockquote class="reviews__item slider__item">
-              <p class="reviews__text">&#171;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&#187;</p>
+              <p class="reviews__text">
+                &#171;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&#187;
+              </p>
               <cite class="reviews__author">
-                <span class="reviews__name subtitle">Николай Петров</span>
-                <span class="reviews__age">25 лет, водитель трамвая</span>
+                <span class="reviews__name subtitle">
+                  Николай Петров
+                </span>
+                <span class="reviews__age">
+                  25 лет, водитель трамвая
+                </span>
               </cite>
             </blockquote>
             <div class="reviews__buttons">
@@ -201,25 +255,38 @@
                 <svg class="reviews__arrow">
                   <use xlink:href="./img/svg/sprite.svg#icon-arrow"></use>
                 </svg>
-                <span class="visually-hidden">Предыдущий отзыв</span>
+                <span class="visually-hidden">
+                  Предыдущий отзыв.
+                </span>
               </button>
               <button class="reviews__button reviews__button--next" type="button">
                 <svg class="reviews__arrow">
                   <use xlink:href="./img/svg/sprite.svg#icon-arrow"></use>
                 </svg>
-                <span class="visually-hidden">Следующий отзыв</span>
+                <span class="visually-hidden">
+                  Следующий отзыв.
+                </span>
               </button>
             </div>
           </div>
           <p class="slider__toogles">
             <button class="slider__toogle slider__toogle--current" type="button">
-              <span class="visually-hidden">1</span>
+              <span class="slider__mark"></span>
+              <span class="visually-hidden">
+                1.
+              </span>
             </button>
             <button class="slider__toogle" type="button">
-              <span class="visually-hidden">2</span>
+              <span class="slider__mark"></span>
+              <span class="visually-hidden">
+                2.
+              </span>
             </button>
             <button class="slider__toogle" type="button">
-              <span class="visually-hidden">3</span>
+              <span class="slider__mark"></span>
+              <span class="visually-hidden">
+                3.
+              </span>
             </button>
           </p>
         </div>
@@ -227,25 +294,41 @@
       <!-- Блок с описанием режимов приложения -->
       <section class="modes slider">
         <div class="modes__wrapper container">
-          <h2 class="visually-hidden">Режимы приложения</h2>
+          <h2 class="visually-hidden">
+            Режимы приложения.
+          </h2>
           <table class="table slider__item slider__item--table">
             <tr class="table__head">
               <th class="table__title table__title--mobile"></th>
               <th class="table__title table__title--border-left-top">
-                <span class="table__mode">база</span>
-                <span class="table__price">1,99 usd</span>
+                <span class="table__mode">
+                  база
+                </span>
+                <span class="table__price">
+                  1,99 usd
+                </span>
               </th>
               <th class="table__title table__title--hit">
-                <span class="table__mode">стандарт</span>
-                <span class="table__price">3,99 usd</span>
+                <span class="table__mode">
+                  стандарт
+                </span>
+                <span class="table__price">
+                  3,99 usd
+                </span>
               </th>
               <th class="table__title table__title--border-right-top">
-                <span class="table__mode">анлим</span>
-                <span class="table__price">9,99 usd</span>
+                <span class="table__mode">
+                  анлим
+                </span>
+                <span class="table__price">
+                  9,99 usd
+                </span>
               </th>
             </tr>
             <tr class="table__row">
-              <td class="table__data table__data--peculiarities table__data--border-left-top">Розовый фильтр</td>
+              <td class="table__data table__data--peculiarities table__data--border-left-top">
+                Розовый фильтр
+              </td>
               <td class="table__data table__data--filtr">
                 <svg class="table__svg table__svg--yes">
                   <use xlink:href="./img/svg/sprite.svg#icon-yes"></use>
@@ -263,7 +346,9 @@
               </td>
             </tr>
             <tr class="table__row">
-              <td class="table__data table__data--peculiarities">Смайлики</td>
+              <td class="table__data table__data--peculiarities">
+                Смайлики
+              </td>
               <td class="table__data table__data--smile">
                 <svg class="table__svg table__svg--no">
                   <use xlink:href="./img/svg/sprite.svg#icon-no"></use>
@@ -281,7 +366,9 @@
               </td>
             </tr>
             <tr class="table__row">
-              <td class="table__data table__data--peculiarities table__data--border-left-bottom">Комментарии</td>
+              <td class="table__data table__data--peculiarities table__data--border-left-bottom">
+                Комментарии
+              </td>
               <td class="table__data table__data--comments">
                 <svg class="table__svg table__svg--no">
                   <use xlink:href="./img/svg/sprite.svg#icon-no"></use>
@@ -301,13 +388,22 @@
           </table>
           <p class="slider__toogles slider__toogles--table">
             <button class="slider__toogle" type="button">
-              <span class="visually-hidden">1</span>
+              <span class="slider__mark"></span>
+              <span class="visually-hidden">
+                1.
+              </span>
             </button>
             <button class="slider__toogle slider__toogle--current" type="button">
-              <span class="visually-hidden">2</span>
+              <span class="slider__mark"></span>
+              <span class="visually-hidden">
+                2.
+              </span>
             </button>
             <button class="slider__toogle" type="button">
-              <span class="visually-hidden">3</span>
+              <span class="slider__mark"></span>
+              <span class="visually-hidden">
+                3.
+              </span>
             </button>
           </p>
         </div>
@@ -322,16 +418,28 @@
           </h2>
           <ul class="contacts__list">
             <li class="contacts__item">
-              <span class="contacts__subtitle subtitle">Звоните:</span>
-              <a class="contacts__link" href="tel:+78125556666">+7 (812) 555-66-66</a>
+              <span class="contacts__subtitle subtitle">
+                Звоните:
+              </span>
+              <a class="contacts__link contacts__link--condition" href="tel:+78125556666">
+                +7 (812) 555-66-66
+              </a>
             </li>
             <li class="contacts__item contacts__item--order">
-              <span class="contacts__subtitle subtitle">Пишите:</span>
-              <a class="contacts__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+              <span class="contacts__subtitle subtitle">
+                Пишите:
+              </span>
+              <a class="contacts__link contacts__link--condition" href="mailto:mail@htmlacademy.ru">
+                mail@htmlacademy.ru
+              </a>
             </li>
             <li class="contacts__item">
-              <span class="contacts__subtitle subtitle">Приезжайте в гости:</span>
-              <address class="contacts__link">ул. Большая <br> Конюшенная, 19/8</address>
+              <span class="contacts__subtitle subtitle">
+                Приезжайте в гости:
+              </span>
+              <address class="contacts__link">
+                ул. Большая <br> Конюшенная, 19/8
+              </address>
             </li>
           </ul>
           <div class="contacts__map">
@@ -342,35 +450,38 @@
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper container">
-        <a class="page-footer__link" href="#">
+        <a class="page-footer__link" href="#go-to-top">
           <svg class="page-footer__logo">
-            <use xlink:href="./img/svg/sprite.svg#logo-tablet"></use>
+            <use xlink:href="./img/svg/icon-sprite/logo/sprite-logo.svg#logo-tablet"></use>
+          </svg>
+          <svg class="page-footer__logo page-footer__logo--desktop">
+            <use xlink:href="./img/svg/icon-sprite/logo/sprite-logo.svg#logo-desktop-footer"></use>
           </svg>
         </a>
         <ul class="page-footer__list social">
           <li class="social__item">
-            <a class="social__link" href="#">
+            <a class="social__link" href="https://twitter.com/htmlacademy_ru" target="_blank" rel="nofollow noopener">
               <svg class="social__icon social__icon--twitter">
                 <use xlink:href="./img/svg/sprite.svg#icon-twitter"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="#">
+            <a class="social__link" href="https://www.facebook.com/htmlacademy" target="_blank" rel="nofollow noopener">
               <svg class="social__icon social__icon--facebook">
                 <use xlink:href="./img/svg/sprite.svg#icon-facebook"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="#">
+            <a class="social__link" href="https://www.youtube.com/c/HTMLAcademyRUS" target="_blank" rel="nofollow noopener">
               <svg class="social__icon social__icon--youtube">
                 <use xlink:href="./img/svg/sprite.svg#icon-youtube"></use>
               </svg>
             </a>
           </li>
         </ul>
-        <a class="page-footer__author" href="#">
+        <a class="page-footer__author" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="nofollow noopener">
           Разработано
           <svg class="page-footer__icon">
             <use xlink:href="./img/svg/sprite.svg#icon-html-academy"></use>
@@ -378,6 +489,6 @@
         </a>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
-  <script src="./js/menu.js"></script>
 </html>

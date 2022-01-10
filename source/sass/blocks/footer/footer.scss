@@ -29,7 +29,6 @@
   border-radius: 5px;
 
   &:hover .page-footer__logo {
-    fill: $dark-blue;
     color: $magenta;
   }
 
@@ -46,8 +45,6 @@
   }
 
   &:active .page-footer__logo {
-    fill: $dark-blue;
-    color: $magenta;
     opacity: 0.3;
   }
 
@@ -61,6 +58,19 @@
   color: $dark-blue;
   width: 145px;
   height: 40px;
+
+  &--desktop {
+    display: none;
+    color: $dark-blue;
+  }
+
+  @media (min-width: $width-desktop) {
+    display: none;
+
+    &--desktop {
+      display: block;
+    }
+  }
 }
 
 .page-footer__list {
@@ -94,11 +104,6 @@
 
   &:focus-visible {
     outline: 2px solid $green;
-  }
-
-  &:active {
-    color: $dark-blue-3;
-    fill: $dark-blue-3;
   }
 
   &:active .page-footer__icon {

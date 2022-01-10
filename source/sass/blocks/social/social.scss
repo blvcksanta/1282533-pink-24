@@ -38,12 +38,11 @@
   }
 
   &:active {
-    border-color: $magenta;
-    background-color: $magenta;
+    border-color: $dark-blue-1;
   }
 
   &:active .social__icon {
-    fill: $white;
+    fill: $magenta-3;
   }
 }
 

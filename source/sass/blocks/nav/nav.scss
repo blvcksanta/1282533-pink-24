@@ -1,4 +1,8 @@
 .nav {
+  &.nav-noJS:focus-within .nav__list--disable {
+    display: block;
+  }
+
   @media (min-width: $width-desktop) {
     max-width: 620px;
     width: 100%;
@@ -10,7 +14,29 @@
   padding: 0;
   border: none;
   background-color: transparent;
+  outline-offset: 10px;
+  border-radius: 5px;
   cursor: pointer;
+
+  &:hover .nav__burger {
+    fill: $magenta;
+  }
+
+  &:focus {
+    outline: 2px solid $green;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $green;
+  }
+
+  &:active .nav__burger {
+    fill: $magenta-3;
+  }
 
   @media (min-width: $width-desktop) {
     display: none;
@@ -77,11 +103,33 @@
   text-align: center;
   text-decoration: none;
 
+  &:hover {
+    color: $magenta;
+  }
+
+  &:focus {
+    outline: 2px solid $green;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $green;
+  }
+
+  &:active {
+    color: $magenta-3;
+  }
+
   @media (min-width: $width-desktop) {
     position: relative;
     padding: 17px 0;
     line-height: 18px;
     font-weight: 400;
+    outline-offset: 5px;
+    border-radius: 5px;
 
     &--current::before {
       content: "";
@@ -95,6 +143,18 @@
 
     &:hover {
       color: $magenta;
+    }
+
+    &:focus {
+      outline: 2px solid $green;
+    }
+
+    &:focus:not(:focus-visible) {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $green;
     }
 
     &:active {

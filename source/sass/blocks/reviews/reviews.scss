@@ -21,7 +21,7 @@
   flex-direction: column;
 
   @media (min-width: $width-tablet) {
-    padding-top: 47px;
+    padding-top: 50px;
     max-width: $width-tablet+200px;
   }
 
@@ -115,6 +115,8 @@
   box-sizing: border-box;
   background: none;
   line-height: 0;
+  outline-offset: 10px;
+  border-radius: 2px;
   cursor: pointer;
 
   &--next {
@@ -122,6 +124,26 @@
     transform: rotate(180deg);
     top: 0;
     right: 0;
+  }
+
+  &:hover .reviews__arrow {
+    fill: $dark-blue-6;
+  }
+
+  &:focus {
+    outline: 2px solid $green;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $green;
+  }
+
+  &:active .reviews__arrow {
+    fill: $dark-blue-1;
   }
 }
 

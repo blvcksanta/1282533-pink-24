@@ -27,7 +27,21 @@
   border: none;
   background: none;
   box-sizing: border-box;
+  outline-offset: 5px;
+  border-radius: 2px;
   cursor: pointer;
+
+  &:focus {
+    outline: 2px solid $green;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $green;
+  }
 
   @media (min-width: $width-tablet) {
     order: 2;

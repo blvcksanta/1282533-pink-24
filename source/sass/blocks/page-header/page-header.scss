@@ -1,19 +1,31 @@
 .page-header {
   height: 462px;
-  background-image: url("../img/back-mobile.jpg");
+  background-image: url("../img/mobile/back-mobile.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-color: $dark-blue;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/mobile/back-mobile@2x.jpg");
+  }
+
   @media (min-width: $width-tablet) {
     height: 729px;
-    background-image: url("../img/back-tablet.jpg");
+    background-image: url("../img/tablet/back-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/tablet/back-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: $width-desktop) {
     height: 853px;
-    background-image: url("../img/back-desktop.jpg");
+    background-image: url("../img/desktop/back-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/desktop/back-desktop@2x.jpg");
+    }
   }
 }
 
@@ -48,6 +60,34 @@
   }
 }
 
+.page-header__link {
+  display: block;
+  outline-offset: 10px;
+  border-radius: 2px;
+
+  &:hover .page-header__logo {
+    fill: $magenta;
+    color: $magenta;
+  }
+
+  &:focus {
+    outline: 2px solid $green;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $green;
+  }
+
+  &:active .page-header__logo {
+    fill: $white-3;
+    color: $white-3;
+  }
+}
+
 .page-header__logo {
   &--mobile {
     width: 74px;
@@ -67,6 +107,7 @@
     width: 147px;
     height: 40px;
     display: none;
+    color: $white;
   }
 
   @media (min-width: $width-tablet) {
