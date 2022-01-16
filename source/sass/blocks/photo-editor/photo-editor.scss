@@ -274,11 +274,11 @@
     outline: 2px solid $green;
   }
 
-  &::-webkit-slider-thumb:active {
+  &:active::-webkit-slider-thumb {
     background-color: $magenta;
   }
 
-  &::-moz-range-thumb:active {
+  &:active::-moz-range-thumb {
     background-color: $magenta;
   }
 
