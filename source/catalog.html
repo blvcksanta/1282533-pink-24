@@ -372,46 +372,46 @@
         </p>
         <div class="photo-editor__wrapper">
           <div class="photo-editor__editor">
-            <picture class="photo-editor__picture">
+            <picture>
               <source srcset="./img/working-picture.webp 1x, ./img/working-picture@2x.webp 2x" type="image/webp">
               <img class="photo-editor__img" src="./img/working-picture.jpg" srcset="./img/working-picture@2x.jpg 2x" alt="Изменяемая картинка.">
             </picture>
-            <ul class="photo-editor__list photo-editor__list--icon">
-              <li class="photo-editor__item photo-editor__item--active">
-                <svg class="photo-editor__icon photo-editor__icon--crop">
-                  <use xlink:href="./img/svg/sprite.svg#icon-crop"></use>
-                </svg>
-                <div class="photo-editor__range-bar">
-                  <button class="photo-editor__switch photo-editor__switch--crop" type="button"></button>
-                </div>
-              </li>
-              <li class="photo-editor__item">
-                <svg class="photo-editor__icon photo-editor__icon--fill">
-                  <use xlink:href="./img/svg/sprite.svg#icon-fill"></use>
-                </svg>
-                <div class="photo-editor__range-bar">
-                  <button class="photo-editor__switch photo-editor__switch--fill" type="button"></button>
-                </div>
-              </li>
-              <li class="photo-editor__item">
-                <svg class="photo-editor__icon photo-editor__icon--contrast">
-                  <use xlink:href="./img/svg/sprite.svg#icon-contrast"></use>
-                </svg>
-                <div class="photo-editor__range-bar">
-                  <button class="photo-editor__switch photo-editor__switch--contrast" type="button"></button>
-                </div>
-              </li>
-            </ul>
-            <div class="photo-editor__upload">
-              <form class="photo-editor__form" action="https://echo.htmlacademy.ru" method="post">
+            <form class="photo-editor__form" action="https://echo.htmlacademy.ru" method="get">
+              <ul class="photo-editor__list">
+                <li class="photo-editor__item photo-editor__item--active">
+                  <svg class="photo-editor__icon photo-editor__icon--crop photo-editor__icon--active">
+                    <use xlink:href="./img/svg/sprite.svg#icon-crop"></use>
+                  </svg>
+                  <div class="photo-editor__container-range">
+                    <input class="photo-editor__range photo-editor__range--crop photo-editor__range--active" type="range" name="crop" min="0" max="100" value="85">
+                  </div>
+                </li>
+                <li class="photo-editor__item">
+                  <svg class="photo-editor__icon photo-editor__icon--fill">
+                    <use xlink:href="./img/svg/sprite.svg#icon-fill"></use>
+                  </svg>
+                  <div class="photo-editor__container-range">
+                    <input class="photo-editor__range photo-editor__range--fill" type="range" name="fill" min="0" max="100" value="20">
+                  </div>
+                </li>
+                <li class="photo-editor__item">
+                  <svg class="photo-editor__icon photo-editor__icon--contrast">
+                    <use xlink:href="./img/svg/sprite.svg#icon-contrast"></use>
+                  </svg>
+                  <div class="photo-editor__container-range">
+                    <input class="photo-editor__range photo-editor__range--contrast" type="range" name="contrast" min="0" max="100" value="50">
+                  </div>
+                </li>
+              </ul>
+              <div class="photo-editor__upload">
                 <button class="photo-editor__button button" type="submit">
                   Запостить
                 </button>
                 <button class="photo-editor__button button" type="reset">
                   Отмена
                 </button>
-              </form>
-            </div>
+              </div>
+            </form>
           </div>
         </div>
       </section>

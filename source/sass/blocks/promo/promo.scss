@@ -54,16 +54,19 @@
 .promo__picture {
   position: relative;
   max-width: $width-mobile;
+  min-height: 286px;
   margin: 0 auto;
 
   @media (min-width: $width-tablet) {
     max-width: $width-tablet;
+    min-height: 545px;
   }
 
   @media (min-width: $width-desktop) {
     margin: 0;
     margin-left: auto;
     max-width: 1050px;
+    min-height: 645px;
   }
 }
 

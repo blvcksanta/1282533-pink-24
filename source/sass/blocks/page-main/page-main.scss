@@ -47,6 +47,10 @@
 .page-main__title-text {
   line-height: 32px;
 
+  br {
+    display: inline-block;
+  }
+
   @media (min-width: $width-tablet) {
     font-size: 50px;
     line-height: 68px;
