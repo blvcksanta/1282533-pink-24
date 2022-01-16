@@ -9,10 +9,6 @@
   text-align: center;
   color: $white;
 
-  br {
-    display: none;
-  }
-
   &--catalog {
     margin-bottom: -327px;
   }
@@ -34,10 +30,6 @@
     margin: 0 auto;
     margin-bottom: -595px;
 
-    br {
-      display: inline;
-    }
-
     &--catalog {
       margin-bottom: -633px;
     }
@@ -50,10 +42,6 @@
 
 .page-main__title-text {
   line-height: 32px;
-
-  br {
-    display: inline-block;
-  }
 
   @media (min-width: $width-tablet) {
     font-size: 50px;
