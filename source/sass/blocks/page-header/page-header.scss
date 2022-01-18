@@ -37,7 +37,6 @@
   background-color: rgba(0, 0, 0, 0.3);
 
   &--active {
-    box-shadow: 0 1px 0 0 #000000;
     background-color: $dark-blue;
   }
 
@@ -93,22 +92,16 @@
 
 .page-header__logo {
   &--mobile {
-    width: 74px;
-    height: 23px;
     fill: $white;
   }
 
   &--tablet {
-    width: 145px;
-    height: 40px;
     fill: $white;
     color: $white;
     display: none;
   }
 
   &--desktop {
-    width: 147px;
-    height: 40px;
     display: none;
     color: $white;
   }

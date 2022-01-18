@@ -162,10 +162,10 @@
   display: none;
 
   @media (min-width: $width-tablet) {
+    display: block;
     position: absolute;
     top: 2px;
     right: 0;
-    display: block;
     line-height: 0;
     width: 60px;
     height: 60px;
@@ -178,14 +178,4 @@
 
 .fieldset__svg {
   fill: $magenta;
-
-  &--phone {
-    width: 20px;
-    height: 19px;
-  }
-
-  &--mail {
-    width: 18px;
-    height: 13px;
-  }
 }

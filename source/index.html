@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
+    <link rel="preload" href="./fonts/opensans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/opensanslight.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.min.css">
     <link rel="icon" href="./favicon.ico">
     <link rel="icon" href="./img/favicon/32.svg" type="image/svg+xml">
@@ -15,22 +18,22 @@
       <!-- page-header__content--active - класс подставляется, когда активно меню -->
       <div class="page-header__content">
         <div class="page-header__wrapper">
-          <svg class="page-header__logo page-header__logo--mobile">
+          <svg class="page-header__logo page-header__logo--mobile" width="74" height="23">
             <use xlink:href="./img/svg/icon-sprite/logo/sprite-logo.svg#logo-mobile"></use>
           </svg>
-          <svg class="page-header__logo page-header__logo--tablet">
+          <svg class="page-header__logo page-header__logo--tablet" width="145" height="40">
             <use xlink:href="./img/svg/icon-sprite/logo/sprite-logo.svg#logo-tablet"></use>
           </svg>
-          <svg class="page-header__logo page-header__logo--desktop">
+          <svg class="page-header__logo page-header__logo--desktop" width="147" height="40">
             <use xlink:href="./img/svg/icon-sprite/logo/sprite-logo.svg#logo-desktop"></use>
           </svg>
           <nav class="page-header__nav nav nav-noJS">
             <button class="nav__button">
-              <svg class="nav__burger">
+              <svg class="nav__burger" width="50" height="24">
                 <use xlink:href="./img/svg/sprite.svg#menu-burger"></use>
               </svg>
               <!-- nav__burger--disable - класс отвечает за сокрытие не активной иконки кнопки меню -->
-              <svg class="nav__burger nav__burger--close nav__burger--disable">
+              <svg class="nav__burger nav__burger--close nav__burger--disable" width="23" height="23">
                 <use xlink:href="./img/svg/sprite.svg#menu-close"></use>
               </svg>
               <span class="visually-hidden">Открыть/закрыть меню.</span>
@@ -135,12 +138,12 @@
                 <picture>
                   <source media="(min-width: 1200px)" srcset="./img/desktop/index/desktop-phone.webp 1x, ./img/desktop/index/desktop-phone@2x.webp 2x" type="image/webp">
                   <source media="(min-width: 1200px)" srcset="./img/desktop/index/desktop-phone.png 1x, ./img/desktop/index/desktop-phone@2x.png 2x" type="image/png">
-                  <img class="possibility__phone possibility__phone--none" src="./img/crutch.png" alt="Телефон.">
+                  <img class="possibility__phone possibility__phone--none" src="./img/crutch.png" alt="Телефон." loading="lazy">
                 </picture>
                 <picture>
                   <source media="(min-width: 1200px)" srcset="./img/desktop/index/desktop-phone-screen-not-filter.webp 1x, ./img/desktop/index/desktop-phone-screen-not-filter@2x.webp 2x" type="image/webp">
                   <source media="(min-width: 1200px)" srcset="./img/desktop/index/desktop-phone-screen-not-filter.jpg 1x, ./img/desktop/index/desktop-phone-screen-not-filter@2x.jpg 2x" type="image/jpeg">
-                  <img class="possibility__screen possibility__screen--none" src="./img/crutch.png" alt="Экран телефона без фильтра.">
+                  <img class="possibility__screen possibility__screen--none" src="./img/crutch.png" alt="Экран телефона без фильтра." loading="lazy">
                 </picture>
               </div>
               <h3 class="possibility__subtitle subtitle">
@@ -155,12 +158,12 @@
                 <picture>
                   <source media="(min-width: 1200px)" srcset="./img/desktop/index/desktop-phone.webp 1x, ./img/desktop/index/desktop-phone@2x.webp 2x" type="image/webp">
                   <source media="(min-width: 1200px)" srcset="./img/desktop/index/desktop-phone.png 1x, ./img/desktop/index/desktop-phone@2x.png 2x" type="image/png">
-                  <img class="possibility__phone possibility__phone--none" src="./img/crutch.png" alt="Телефон.">
+                  <img class="possibility__phone possibility__phone--none" src="./img/crutch.png" alt="Телефон." loading="lazy">
                 </picture>
                 <picture>
                   <source media="(min-width: 1200px)" srcset="./img/desktop/index/desktop-phone-screen-filter.webp 1x, ./img/desktop/index/desktop-phone-screen-filter@2x.webp 2x" type="image/webp">
                   <source media="(min-width: 1200px)" srcset="./img/desktop/index/desktop-phone-screen-filter.jpg 1x, ./img/desktop/index/desktop-phone-screen-filter@2x.jpg 2x" type="image/jpeg">
-                  <img class="possibility__screen possibility__screen--none" src="./img/crutch.png" alt="Экран телефона с фильтром.">
+                  <img class="possibility__screen possibility__screen--none" src="./img/crutch.png" alt="Экран телефона с фильтром." loading="lazy">
                 </picture>
               </div>
               <h3 class="possibility__subtitle subtitle">
@@ -181,7 +184,7 @@
                   <source media="(min-width: 660px)" srcset="./img/tablet/index/tablet-phone.png 1x, ./img/tablet/index/tablet-phone@2x.png 2x" type="image/png">
                   <source media="(min-width: 320px)" srcset="./img/mobile/index/mobile-phone.webp 1x, ./img/mobile/index/mobile-phone@2x.webp 2x" type="image/webp">
                   <source media="(min-width: 320px)" srcset="./img/mobile/index/mobile-phone.png 1x, ./img/mobile/index/mobile-phone@2x.png 2x" type="image/png">
-                  <img class="possibility__phone" src="./img/mobile/index/mobile-phone.png" srcset="./img/mobile/index/mobile-phone@2x.png 2x" alt="Телефон.">
+                  <img class="possibility__phone" src="./img/mobile/index/mobile-phone.png" srcset="./img/mobile/index/mobile-phone@2x.png 2x" alt="Телефон." loading="lazy">
                 </picture>
                 <picture>
                   <source media="(min-width: 1200px)" srcset="./img/desktop/index/desktop-phone-screen-filter-smile.webp 1x, ./img/desktop/index/desktop-phone-screen-filter-smile@2x.webp 2x" type="image/webp">
@@ -190,7 +193,7 @@
                   <source media="(min-width: 660px)" srcset="./img/tablet/index/tablet-phone-screen-smail.jpg 1x, ./img/tablet/index/tablet-phone-screen-smail@2x.jpg 2x" type="image/jpeg">
                   <source media="(min-width: 320px)" srcset="./img/mobile/index/mobile-phone-screen-smail.webp 1x, ./img/mobile/index/mobile-phone-screen-smail@2x.webp 2x" type="image/webp">
                   <source media="(min-width: 320px)" srcset="./img/mobile/index/mobile-phone-screen-smail.jpg 1x, ./img/mobile/index/mobile-phone-screen-smail@2x.jpg 2x" type="image/jpeg">
-                  <img class="possibility__screen" src="./img/mobile/index/mobile-phone-screen-smail.jpg" srcset="./img/mobile/index/mobile-phone-screen-smail@2x.jpg 2x" alt="Экран телефона с фильтром и смайлом.">
+                  <img class="possibility__screen" src="./img/mobile/index/mobile-phone-screen-smail.jpg" srcset="./img/mobile/index/mobile-phone-screen-smail@2x.jpg 2x" alt="Экран телефона с фильтром и смайлом." loading="lazy">
                 </picture>
               </div>
               <h3 class="possibility__subtitle subtitle">
@@ -212,16 +215,16 @@
           <div class="article__description">
             <h2 class="article__title title">
               Эффект
-              <br>
+              <br>&#32;
               на 24 часа!
             </h2>
             <p class="article__text">
               Британские ученые провели исследования
-              <br>
+              <br>&#32;
               и доказали,
               <br>
               что положительный эффект
-              <br>
+              <br>&#32;
               от использования&nbsp;приложения длится целые сутки!
             </p>
             <a class="article__link" href="#">
@@ -252,7 +255,7 @@
             </blockquote>
             <div class="reviews__buttons">
               <button class="reviews__button reviews__button--prew" type="button">
-                <svg class="reviews__arrow">
+                <svg class="reviews__arrow" width="20" height="41">
                   <use xlink:href="./img/svg/sprite.svg#icon-arrow"></use>
                 </svg>
                 <span class="visually-hidden">
@@ -260,7 +263,7 @@
                 </span>
               </button>
               <button class="reviews__button reviews__button--next" type="button">
-                <svg class="reviews__arrow">
+                <svg class="reviews__arrow" width="20" height="41">
                   <use xlink:href="./img/svg/sprite.svg#icon-arrow"></use>
                 </svg>
                 <span class="visually-hidden">
@@ -330,17 +333,17 @@
                 Розовый фильтр
               </td>
               <td class="table__data table__data--filtr">
-                <svg class="table__svg table__svg--yes">
+                <svg class="table__svg table__svg--yes" width="31" height="21">
                   <use xlink:href="./img/svg/sprite.svg#icon-yes"></use>
                 </svg>
               </td>
               <td class="table__data table__data--filtr">
-                <svg class="table__svg table__svg--yes">
+                <svg class="table__svg table__svg--yes" width="31" height="21">
                   <use xlink:href="./img/svg/sprite.svg#icon-yes"></use>
                 </svg>
               </td>
               <td class="table__data table__data--filtr">
-                <svg class="table__svg table__svg--yes">
+                <svg class="table__svg table__svg--yes" width="31" height="21">
                   <use xlink:href="./img/svg/sprite.svg#icon-yes"></use>
                 </svg>
               </td>
@@ -350,17 +353,17 @@
                 Смайлики
               </td>
               <td class="table__data table__data--smile">
-                <svg class="table__svg table__svg--no">
+                <svg class="table__svg table__svg--no" width="27" height="27">
                   <use xlink:href="./img/svg/sprite.svg#icon-no"></use>
                 </svg>
               </td>
               <td class="table__data table__data--smile">
-                <svg class="table__svg table__svg--yes">
+                <svg class="table__svg table__svg--yes" width="31" height="21">
                   <use xlink:href="./img/svg/sprite.svg#icon-yes"></use>
                 </svg>
               </td>
               <td class="table__data table__data--smile">
-                <svg class="table__svg table__svg--yes">
+                <svg class="table__svg table__svg--yes" width="31" height="21">
                   <use xlink:href="./img/svg/sprite.svg#icon-yes"></use>
                 </svg>
               </td>
@@ -370,17 +373,17 @@
                 Комментарии
               </td>
               <td class="table__data table__data--comments">
-                <svg class="table__svg table__svg--no">
+                <svg class="table__svg table__svg--no" width="27" height="27">
                   <use xlink:href="./img/svg/sprite.svg#icon-no"></use>
                 </svg>
               </td>
               <td class="table__data table__data--comments">
-                <svg class="table__svg table__svg--no">
+                <svg class="table__svg table__svg--no" width="27" height="27">
                   <use xlink:href="./img/svg/sprite.svg#icon-no"></use>
                 </svg>
               </td>
               <td class="table__data table__data--comments table__data--border-right-bottom">
-                <svg class="table__svg table__svg--yes">
+                <svg class="table__svg table__svg--yes" width="31" height="21">
                   <use xlink:href="./img/svg/sprite.svg#icon-yes"></use>
                 </svg>
               </td>
@@ -461,21 +464,21 @@
         <ul class="page-footer__list social">
           <li class="social__item">
             <a class="social__link" href="https://twitter.com/htmlacademy_ru" target="_blank" rel="nofollow noopener">
-              <svg class="social__icon social__icon--twitter">
+              <svg class="social__icon" width="18" height="14">
                 <use xlink:href="./img/svg/sprite.svg#icon-twitter"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link" href="https://www.facebook.com/htmlacademy" target="_blank" rel="nofollow noopener">
-              <svg class="social__icon social__icon--facebook">
+              <svg class="social__icon" width="9" height="18">
                 <use xlink:href="./img/svg/sprite.svg#icon-facebook"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link" href="https://www.youtube.com/c/HTMLAcademyRUS" target="_blank" rel="nofollow noopener">
-              <svg class="social__icon social__icon--youtube">
+              <svg class="social__icon" width="15" height="13">
                 <use xlink:href="./img/svg/sprite.svg#icon-youtube"></use>
               </svg>
             </a>
@@ -483,7 +486,7 @@
         </ul>
         <a class="page-footer__author" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="nofollow noopener">
           Разработано
-          <svg class="page-footer__icon">
+          <svg class="page-footer__icon" width="27" height="34">
             <use xlink:href="./img/svg/sprite.svg#icon-html-academy"></use>
           </svg>
         </a>
