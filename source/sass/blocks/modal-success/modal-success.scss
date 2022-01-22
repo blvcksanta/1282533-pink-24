@@ -6,6 +6,10 @@
   bottom: 0;
 
   @include center;
+
+  &--disable {
+    display: none;
+  }
 }
 
 .modal-success__wrapper {
@@ -78,8 +82,4 @@
   @media (min-width: $width-desktop) {
     max-width: 460px;
   }
-}
-
-.modal-success__disable {
-  display: none;
 }

@@ -14,9 +14,10 @@
     <link rel="apple-touch-icon" href="./img/favicon/152.png">
   </head>
   <body>
-    <header class="page-header container" id="go-to-top">
+    <header class="page-header page-header--noJS container" id="go-to-top">
       <!-- page-header__content--active - класс подставляется, когда активно меню -->
-      <div class="page-header__content">
+      <!-- page-header__content--noJS - класс отвечает за работу меню при отключенном JS -->
+      <div class="page-header__content page-header__content--noJS">
         <div class="page-header__wrapper">
           <svg class="page-header__logo page-header__logo--mobile" width="74" height="23">
             <use xlink:href="./img/svg/icon-sprite/logo/sprite-logo.svg#logo-mobile"></use>
@@ -27,8 +28,8 @@
           <svg class="page-header__logo page-header__logo--desktop" width="147" height="40">
             <use xlink:href="./img/svg/icon-sprite/logo/sprite-logo.svg#logo-desktop"></use>
           </svg>
-          <nav class="page-header__nav nav nav-noJS">
-            <button class="nav__button">
+          <nav class="page-header__nav nav">
+            <button class="page-header__button nav__button">
               <svg class="nav__burger" width="50" height="24">
                 <use xlink:href="./img/svg/sprite.svg#menu-burger"></use>
               </svg>
@@ -40,7 +41,7 @@
             </button>
             <!-- nav__list--disable - класс отвечает за показ пунктов меню -->
             <!-- nav__link--current - класс отвечает за выделение активного пункта меню -->
-            <ul class="nav__list nav__list--disable">
+            <ul class="nav__list nav__list--disable nav__list--noJS">
               <li class="nav__item">
                 <a class="nav__link nav__link--current" href="./index.html">
                   Главная
@@ -445,7 +446,7 @@
               </address>
             </li>
           </ul>
-          <div class="contacts__map">
+          <div class="contacts__map contacts__map--noJS">
             <iframe class="contacts__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d840.3098254570853!2d30.323149430878416!3d59.93869890682637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1639577304040!5m2!1sru!2sru" width="320" height="200" allowfullscreen="" loading="lazy"></iframe>
           </div>
         </div>
@@ -493,5 +494,6 @@
       </div>
     </footer>
     <script src="./js/menu.js"></script>
+    <script src="./js/map.js"></script>
   </body>
 </html>

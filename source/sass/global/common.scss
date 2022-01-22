@@ -1,0 +1,56 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.title {
+  margin: 0;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28.8px;
+
+  @media (min-width: $width-tablet) {
+    font-size: 40px;
+    line-height: 54.4px;
+  }
+
+  @media (min-width: $width-desktop) {
+    font-size: 50px;
+    line-height: 68px;
+  }
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0.05em;
+}
+
+.text-form {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.button {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px 0;
+  font-family: "OpenSans", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+  color: $white;
+  border: 3px solid $white;
+  border-radius: 30px;
+  background-color: transparent;
+  cursor: pointer;
+
+  @media (min-width: $width-desktop) {
+    letter-spacing: 0.15em;
+  }
+}

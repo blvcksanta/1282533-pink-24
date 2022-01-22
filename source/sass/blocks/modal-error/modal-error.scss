@@ -6,6 +6,10 @@
   bottom: 0;
 
   @include center;
+
+  &--disable {
+    display: none;
+  }
 }
 
 .modal-error__wrapper {
@@ -82,8 +86,4 @@
 
 .modal-error__button {
   margin: 0 auto;
-}
-
-.modal-error__disable {
-  display: none;
 }

@@ -6,6 +6,10 @@
   background-size: cover;
   background-color: $dark-blue;
 
+  &--noJS {
+    margin-top: 318px;   //test
+  }
+
   @media (min-resolution: 2dppx) {
     background-image: url("../img/mobile/back-mobile@2x.jpg");
   }
@@ -13,6 +17,10 @@
   @media (min-width: $width-tablet) {
     min-height: 729px;
     background-image: url("../img/tablet/back-tablet.jpg");
+
+    &--noJS {
+      margin-top: 361px; //test
+    }
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/tablet/back-tablet@2x.jpg");
@@ -22,6 +30,10 @@
   @media (min-width: $width-desktop) {
     min-height: 853px;
     background-image: url("../img/desktop/back-desktop.jpg");
+
+    &--noJS {
+      margin-top: 0; //test
+    }
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/desktop/back-desktop@2x.jpg");
@@ -40,9 +52,26 @@
     background-color: $dark-blue;
   }
 
+  &--noJS {
+    background-color: $dark-blue;
+    position: absolute;  //test
+    top: 0;  //test
+    left: 0;  //test
+    right: 0;  //test
+    padding-bottom: 20px; //test
+
+    & .page-header__button { //test
+      display: none; //test
+    }
+  }
+
   @media (min-width: $width-tablet) {
     padding-top: 27px;
     padding-bottom: 40px;
+
+    &--noJS {
+      padding-bottom: 43px; //test
+    }
   }
 
   @media (min-width: $width-desktop) {

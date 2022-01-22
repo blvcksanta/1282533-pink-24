@@ -162,6 +162,10 @@
   }
 }
 
+.photo-editor__label {
+  cursor: pointer;
+}
+
 .photo-editor__icon {
   display: block;
   margin: 0 auto;
@@ -212,6 +216,7 @@
   background-color: $dark-blue;
   outline-offset: 7px;
   border-radius: 2px;
+  cursor: pointer;
 
   &::-webkit-slider-thumb {
     appearance: none;

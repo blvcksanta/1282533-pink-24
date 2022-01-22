@@ -1,3 +1,5 @@
+var header = document.querySelector('.page-header');
+var headerContent = document.querySelector('.page-header__content');
 var nav = document.querySelector('.nav');
 var navMain = document.querySelector('.nav__list');
 var navToggle = document.querySelector('.nav__button');
@@ -6,7 +8,9 @@ var navBurger = document.querySelector('.nav__burger');
 var navBurgerClose = document.querySelector('.nav__burger--close');
 
 // Удаление класса для работы без JS
-nav.classList.remove('nav-noJS');
+header.classList.remove('page-header--noJS');
+headerContent.classList.remove('page-header__content--noJS');
+navMain.classList.remove('nav__list--noJS');
 
 // Скрипт работы кнопки меню
 navToggle.addEventListener('click', function() {

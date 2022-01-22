@@ -257,9 +257,9 @@
             <!-- Опишите свои мысли(эмоции) -->
             <fieldset class="questionnaire__thoughts thoughts">
               <legend class="thoughts__title">
-                Опишите свои эмоции
+                <label class="thoughts__label" for="thoughts">Опишите свои эмоции</label>
               </legend>
-              <textarea class="thoughts__textarea" name="thoughts" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+              <textarea class="thoughts__textarea" id="thoughts" name="thoughts" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
             </fieldset>
             <!-- Отправка формы -->
             <div class="questionnaire__submit">
@@ -322,8 +322,8 @@
         </a>
       </div>
     </footer>
-    <!-- Класс modal-error__disable отвечает за отключение модального окна -->
-    <div class="modal-error modal-error__disable">
+    <!-- Класс modal-error--disable отвечает за отключение модального окна -->
+    <div class="modal-error modal-error--disable">
       <div class="modal-error__wrapper">
         <p class="modal-error__title">
           Что-то пошло
@@ -340,8 +340,8 @@
         </div>
       </div>
     </div>
-    <!-- Класс modal-success__disable отвечает за отключение модального окна -->
-    <div class="modal-success modal-success__disable">
+    <!-- Класс modal-success--disable отвечает за отключение модального окна -->
+    <div class="modal-success modal-success--disable">
       <div class="modal-success__wrapper">
         <p class="modal-success__title">
           Ваша заявка отправлена

@@ -125,6 +125,52 @@
       linear-gradient(to left top, transparent 49%, $white 50%) right / 50.1% 100% no-repeat;
   }
 
+  &--noJS {
+    background-image: url("../img/mobile/index/map-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/mobile/index/map-mobile@2x.jpg");
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 88px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 16px;
+      height: 16px;
+      border: 10px solid $white;
+      border-radius: 50%;
+      background-color: $magenta;
+    }
+
+    @media (min-width: $width-tablet) {
+      background-image: url("../img/tablet/index/map-tablet.jpg");
+      height: 356px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/tablet/index/map-tablet@2x.jpg");
+      }
+
+      &::after {
+        top: 50%;
+      }
+    }
+
+    @media (min-width: $width-desktop) {
+      background-image: url("../img/desktop/index/map-desktop.jpg");
+      height: 480px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/desktop/index/map-desktop@2x.jpg");
+      }
+    }
+  }
+
   @media (min-width: $width-tablet) {
     &::before {
       height: 50px;

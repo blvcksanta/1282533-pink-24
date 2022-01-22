@@ -394,27 +394,33 @@
             <form class="photo-editor__form" action="https://echo.htmlacademy.ru" method="get">
               <ul class="photo-editor__list">
                 <li class="photo-editor__item photo-editor__item--active">
-                  <svg class="photo-editor__icon photo-editor__icon--crop photo-editor__icon--active" width="44" height="44">
-                    <use xlink:href="./img/svg/sprite.svg#icon-crop"></use>
-                  </svg>
+                  <label class="photo-editor__label" for="crop">
+                    <svg class="photo-editor__icon photo-editor__icon--crop photo-editor__icon--active" width="44" height="44">
+                      <use xlink:href="./img/svg/sprite.svg#icon-crop"></use>
+                    </svg>
+                  </label>
                   <div class="photo-editor__container-range">
-                    <input class="photo-editor__range photo-editor__range--crop photo-editor__range--active" type="range" name="crop" min="0" max="100" value="85">
+                    <input class="photo-editor__range photo-editor__range--crop photo-editor__range--active" id="crop" type="range" name="crop" min="0" max="100" value="85">
                   </div>
                 </li>
                 <li class="photo-editor__item">
-                  <svg class="photo-editor__icon photo-editor__icon--fill" width="48" height="43">
-                    <use xlink:href="./img/svg/sprite.svg#icon-fill"></use>
-                  </svg>
+                  <label class="photo-editor__label" for="fill">
+                    <svg class="photo-editor__icon photo-editor__icon--fill" width="48" height="43">
+                      <use xlink:href="./img/svg/sprite.svg#icon-fill"></use>
+                    </svg>
+                  </label>
                   <div class="photo-editor__container-range">
-                    <input class="photo-editor__range photo-editor__range--fill" type="range" name="fill" min="0" max="100" value="20">
+                    <input class="photo-editor__range photo-editor__range--fill" id="fill" type="range" name="fill" min="0" max="100" value="20">
                   </div>
                 </li>
                 <li class="photo-editor__item">
-                  <svg class="photo-editor__icon photo-editor__icon--contrast" width="32" height="32">
-                    <use xlink:href="./img/svg/sprite.svg#icon-contrast"></use>
-                  </svg>
+                  <label class="photo-editor__label" for="contrast">
+                    <svg class="photo-editor__icon photo-editor__icon--contrast" width="32" height="32">
+                      <use xlink:href="./img/svg/sprite.svg#icon-contrast"></use>
+                    </svg>
+                  </label>
                   <div class="photo-editor__container-range">
-                    <input class="photo-editor__range photo-editor__range--contrast" type="range" name="contrast" min="0" max="100" value="50">
+                    <input class="photo-editor__range photo-editor__range--contrast" id="contrast" type="range" name="contrast" min="0" max="100" value="50">
                   </div>
                 </li>
               </ul>
