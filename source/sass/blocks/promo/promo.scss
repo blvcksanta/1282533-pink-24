@@ -52,18 +52,6 @@
   }
 }
 
-.promo__position {
-  @media (min-width: $width-tablet) {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-  }
-
-  @media (min-width: $width-desktop) {
-    right: 4px;
-  }
-}
-
 .promo__picture {
   position: relative;
   max-width: $width-mobile;
@@ -71,15 +59,15 @@
   margin: 0 auto;
 
   @media (min-width: $width-tablet) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
     max-width: $width-tablet;
-    min-height: 545px;
   }
 
   @media (min-width: $width-desktop) {
-    margin: 0;
-    margin-left: auto;
+    right: 4px;
     max-width: 1050px;
-    min-height: 645px;
   }
 }
 
