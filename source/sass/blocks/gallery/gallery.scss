@@ -35,3 +35,63 @@
   display: flex;
   flex-direction: column;
 }
+
+.gallery__link {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $green-3;
+    display: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $dark-blue-3;
+    display: none;
+  }
+
+  &:hover {
+    &::after {
+      display: block;
+    }
+  }
+
+  &:focus {
+    outline: none;
+
+    &::before {
+      display: block;
+    }
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+
+    &::before {
+      display: block;
+    }
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}

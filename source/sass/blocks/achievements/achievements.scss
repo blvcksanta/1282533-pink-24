@@ -55,7 +55,7 @@
   @media (min-width: $width-desktop) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 20px;
+    column-gap: 57px;
     row-gap: 52px;
   }
 }
@@ -78,6 +78,8 @@
   }
 
   @media (min-width: $width-desktop) {
+    white-space: nowrap;
+
     &:not(:last-child) {
       margin-bottom: 0;
     }

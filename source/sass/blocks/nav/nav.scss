@@ -44,13 +44,7 @@
 }
 
 .nav__burger {
-  width: 50px;
-  height: 23px;
   fill: $white;
-
-  &--close {
-    width: 23px;
-  }
 
   &--disable {
     display: none;
@@ -78,6 +72,7 @@
     position: static;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 

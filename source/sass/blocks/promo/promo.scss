@@ -14,10 +14,12 @@
 .promo__wrapper {
   @media (min-width: $width-tablet) {
     position: relative;
+    padding-bottom: 85px;
     max-width: $width-tablet+200px;
   }
 
   @media (min-width: $width-desktop) {
+    padding-bottom: 93px;
     max-width: $width-desktop;
   }
 }
@@ -33,12 +35,11 @@
   }
 
   @media (min-width: $width-tablet) {
-    position: absolute;
-    top: 20px;
-    left: 0;
+    position: relative;
+    padding-top: 20px;
     width: 300px;
     line-height: 48px;
-    z-index: 3;
+    z-index: 2;
 
     br {
       display: inline;
@@ -46,7 +47,7 @@
   }
 
   @media (min-width: $width-desktop) {
-    top: 0;
+    padding-top: 0;
     line-height: 68px;
   }
 }
@@ -54,15 +55,18 @@
 .promo__picture {
   position: relative;
   max-width: $width-mobile;
+  min-height: 286px;
   margin: 0 auto;
 
   @media (min-width: $width-tablet) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
     max-width: $width-tablet;
   }
 
   @media (min-width: $width-desktop) {
-    margin: 0;
-    margin-left: auto;
+    right: 4px;
     max-width: 1050px;
   }
 }
@@ -104,16 +108,15 @@
   background-color: $dark-blue;
 
   @media (min-width: $width-tablet) {
-    position: absolute;
-    bottom: 83px;
-    left: 0;
+    position: relative;
+    padding-top: 0;
     max-width: 300px;
-    z-index: 3;
+    z-index: 2;
     background-color: transparent;
   }
 
   @media (min-width: $width-desktop) {
-    bottom: 93px;
+    padding-top: 9px;
   }
 }
 
@@ -168,6 +171,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 
   @media (min-width: $width-tablet) {
     max-width: none;

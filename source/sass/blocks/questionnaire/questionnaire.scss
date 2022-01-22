@@ -150,6 +150,10 @@
     background-color: $grey;
     border-color: $grey;
   }
+
+  @media (min-width: $width-tablet) {
+    flex: 1 0 300px;
+  }
 }
 
 .questionnaire__footnote {

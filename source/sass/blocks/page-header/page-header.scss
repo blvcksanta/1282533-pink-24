@@ -1,5 +1,5 @@
 .page-header {
-  height: 462px;
+  min-height: 462px;
   background-image: url("../img/mobile/back-mobile.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -11,7 +11,7 @@
   }
 
   @media (min-width: $width-tablet) {
-    height: 729px;
+    min-height: 729px;
     background-image: url("../img/tablet/back-tablet.jpg");
 
     @media (min-resolution: 2dppx) {
@@ -20,7 +20,7 @@
   }
 
   @media (min-width: $width-desktop) {
-    height: 853px;
+    min-height: 853px;
     background-image: url("../img/desktop/back-desktop.jpg");
 
     @media (min-resolution: 2dppx) {
@@ -30,21 +30,23 @@
 }
 
 .page-header__content {
-  height: 66px;
-
   @include ears;
   padding-top: 23px;
+  padding-bottom: 17px;
   box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.3);
 
   &--active {
-    box-shadow: 0 1px 0 0 #000000;
     background-color: $dark-blue;
   }
 
   @media (min-width: $width-tablet) {
-    height: 110px;
     padding-top: 27px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding-bottom: 31px;
   }
 }
 
@@ -90,22 +92,16 @@
 
 .page-header__logo {
   &--mobile {
-    width: 74px;
-    height: 23px;
     fill: $white;
   }
 
   &--tablet {
-    width: 145px;
-    height: 40px;
     fill: $white;
     color: $white;
     display: none;
   }
 
   &--desktop {
-    width: 147px;
-    height: 40px;
     display: none;
     color: $white;
   }

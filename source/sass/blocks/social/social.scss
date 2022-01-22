@@ -2,6 +2,16 @@
   @include reset-list;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+
+  @media (min-width: $width-tablet) {
+    padding-right: 15px;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding-right: 0;
+    padding-left: 10px;
+  }
 }
 
 .social__item:not(:last-child) {
@@ -48,19 +58,4 @@
 
 .social__icon {
   fill: $magenta;
-
-  &--twitter {
-    width: 18px;
-    height: 14px;
-  }
-
-  &--facebook {
-    width: 9px;
-    height: 18px;
-  }
-
-  &--youtube {
-    width: 15px;
-    height: 13px;
-  }
 }

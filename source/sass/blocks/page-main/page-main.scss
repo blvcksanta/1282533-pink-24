@@ -1,13 +1,13 @@
+.page-main {
+  flex-grow: 1;
+}
+
 .page-main__title {
   position: relative;
   top: -365px;
   margin-bottom: -320px;
   text-align: center;
   color: $white;
-
-  br {
-    display: none;
-  }
 
   &--catalog {
     margin-bottom: -327px;
@@ -29,10 +29,6 @@
     right: 0;
     margin: 0 auto;
     margin-bottom: -595px;
-
-    br {
-      display: inline;
-    }
 
     &--catalog {
       margin-bottom: -633px;
