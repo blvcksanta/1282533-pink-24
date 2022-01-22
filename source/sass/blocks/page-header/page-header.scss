@@ -7,7 +7,7 @@
   background-color: $dark-blue;
 
   &--noJS {
-    margin-top: 318px;   //test
+    margin-top: 318px;
   }
 
   @media (min-resolution: 2dppx) {
@@ -19,7 +19,7 @@
     background-image: url("../img/tablet/back-tablet.jpg");
 
     &--noJS {
-      margin-top: 361px; //test
+      margin-top: 361px;
     }
 
     @media (min-resolution: 2dppx) {
@@ -32,7 +32,7 @@
     background-image: url("../img/desktop/back-desktop.jpg");
 
     &--noJS {
-      margin-top: 0; //test
+      margin-top: 0;
     }
 
     @media (min-resolution: 2dppx) {
@@ -54,14 +54,14 @@
 
   &--noJS {
     background-color: $dark-blue;
-    position: absolute;  //test
-    top: 0;  //test
-    left: 0;  //test
-    right: 0;  //test
-    padding-bottom: 20px; //test
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 20px;
 
-    & .page-header__button { //test
-      display: none; //test
+    & .page-header__button {
+      display: none;
     }
   }
 
@@ -70,7 +70,7 @@
     padding-bottom: 40px;
 
     &--noJS {
-      padding-bottom: 43px; //test
+      padding-bottom: 43px;
     }
   }
 
