@@ -14,9 +14,10 @@
     <link rel="apple-touch-icon" href="./img/favicon/152.png">
   </head>
   <body>
-    <header class="page-header container" id="go-to-top">
+    <header class="page-header page-header--noJS container" id="go-to-top">
       <!-- page-header__content--active - класс подставляется, когда активно меню -->
-      <div class="page-header__content">
+      <!-- page-header__content--noJS - класс отвечает за работу меню при отключенном JS -->
+      <div class="page-header__content page-header__content--noJS">
         <div class="page-header__wrapper">
           <a class="page-header__link" href="index.html">
             <svg class="page-header__logo page-header__logo--mobile" width="74" height="23">
@@ -29,8 +30,8 @@
               <use xlink:href="./img/svg/icon-sprite/logo/sprite-logo.svg#logo-desktop"></use>
             </svg>
           </a>
-          <nav class="page-header__nav nav nav-noJS">
-            <button class="nav__button">
+          <nav class="page-header__nav nav">
+            <button class="page-header__button nav__button">
               <svg class="nav__burger" width="50" height="24">
                 <use xlink:href="./img/svg/sprite.svg#menu-burger"></use>
               </svg>
@@ -42,7 +43,7 @@
             </button>
             <!-- nav__list--disable - класс отвечает за показ пунктов меню -->
             <!-- nav__link--current - класс отвечает за выделение активного пункта меню -->
-            <ul class="nav__list nav__list--disable">
+            <ul class="nav__list nav__list--disable nav__list--noJS">
               <li class="nav__item">
                 <a class="nav__link" href="./index.html">
                   Главная
